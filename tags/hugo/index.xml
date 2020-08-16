@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hugo on Life times</title>
-    <link>https://blog.aaa.com/tags/hugo/</link>
+    <link>https://blog.wisekee.com/tags/hugo/</link>
     <description>Recent content in hugo on Life times</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
     <lastBuildDate>Sun, 16 Aug 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://blog.aaa.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.wisekee.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo usage issues summary</title>
-      <link>https://blog.aaa.com/post/hugo-usage-issues/</link>
+      <link>https://blog.wisekee.com/post/hugo-usage-issues/</link>
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.aaa.com/post/hugo-usage-issues/</guid>
+      <guid>https://blog.wisekee.com/post/hugo-usage-issues/</guid>
       <description>Usage scene  In my github repo initialize two repos  One to storage Hugo sourcecode and markdown files And other one use release finaly site resources   Has two folders themes and public as github submodes 1 git submoduld update --init   </description>
     </item>
     
