@@ -2,102 +2,102 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Life times</title>
-    <link>http://blog.wisekee.com/tags/</link>
+    <link>https://blog.wisekee.com/tags/</link>
     <description>Recent content in Tags on Life times</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
     <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://blog.wisekee.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.wisekee.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>css</title>
-      <link>http://blog.wisekee.com/tags/css/</link>
+      <link>https://blog.wisekee.com/tags/css/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.wisekee.com/tags/css/</guid>
+      <guid>https://blog.wisekee.com/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>featured</title>
-      <link>http://blog.wisekee.com/tags/featured/</link>
+      <link>https://blog.wisekee.com/tags/featured/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.wisekee.com/tags/featured/</guid>
+      <guid>https://blog.wisekee.com/tags/featured/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html</title>
-      <link>http://blog.wisekee.com/tags/html/</link>
+      <link>https://blog.wisekee.com/tags/html/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.wisekee.com/tags/html/</guid>
+      <guid>https://blog.wisekee.com/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>http://blog.wisekee.com/tags/markdown/</link>
+      <link>https://blog.wisekee.com/tags/markdown/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.wisekee.com/tags/markdown/</guid>
+      <guid>https://blog.wisekee.com/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>themes</title>
-      <link>http://blog.wisekee.com/tags/themes/</link>
+      <link>https://blog.wisekee.com/tags/themes/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.wisekee.com/tags/themes/</guid>
+      <guid>https://blog.wisekee.com/tags/themes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>privacy</title>
-      <link>http://blog.wisekee.com/tags/privacy/</link>
+      <link>https://blog.wisekee.com/tags/privacy/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.wisekee.com/tags/privacy/</guid>
+      <guid>https://blog.wisekee.com/tags/privacy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>shortcodes</title>
-      <link>http://blog.wisekee.com/tags/shortcodes/</link>
+      <link>https://blog.wisekee.com/tags/shortcodes/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.wisekee.com/tags/shortcodes/</guid>
+      <guid>https://blog.wisekee.com/tags/shortcodes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>text</title>
-      <link>http://blog.wisekee.com/tags/text/</link>
+      <link>https://blog.wisekee.com/tags/text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.wisekee.com/tags/text/</guid>
+      <guid>https://blog.wisekee.com/tags/text/</guid>
       <description></description>
     </item>
     
     <item>
       <title>emoji</title>
-      <link>http://blog.wisekee.com/tags/emoji/</link>
+      <link>https://blog.wisekee.com/tags/emoji/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.wisekee.com/tags/emoji/</guid>
+      <guid>https://blog.wisekee.com/tags/emoji/</guid>
       <description></description>
     </item>
     
     <item>
       <title>index</title>
-      <link>http://blog.wisekee.com/tags/index/</link>
+      <link>https://blog.wisekee.com/tags/index/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://blog.wisekee.com/tags/index/</guid>
+      <guid>https://blog.wisekee.com/tags/index/</guid>
       <description></description>
     </item>
     
