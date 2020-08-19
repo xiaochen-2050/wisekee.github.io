@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hugo on Life times</title>
+    <title>hugo on Xiao.chen</title>
     <link>https://blog.wisekee.com/tags/hugo/</link>
-    <description>Recent content in hugo on Life times</description>
+    <description>Recent content in hugo on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
     <lastBuildDate>Sun, 16 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.wisekee.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +17,7 @@
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/post/hugo-usage-issues/</guid>
-      <description>Usage scene  In my github repo initialize two repos  One to storage Hugo sourcecode and markdown files And other one use release finaly site resources   Has two folders themes and public as github submodes 1 git submoduld update --init   </description>
+      <description>Usage scene  In my github repo initialize two repos  One to storage Hugo sourcecode and markdown files And other one use release finaly site resources   Has two folders themes and public as github submodes 1 git submodule add https://github.com/don.chen/DbConnector 2 git submodule update --init   </description>
     </item>
     
   </channel>

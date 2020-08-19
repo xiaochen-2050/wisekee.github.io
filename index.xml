@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Life times</title>
+    <title>Xiao.chen</title>
     <link>https://blog.wisekee.com/</link>
-    <description>Recent content on Life times</description>
+    <description>Recent content on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved.</copyright>
+    <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
     <lastBuildDate>Sun, 16 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.wisekee.com/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +17,7 @@
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/post/hugo-usage-issues/</guid>
-      <description>Usage scene  In my github repo initialize two repos  One to storage Hugo sourcecode and markdown files And other one use release finaly site resources   Has two folders themes and public as github submodes 1 git submoduld update --init   </description>
+      <description>Usage scene  In my github repo initialize two repos  One to storage Hugo sourcecode and markdown files And other one use release finaly site resources   Has two folders themes and public as github submodes 1 git submodule add https://github.com/don.chen/DbConnector 2 git submodule update --init   </description>
     </item>
     
     <item>
@@ -80,9 +80,8 @@
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/about/</guid>
-      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
-Hugo makes use of a variety of open source projects including:
- https://github.</description>
+      <description>I have 13 years of working experience in the IT industry in China from Qbasic language in high school to Foxbase,PowerBuilder and other traditional C/S software development tool sets. With the vigorous development of Internet, ASP language has been used to make dynamic website since 2002. Later, I turned to PHP, a powerful WEB development language, and led the development of Online education websites.
+Around 2011, as Java becomes more and more powerful in the web development space.</description>
     </item>
     
   </channel>
