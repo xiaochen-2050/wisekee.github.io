@@ -143,13 +143,15 @@
 <li>And other one use release finaly site resources</li>
 </ul>
 </li>
-<<<<<<< HEAD
 <li>
 <p>Has two folders themes and public as github submodes</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>   git submodule add https://github.com/don.chen/blog.github.io public
 <span class="ln">2</span>   git submodule update --init
-</code></pre></div><p>and every time wited markdown article  and execute <code>git submodule update</code></p>
-</li>
+</code></pre></div><p>and every time wited markdown article  and execute</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>git submodule update
+<span class="ln">2</span>cd public &amp;&amp; git add . &amp;&amp; git commit -am &#34;something is added&#34;
+<span class="ln">3</span>git push origin HEAD:master
+</code></pre></div></li>
 <li>
 <p>Prepare <code>deploy.sh</code>script to automatic generate site and commit</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln"> 1</span>    <span class="c1">#!/bin/sh</span>
@@ -178,12 +180,6 @@
 <span class="ln">24</span><span class="c1"># Push source and build repos.</span>
 <span class="ln">25</span>git push origin master
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></div></li>
-=======
-<li>Has two folders themes and public as github submodes
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>   git submodule add https://github.com/don.chen/DbConnector
-<span class="ln">2</span>   git submodule update --init
-</code></pre></div></li>
->>>>>>> 9cfdf92951e98bd9ccc324eb92ab4d446042ba7c
 </ul>
 
   </article>
