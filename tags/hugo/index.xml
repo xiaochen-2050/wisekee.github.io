@@ -17,10 +17,14 @@
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/post/hugo-usage-issues/</guid>
+<<<<<<< HEAD
       <description>Usage scene   In my github repo initialize two repos
  One to storage Hugo sourcecode and markdown files And other one use release finaly site resources    Has two folders themes and public as github submodes
 1 git submodule add https://github.com/don.chen/blog.github.io public 2 git submodule update --init and every time wited markdown article and execute git submodule update
   Prepare deploy.shscript to automatic generate site and commit</description>
+=======
+      <description>Usage scene  In my github repo initialize two repos  One to storage Hugo sourcecode and markdown files And other one use release finaly site resources   Has two folders themes and public as github submodes 1 git submodule add https://github.com/don.chen/DbConnector 2 git submodule update --init   </description>
+>>>>>>> 9cfdf92951e98bd9ccc324eb92ab4d446042ba7c
     </item>
     
   </channel>
