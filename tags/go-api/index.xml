@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kubernetes on Xiao.chen</title>
-    <link>https://blog.wisekee.com/tags/kubernetes/</link>
-    <description>Recent content in Kubernetes on Xiao.chen</description>
+    <title>GO api on Xiao.chen</title>
+    <link>https://blog.wisekee.com/tags/go-api/</link>
+    <description>Recent content in GO api on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
     <lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://blog.wisekee.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.wisekee.com/tags/go-api/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       <guid>https://blog.wisekee.com/post/generate-crds-api-k8s/</guid>
       <description>Why does this article exist because when we use Kubesphere. the go client code need to use the client objects of K8s but dosen&amp;rsquo;t provider the s2ibinary object client code. https://github.com/kubesphere/s2ioperator/tree/master/pkg/client/clientset/versioned/typed/devops/v1alpha1
   Prepare directory structure and resource defination files    The doc.go include content:  1// +k8s:deepcopy-gen=package,register 2// +k8s:defaulter-gen=TypeMeta 3// +groupName=devops.kubesphere.io 4package v1alpha1  The register.go main defination custom resources GroupName and GroupVersion  1package v1alpha1 2 3import ( 4 &amp;#34;k8s.</description>
-    </item>
-    
-    <item>
-      <title>Install and setup cloud foundry in kubernetes cluster</title>
-      <link>https://blog.wisekee.com/post/setup-cloudfoundry-in-k8s/</link>
-      <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.wisekee.com/post/setup-cloudfoundry-in-k8s/</guid>
-      <description>First prepare the tools installation in host:  Kind: https://kind.sigs.k8s.io/docs/user/quick-start/ Cf command: https://docs.cloudfoundry.org/cf-cli/install-go-cli.html Kubectl command: https://kubernetes.io/docs/tasks/tools/install-kubectl/ Helm: https://helm.sh/docs/intro/install/  The Kind must definiation config.yml, refer to expose http(80) and https(443) ports to host machine, because the k8s cluster node ip is internal-ip created by Kind such as: 172.18.0.2
-1kind:Cluster2apiVersion:kind.x-k8s.io/v1alpha43networking:4# WARNING: It is _strongly_ recommended that you keep this the default5# (127.0.0.1) for security reasons. However it is possible to change this.</description>
     </item>
     
   </channel>

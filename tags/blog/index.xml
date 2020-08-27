@@ -20,7 +20,7 @@
       <description>Usage scene   In my github repo initialize two repos
  One to storage Hugo sourcecode and markdown files And other one use release finaly site resources    Has two folders themes and public as github submodes
 1 git submodule add https://github.com/don.chen/blog.github.io public 2 git submodule update --init and every time wited markdown article and execute
-1git submodule update public 2cd public &amp;amp;&amp;amp; git add . &amp;amp;&amp;amp; git commit -am &amp;#34;something is added&amp;#34; 3git push origin HEAD:master   Prepare deploy.</description>
+1git submodule update public 2git pull origin master 3cd public &amp;amp;&amp;amp; git add .</description>
     </item>
     
   </channel>
