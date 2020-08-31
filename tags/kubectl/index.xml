@@ -13,10 +13,10 @@
     
     <item>
       <title>kubernetes operations command summary</title>
-      <link>https://blog.wisekee.com/post/k8s-common-command-conclusion/</link>
+      <link>https://blog.wisekee.com/blog/kubernetes-operations-command-summary/</link>
       <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.wisekee.com/post/k8s-common-command-conclusion/</guid>
+      <guid>https://blog.wisekee.com/blog/kubernetes-operations-command-summary/</guid>
       <description>When we use the Kubernetes platform,has many commands is important:
  The k command is alias to kubectl
    force delete pod, sometimes the pod still terminating.

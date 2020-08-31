@@ -13,10 +13,10 @@
     
     <item>
       <title>Install and setup cloud foundry in kubernetes cluster</title>
-      <link>https://blog.wisekee.com/post/setup-cloudfoundry-in-k8s/</link>
+      <link>https://blog.wisekee.com/blog/install-and-setup-cloud-foundry-in-kubernetes-cluster/</link>
       <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.wisekee.com/post/setup-cloudfoundry-in-k8s/</guid>
+      <guid>https://blog.wisekee.com/blog/install-and-setup-cloud-foundry-in-kubernetes-cluster/</guid>
       <description>First prepare the tools installation in host:  Kind: https://kind.sigs.k8s.io/docs/user/quick-start/ Cf command: https://docs.cloudfoundry.org/cf-cli/install-go-cli.html  HOMEBREW_NO_AUTO_UPDATE=1 brew install cloudfoundry/tap/cf-cli@6 or HOMEBREW_NO_AUTO_UPDATE=1 brew install cloudfoundry/tap/cf-cli@7   Kubectl command: https://kubernetes.io/docs/tasks/tools/install-kubectl/ Helm: https://helm.sh/docs/intro/install/  The Kind must definiation config.yml, refer to expose http(80) and https(443) ports to host machine, because the k8s cluster node ip is internal-ip created by Kind such as: 172.18.0.2
 1kind:Cluster2apiVersion:kind.x-k8s.io/v1alpha43networking:4# WARNING: It is _strongly_ recommended that you keep this the default5# (127.</description>
     </item>

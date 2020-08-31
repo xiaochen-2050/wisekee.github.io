@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-figures="">
-  <head>  <title>404 Page not found | Xiao.chen</title>
+<html lang="en" data-figures="" class="page">
+  <head>  <title>kubernetes operations command summary | Xiao.chen</title>
   <meta charset='utf-8'>
   <meta name="generator" content="Hugo 0.74.1" />
   <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
@@ -12,15 +12,16 @@
   gtag('js', new Date());
   gtag('config', '176839538');
 </script>
+  
 <meta property = "og:locale" content = "en_US" />
 <meta property="og:type" content="article">
-<meta name="description" content="">
+<meta name="description" content="Kubernetes operations command summary">
 <meta name = "twitter:card" content = "summary" />
 <meta name = "twitter:creator" content = "">
-<meta name = "twitter:title" content = "404 Page not found" />
-<meta property = "og:url" content = "https://blog.wisekee.com/404.html" />
-<meta property = "og:title" content = "404 Page not found" />
-<meta property = "og:description" content = "" />
+<meta name = "twitter:title" content = "kubernetes operations command summary" />
+<meta property = "og:url" content = "https://blog.wisekee.com/blog/kubernetes-operations-command-summary/" />
+<meta property = "og:title" content = "kubernetes operations command summary" />
+<meta property = "og:description" content = "Kubernetes operations command summary" />
 <meta property = "og:image" content = "https://blog.wisekee.com/images/thumbnail.png" />
 <link rel='apple-touch-icon' sizes='180x180' href='https://blog.wisekee.com/icons/apple-touch-icon.png'>
 <link rel='icon' type='image/png' sizes='32x32' href='https://blog.wisekee.com/icons/favicon-32x32.png'>
@@ -30,7 +31,7 @@
 <meta name="msapplication-TileColor" content="#002538">
 <meta name="theme-color" content="#002538">
 
-  <link rel='canonical' href='https://blog.wisekee.com/404.html'>
+  <link rel='canonical' href='https://blog.wisekee.com/blog/kubernetes-operations-command-summary/'>
     
 
     
@@ -87,12 +88,179 @@
 </header>
 
     <main>
-<div class = 'never wrap'>
-  <h1>Lost</h1>
-  <p class = 'pale'>We couldn't find the page you're looking for</p><br>
-  <div class = 'button btn_back'>Go Back</div>
+  
+<div class = 'grid-inverse wrap content'>
+  <article class='post_content'>
+    <h1 class='post_title'>kubernetes operations command summary</h1><div class = 'post_meta'>
+  <svg class="icon">
+    <use xlink:href="#calendar"></use>
+  </svg>
+  <span class="post_date">
+    Aug 25, 2020</span>
+  <a href = 'https://blog.wisekee.com/tags/k8s' class = 'post_tag button button_translucent'>k8s
+  </a>
+  <a href = 'https://blog.wisekee.com/tags/kubectl' class = 'post_tag button button_translucent'>kubectl
+  </a>
+  <a href = 'https://blog.wisekee.com/tags/kubernetes' class = 'post_tag button button_translucent'>kubernetes
+  </a>
 </div>
 
+    <div class='post_share'>
+  Share on:
+  <a href="https://twitter.com/intent/tweet?text=kubernetes%20operations%20command%20summary&url=https%3a%2f%2fblog.wisekee.com%2fblog%2fkubernetes-operations-command-summary%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
+    <svg class="icon">
+      <use xlink:href="#twitter"></use>
+    </svg>
+  </a>
+  
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.wisekee.com%2fblog%2fkubernetes-operations-command-summary%2f&t=kubernetes%20operations%20command%20summary" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+    <svg class="icon">
+      <use xlink:href="#facebook"></use>
+    </svg>
+  </a>
+  <script>
+    function shareViaLinkedin() {
+      window.open('http://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent("https://blog.wisekee.com/blog/kubernetes-operations-command-summary/"), '', 'left=0,top=0,width=650,height=420,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+    }
+  </script>
+  <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow" onclick="shareViaLinkedin()">
+    <svg class="icon">
+      <use xlink:href="#linkedin"></use>
+    </svg>
+  </a>
+  <a href="https://blog.wisekee.com/blog/kubernetes-operations-command-summary/" title="Copy Link" class="link link_yank">
+    <svg class="icon">
+      <use xlink:href="#yank"></use>
+    </svg>
+  </a>
+</div>
+
+    
+    <p>When we use the Kubernetes platform,has many commands is important:</p>
+<blockquote>
+<p>The <code>k</code> command is alias to kubectl</p>
+</blockquote>
+<ul>
+<li>
+<p>force delete pod, sometimes the pod still terminating.</p>
+<p><code>k delete pods &lt;pod&gt; -n &lt;namespace&gt; --grace-period=0 --force</code></p>
+</li>
+<li>
+<p>get all resource in current kubernetes cluster</p>
+<p><code>k get all --all-namespaces</code></p>
+</li>
+<li>
+<p>view job logs</p>
+<p><code>k logs $(k get pods --selector=job-name=job-1598792400 --output=jsonpath={.items[*].metadata.name})</code></p>
+</li>
+<li>
+<p>taint the master nodes no execute and no schedult</p>
+<p><code>kubectl taint nodes &lt;node-name&gt; node-role.kubernetes.io/master=:NoExecute</code></p>
+<p><code>kubectl taint nodes &lt;node-name&gt; node-role.kubernetes.io/master=:NoSchedule</code></p>
+</li>
+<li>
+<p>no schedule on nodes: SchedulingDisabled</p>
+<p><code>k get nodes</code></p>
+<p><code>k cordon &lt;node name&gt;</code></p>
+<p><code>k uncordon &lt;node name&gt;</code> # cancel cordon back to normal</p>
+</li>
+<li>
+<p>when shutdown the nodes first exec</p>
+<p><code>k drain &lt;node name&gt;</code></p>
+</li>
+</ul>
+
+  </article>
+<aside class="sidebar">
+  <section class="sidebar_inner">
+    
+    <h2>Xiao.chen</h2>
+    <div>
+      DevOps Engineer,Web development instructor
+    </div>
+    <a href = 'https://blog.wisekee.com/about/' class="button mt-1" role="button">Read More</a>
+    <h2 class="mt-4">Featured Posts</h2>
+    
+    <ul>
+    
+    </ul>
+    <h2 class="mt-4">Recent Posts</h2>
+    <ul class="flex-column">
+      
+      <li>
+        <a href="https://blog.wisekee.com/blog/automatic-generate-kubernetes-custom-resources-api-go-language-code/" class="nav-link">Automatic generate kubernetes custom resources api go language code</a>
+      </li>
+      <li>
+        <a href="https://blog.wisekee.com/blog/install-and-setup-cloud-foundry-in-kubernetes-cluster/" class="nav-link">Install and setup cloud foundry in kubernetes cluster</a>
+      </li>
+      <li>
+        <a href="https://blog.wisekee.com/blog/hugo-usage-issues-summary/" class="nav-link">Hugo usage issues summary</a>
+      </li>
+    </ul> 
+    
+    <div>
+      <h2 class="mt-4 taxonomy" id="categories-section">categories</h2>
+      <nav class="tags_nav">
+        
+      </nav>
+    </div>
+    
+    <div>
+      <h2 class="mt-4 taxonomy" id="tags-section">tags</h2>
+      <nav class="tags_nav">
+        <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent">
+          KUBERNETES
+          <span class='button_tally'>3</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/blog/' class=" post_tag button button_translucent">
+          BLOG
+          <span class='button_tally'>1</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/cloud-foundry/' class=" post_tag button button_translucent">
+          CLOUD-FOUNDRY
+          <span class='button_tally'>1</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/custom-resources/' class=" post_tag button button_translucent">
+          CUSTOM-RESOURCES
+          <span class='button_tally'>1</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/go-api/' class=" post_tag button button_translucent">
+          GO-API
+          <span class='button_tally'>1</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/hugo/' class=" post_tag button button_translucent">
+          HUGO
+          <span class='button_tally'>1</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/index/' class=" post_tag button button_translucent">
+          INDEX
+          <span class='button_tally'>1</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent">
+          K8S
+          <span class='button_tally'>1</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/kubectl/' class=" post_tag button button_translucent">
+          KUBECTL
+          <span class='button_tally'>1</span>
+        </a>
+        
+        
+      </nav>
+    </div>
+    
+  </section>
+</aside>
+
+</div>
     </main><svg width="0" height="0" class="hidden">
   <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
     <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>

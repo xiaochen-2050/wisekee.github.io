@@ -13,10 +13,10 @@
     
     <item>
       <title>kubernetes operations command summary</title>
-      <link>https://blog.wisekee.com/post/k8s-common-command-conclusion/</link>
+      <link>https://blog.wisekee.com/blog/kubernetes-operations-command-summary/</link>
       <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.wisekee.com/post/k8s-common-command-conclusion/</guid>
+      <guid>https://blog.wisekee.com/blog/kubernetes-operations-command-summary/</guid>
       <description>When we use the Kubernetes platform,has many commands is important:
  The k command is alias to kubectl
    force delete pod, sometimes the pod still terminating.
@@ -30,20 +30,20 @@ k logs $(k get pods --selector=job-name=job-1598792400 --output=jsonpath={.items
     
     <item>
       <title>Automatic generate kubernetes custom resources api go language code</title>
-      <link>https://blog.wisekee.com/post/generate-crds-api-k8s/</link>
+      <link>https://blog.wisekee.com/blog/automatic-generate-kubernetes-custom-resources-api-go-language-code/</link>
       <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.wisekee.com/post/generate-crds-api-k8s/</guid>
+      <guid>https://blog.wisekee.com/blog/automatic-generate-kubernetes-custom-resources-api-go-language-code/</guid>
       <description>Why does this article exist because when we use Kubesphere. the go client code need to use the client objects of K8s but dosen&amp;rsquo;t provider the s2ibinary object client code. https://github.com/kubesphere/s2ioperator/tree/master/pkg/client/clientset/versioned/typed/devops/v1alpha1
   Prepare directory structure and resource defination files    The doc.go include content:  1// +k8s:deepcopy-gen=package,register 2// +k8s:defaulter-gen=TypeMeta 3// +groupName=devops.kubesphere.io 4package v1alpha1  The register.go main defination custom resources GroupName and GroupVersion  1package v1alpha1 2 3import ( 4 &amp;#34;k8s.</description>
     </item>
     
     <item>
       <title>Install and setup cloud foundry in kubernetes cluster</title>
-      <link>https://blog.wisekee.com/post/setup-cloudfoundry-in-k8s/</link>
+      <link>https://blog.wisekee.com/blog/install-and-setup-cloud-foundry-in-kubernetes-cluster/</link>
       <pubDate>Thu, 20 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.wisekee.com/post/setup-cloudfoundry-in-k8s/</guid>
+      <guid>https://blog.wisekee.com/blog/install-and-setup-cloud-foundry-in-kubernetes-cluster/</guid>
       <description>First prepare the tools installation in host:  Kind: https://kind.sigs.k8s.io/docs/user/quick-start/ Cf command: https://docs.cloudfoundry.org/cf-cli/install-go-cli.html  HOMEBREW_NO_AUTO_UPDATE=1 brew install cloudfoundry/tap/cf-cli@6 or HOMEBREW_NO_AUTO_UPDATE=1 brew install cloudfoundry/tap/cf-cli@7   Kubectl command: https://kubernetes.io/docs/tasks/tools/install-kubectl/ Helm: https://helm.sh/docs/intro/install/  The Kind must definiation config.yml, refer to expose http(80) and https(443) ports to host machine, because the k8s cluster node ip is internal-ip created by Kind such as: 172.18.0.2
 1kind:Cluster2apiVersion:kind.x-k8s.io/v1alpha43networking:4# WARNING: It is _strongly_ recommended that you keep this the default5# (127.</description>
     </item>

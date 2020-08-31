@@ -23,7 +23,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wisekee.com/post/k8s-common-command-conclusion/</loc>
+    <loc>https://blog.wisekee.com/blog/kubernetes-operations-command-summary/</loc>
     <lastmod>2020-08-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wisekee.com/post/generate-crds-api-k8s/</loc>
+    <loc>https://blog.wisekee.com/blog/automatic-generate-kubernetes-custom-resources-api-go-language-code/</loc>
     <lastmod>2020-08-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -58,7 +58,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wisekee.com/post/setup-cloudfoundry-in-k8s/</loc>
+    <loc>https://blog.wisekee.com/blog/install-and-setup-cloud-foundry-in-kubernetes-cluster/</loc>
     <lastmod>2020-08-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -73,7 +73,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wisekee.com/post/hugo-usage-issues/</loc>
+    <loc>https://blog.wisekee.com/blog/hugo-usage-issues-summary/</loc>
     <lastmod>2020-08-16T00:00:00+00:00</lastmod>
   </url>
   

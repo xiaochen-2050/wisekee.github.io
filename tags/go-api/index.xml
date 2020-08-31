@@ -13,10 +13,10 @@
     
     <item>
       <title>Automatic generate kubernetes custom resources api go language code</title>
-      <link>https://blog.wisekee.com/post/generate-crds-api-k8s/</link>
+      <link>https://blog.wisekee.com/blog/automatic-generate-kubernetes-custom-resources-api-go-language-code/</link>
       <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.wisekee.com/post/generate-crds-api-k8s/</guid>
+      <guid>https://blog.wisekee.com/blog/automatic-generate-kubernetes-custom-resources-api-go-language-code/</guid>
       <description>Why does this article exist because when we use Kubesphere. the go client code need to use the client objects of K8s but dosen&amp;rsquo;t provider the s2ibinary object client code. https://github.com/kubesphere/s2ioperator/tree/master/pkg/client/clientset/versioned/typed/devops/v1alpha1
   Prepare directory structure and resource defination files    The doc.go include content:  1// +k8s:deepcopy-gen=package,register 2// +k8s:defaulter-gen=TypeMeta 3// +groupName=devops.kubesphere.io 4package v1alpha1  The register.go main defination custom resources GroupName and GroupVersion  1package v1alpha1 2 3import ( 4 &amp;#34;k8s.</description>
     </item>

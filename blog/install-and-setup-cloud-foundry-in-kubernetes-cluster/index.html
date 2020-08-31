@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-figures="">
-  <head>  <title>Posts | Xiao.chen</title>
+<html lang="en" data-figures="" class="page">
+  <head>  <title>Install and setup cloud foundry in kubernetes cluster | Xiao.chen</title>
   <meta charset='utf-8'>
   <meta name="generator" content="Hugo 0.74.1" />
   <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
@@ -15,13 +15,13 @@
   
 <meta property = "og:locale" content = "en_US" />
 <meta property="og:type" content="article">
-<meta name="description" content="">
+<meta name="description" content="Use Helm and Kind test cloud foundry installation in kubernetes environment">
 <meta name = "twitter:card" content = "summary" />
 <meta name = "twitter:creator" content = "">
-<meta name = "twitter:title" content = "Posts" />
-<meta property = "og:url" content = "https://blog.wisekee.com/post/" />
-<meta property = "og:title" content = "Posts" />
-<meta property = "og:description" content = "" />
+<meta name = "twitter:title" content = "Install and setup cloud foundry in kubernetes cluster" />
+<meta property = "og:url" content = "https://blog.wisekee.com/blog/install-and-setup-cloud-foundry-in-kubernetes-cluster/" />
+<meta property = "og:title" content = "Install and setup cloud foundry in kubernetes cluster" />
+<meta property = "og:description" content = "Use Helm and Kind test cloud foundry installation in kubernetes environment" />
 <meta property = "og:image" content = "https://blog.wisekee.com/images/thumbnail.png" />
 <link rel='apple-touch-icon' sizes='180x180' href='https://blog.wisekee.com/icons/apple-touch-icon.png'>
 <link rel='icon' type='image/png' sizes='32x32' href='https://blog.wisekee.com/icons/favicon-32x32.png'>
@@ -31,7 +31,7 @@
 <meta name="msapplication-TileColor" content="#002538">
 <meta name="theme-color" content="#002538">
 
-  <link rel='canonical' href='https://blog.wisekee.com/post/'>
+  <link rel='canonical' href='https://blog.wisekee.com/blog/install-and-setup-cloud-foundry-in-kubernetes-cluster/'>
     
 
     
@@ -88,86 +88,10 @@
 </header>
 
     <main>
-
-<div class='grid-inverse wrap content'>
-  <ul class='posts' id = 'posts'>
-      
-<li class = 'post_item'>
-  <div class = 'excerpt'>
-    <div class = 'excerpt_header'>
-      <h3 class = 'post_link'>
-        <a href='https://blog.wisekee.com/blog/kubernetes-operations-command-summary/'>kubernetes operations command summary</a>
-      </h3>
-      <div class = 'post_meta'>
-  <svg class="icon">
-    <use xlink:href="#calendar"></use>
-  </svg>
-  <span class="post_date">
-    Aug 25, 2020</span>
-  <a href = 'https://blog.wisekee.com/tags/k8s' class = 'post_tag button button_translucent'>k8s
-  </a>
-  <a href = 'https://blog.wisekee.com/tags/kubectl' class = 'post_tag button button_translucent'>kubectl
-  </a>
-  <a href = 'https://blog.wisekee.com/tags/kubernetes' class = 'post_tag button button_translucent'>kubernetes
-  </a>
-</div>
-
-    </div>
-      <div class = 'excerpt_footer'>
-        <div>
-          <p class = 'pale'>When we use the Kubernetes platform,has many commands is important:
- The k command is alias to kubectl
-   force delete pod, sometimes the pod still terminating.
-k delete pods &lt;pod&gt; -n &lt;namespace&gt; --grace-period=0 --force
-  get all resource in current kubernetes cluster
-k get all --all-namespaces
-  view job …</p>
-          <a href='https://blog.wisekee.com/blog/kubernetes-operations-command-summary/' class='excerpt_more button'>Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
   
-      
-<li class = 'post_item'>
-  <div class = 'excerpt'>
-    <div class = 'excerpt_header'>
-      <h3 class = 'post_link'>
-        <a href='https://blog.wisekee.com/blog/automatic-generate-kubernetes-custom-resources-api-go-language-code/'>Automatic generate kubernetes custom resources api go language code</a>
-      </h3>
-      <div class = 'post_meta'>
-  <svg class="icon">
-    <use xlink:href="#calendar"></use>
-  </svg>
-  <span class="post_date">
-    Aug 22, 2020</span>
-  <a href = 'https://blog.wisekee.com/tags/kubernetes' class = 'post_tag button button_translucent'>Kubernetes
-  </a>
-  <a href = 'https://blog.wisekee.com/tags/custom-resources' class = 'post_tag button button_translucent'>Custom Resources
-  </a>
-  <a href = 'https://blog.wisekee.com/tags/go-api' class = 'post_tag button button_translucent'>GO api
-  </a>
-</div>
-
-    </div>
-      <div class = 'excerpt_footer'>
-        <div>
-          <p class = 'pale'>Why does this article exist because when we use Kubesphere. the go client code need to use the client objects of K8s but dosen&rsquo;t provider the s2ibinary object client code. https://github.com/kubesphere/s2ioperator/tree/master/pkg/client/clientset/versioned/typed/devops/v1alpha1
-  Prepare directory structure and …</p>
-          <a href='https://blog.wisekee.com/blog/automatic-generate-kubernetes-custom-resources-api-go-language-code/' class='excerpt_more button'>Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-  
-      
-<li class = 'post_item'>
-  <div class = 'excerpt'>
-    <div class = 'excerpt_header'>
-      <h3 class = 'post_link'>
-        <a href='https://blog.wisekee.com/blog/install-and-setup-cloud-foundry-in-kubernetes-cluster/'>Install and setup cloud foundry in kubernetes cluster</a>
-      </h3>
-      <div class = 'post_meta'>
+<div class = 'grid-inverse wrap content'>
+  <article class='post_content'>
+    <h1 class='post_title'>Install and setup cloud foundry in kubernetes cluster</h1><div class = 'post_meta'>
   <svg class="icon">
     <use xlink:href="#calendar"></use>
   </svg>
@@ -179,52 +103,122 @@ k get all --all-namespaces
   </a>
 </div>
 
-    </div>
-      <div class = 'excerpt_footer'>
-        <div>
-          <p class = 'pale'>First prepare the tools installation in host:  Kind: https://kind.sigs.k8s.io/docs/user/quick-start/ Cf command: https://docs.cloudfoundry.org/cf-cli/install-go-cli.html  HOMEBREW_NO_AUTO_UPDATE=1 brew install cloudfoundry/tap/cf-cli@6 or HOMEBREW_NO_AUTO_UPDATE=1 brew install cloudfoundry/tap/cf-cli@7   Kubectl …</p>
-          <a href='https://blog.wisekee.com/blog/install-and-setup-cloud-foundry-in-kubernetes-cluster/' class='excerpt_more button'>Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-  
-      
-<li class = 'post_item'>
-  <div class = 'excerpt'>
-    <div class = 'excerpt_header'>
-      <h3 class = 'post_link'>
-        <a href='https://blog.wisekee.com/blog/hugo-usage-issues-summary/'>Hugo usage issues summary</a>
-      </h3>
-      <div class = 'post_meta'>
-  <svg class="icon">
-    <use xlink:href="#calendar"></use>
-  </svg>
-  <span class="post_date">
-    Aug 16, 2020</span>
-  <a href = 'https://blog.wisekee.com/tags/blog' class = 'post_tag button button_translucent'>blog
+    <div class='post_share'>
+  Share on:
+  <a href="https://twitter.com/intent/tweet?text=Install%20and%20setup%20cloud%20foundry%20in%20kubernetes%20cluster&url=https%3a%2f%2fblog.wisekee.com%2fblog%2finstall-and-setup-cloud-foundry-in-kubernetes-cluster%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
+    <svg class="icon">
+      <use xlink:href="#twitter"></use>
+    </svg>
   </a>
-  <a href = 'https://blog.wisekee.com/tags/hugo' class = 'post_tag button button_translucent'>hugo
+  
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.wisekee.com%2fblog%2finstall-and-setup-cloud-foundry-in-kubernetes-cluster%2f&t=Install%20and%20setup%20cloud%20foundry%20in%20kubernetes%20cluster" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+    <svg class="icon">
+      <use xlink:href="#facebook"></use>
+    </svg>
+  </a>
+  <script>
+    function shareViaLinkedin() {
+      window.open('http://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent("https://blog.wisekee.com/blog/install-and-setup-cloud-foundry-in-kubernetes-cluster/"), '', 'left=0,top=0,width=650,height=420,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+    }
+  </script>
+  <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow" onclick="shareViaLinkedin()">
+    <svg class="icon">
+      <use xlink:href="#linkedin"></use>
+    </svg>
+  </a>
+  <a href="https://blog.wisekee.com/blog/install-and-setup-cloud-foundry-in-kubernetes-cluster/" title="Copy Link" class="link link_yank">
+    <svg class="icon">
+      <use xlink:href="#yank"></use>
+    </svg>
   </a>
 </div>
 
-    </div>
-      <div class = 'excerpt_footer'>
-        <div>
-          <p class = 'pale'>Usage scene   In my github repo initialize two repos
- One to storage Hugo sourcecode and markdown files And other one use release finaly site resources    Has two folders themes and public as github submodes
-1 git submodule add https://github.com/don.chen/blog.github.io public 2 git submodule update --init and every …</p>
-          <a href='https://blog.wisekee.com/blog/hugo-usage-issues-summary/' class='excerpt_more button'>Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-  
-    <li>
+    
+    <h3 id="first-prepare-the-tools-installation-in-host">First prepare the tools installation in host:</h3>
+<ul>
+<li>Kind: <a href="https://kind.sigs.k8s.io/docs/user/quick-start/">https://kind.sigs.k8s.io/docs/user/quick-start/</a></li>
+<li>Cf command: <a href="https://docs.cloudfoundry.org/cf-cli/install-go-cli.html">https://docs.cloudfoundry.org/cf-cli/install-go-cli.html</a>
+<ul>
+<li><code>HOMEBREW_NO_AUTO_UPDATE=1 brew install cloudfoundry/tap/cf-cli@6</code> or <code>HOMEBREW_NO_AUTO_UPDATE=1 brew install cloudfoundry/tap/cf-cli@7</code></li>
+</ul>
+</li>
+<li>Kubectl command: <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">https://kubernetes.io/docs/tasks/tools/install-kubectl/</a></li>
+<li>Helm: <a href="https://helm.sh/docs/intro/install/">https://helm.sh/docs/intro/install/</a></li>
+</ul>
+<p>The Kind must definiation config.yml, refer to expose http(80) and https(443) ports to host machine, because the k8s cluster node ip is internal-ip created by Kind such as: 172.18.0.2</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="ln"> 1</span><span class="k">kind</span><span class="p">:</span><span class="w"> </span>Cluster<span class="w">
+</span><span class="ln"> 2</span><span class="w"></span><span class="k">apiVersion</span><span class="p">:</span><span class="w"> </span>kind.x-k8s.io/v1alpha4<span class="w">
+</span><span class="ln"> 3</span><span class="w"></span><span class="k">networking</span><span class="p">:</span><span class="w">
+</span><span class="ln"> 4</span><span class="w">  </span><span class="c"># WARNING: It is _strongly_ recommended that you keep this the default</span><span class="w">
+</span><span class="ln"> 5</span><span class="w">  </span><span class="c"># (127.0.0.1) for security reasons. However it is possible to change this.</span><span class="w">
+</span><span class="ln"> 6</span><span class="w">  </span><span class="k">apiServerAddress</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Host external ip&#34;</span><span class="w">
+</span><span class="ln"> 7</span><span class="w">  </span><span class="c"># This can connect to k8s from external when install kind in virtual host or cloud platform(ec2 of aws)</span><span class="w">
+</span><span class="ln"> 8</span><span class="w">  </span><span class="c"># By default the API server listens on a random open port.</span><span class="w">
+</span><span class="ln"> 9</span><span class="w">  </span><span class="c"># You may choose a specific port but probably don&#39;t need to in most cases.</span><span class="w">
+</span><span class="ln">10</span><span class="w">  </span><span class="c"># Using a random port makes it easier to spin up multiple clusters.</span><span class="w">
+</span><span class="ln">11</span><span class="w">  </span><span class="k">apiServerPort</span><span class="p">:</span><span class="w"> </span><span class="m">6443</span><span class="w">
+</span><span class="ln">12</span><span class="w"></span><span class="k">nodes</span><span class="p">:</span><span class="w">
+</span><span class="ln">13</span><span class="w"></span>- <span class="k">role</span><span class="p">:</span><span class="w"> </span>control-plane<span class="w">
+</span><span class="ln">14</span><span class="w">  </span><span class="c"># port forward 80 on the host to 80 on this node</span><span class="w">
+</span><span class="ln">15</span><span class="w">  </span><span class="k">extraPortMappings</span><span class="p">:</span><span class="w">
+</span><span class="ln">16</span><span class="w">  </span>- <span class="k">containerPort</span><span class="p">:</span><span class="w"> </span><span class="m">80</span><span class="w">
+</span><span class="ln">17</span><span class="w">    </span><span class="k">hostPort</span><span class="p">:</span><span class="w"> </span><span class="m">80</span><span class="w">
+</span><span class="ln">18</span><span class="w">    </span><span class="c"># optional: set the bind address on the host</span><span class="w">
+</span><span class="ln">19</span><span class="w">    </span><span class="c"># 0.0.0.0 is the current default</span><span class="w">
+</span><span class="ln">20</span><span class="w">    </span><span class="k">listenAddress</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;0.0.0.0&#34;</span><span class="w">
+</span><span class="ln">21</span><span class="w">    </span><span class="c"># optional: set the protocol to one of TCP, UDP, SCTP.</span><span class="w">
+</span><span class="ln">22</span><span class="w">    </span><span class="c"># TCP is the default</span><span class="w">
+</span><span class="ln">23</span><span class="w">    </span><span class="k">protocol</span><span class="p">:</span><span class="w"> </span>TCP<span class="w">
+</span><span class="ln">24</span><span class="w">  </span>- <span class="k">containerPort</span><span class="p">:</span><span class="w"> </span><span class="m">443</span><span class="w">
+</span><span class="ln">25</span><span class="w">    </span><span class="k">hostPort</span><span class="p">:</span><span class="w"> </span><span class="m">443</span><span class="w">
+</span><span class="ln">26</span><span class="w">    </span><span class="k">listenAddress</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;0.0.0.0&#34;</span><span class="w">
+</span><span class="ln">27</span><span class="w">    </span><span class="k">protocol</span><span class="p">:</span><span class="w"> </span>TCP<span class="w">
+</span></code></pre></div><blockquote>
+<p>execute command create cluster: <code>kind create cluster --name kubecf --config kind.yaml</code></p>
+</blockquote>
+<p>In order to <a href="https://kubecf.suse.dev/docs/tutorials/deploy-kind/">https://kubecf.suse.dev/docs/tutorials/deploy-kind/</a> tutorial. setup environment. But need to change something configuration and verstion.
+Use newest version for cf-operator and kubecf, through this repo url view release detail:</p>
+<ul>
+<li>cf-operator: <a href="https://github.com/cloudfoundry-incubator/quarks-operator/releases">https://github.com/cloudfoundry-incubator/quarks-operator/releases</a></li>
+<li>kubecf: <a href="https://github.com/cloudfoundry-incubator/kubecf/releases">https://github.com/cloudfoundry-incubator/kubecf/releases</a></li>
+</ul>
+<h4 id="the-helm-install--look-likes-following">The helm install  look likes following:</h4>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln"> 1</span>  helm install cf-operator <span class="se">\
+</span><span class="ln"> 2</span><span class="se"></span>     --namespace cfo <span class="se">\
+</span><span class="ln"> 3</span><span class="se"></span>     --set <span class="s2">&#34;global.singleNamespace.name=kubecf&#34;</span> <span class="se">\
+</span><span class="ln"> 4</span><span class="se"></span>     https://cf-operators.s3.amazonaws.com/helm-charts/cf-operator-5.0.0%2B0.gd7ac12bc.tgz
+<span class="ln"> 5</span>
+<span class="ln"> 6</span>  helm install kubecf <span class="se">\
+</span><span class="ln"> 7</span><span class="se"></span>     --namespace kubecf <span class="se">\
+</span><span class="ln"> 8</span><span class="se"></span>     --set <span class="s2">&#34;system_domain=kubecf.example.com&#34;</span> <span class="se">\
+</span><span class="ln"> 9</span><span class="se"></span>     --set <span class="s2">&#34;features.eirini.enabled=true&#34;</span> <span class="se">\
+</span><span class="ln">10</span><span class="se"></span>     --set <span class="s2">&#34;features.ingress.enabled=true&#34;</span> <span class="se">\
+</span><span class="ln">11</span><span class="se"></span>     https://kubecf.s3.amazonaws.com/kubecf-v2.3.0.tgz
+</code></pre></div><h4 id="add-the-nginx-ingress-component">Add the nginx ingress component</h4>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+<span class="ln">2</span>
+<span class="ln">3</span>helm install  ingress ingress-nginx/ingress-nginx <span class="se">\
+</span><span class="ln">4</span><span class="se"></span>--namespace ingress <span class="se">\
+</span><span class="ln">5</span><span class="se"></span>--set <span class="s2">&#34;tcp.2222=kubecf/scheduler:2222&#34;</span>
+</code></pre></div><h4 id="change-all-type-is-loadbalance-in-k8s-service-configuration-add-yaml-section-like-following">Change All type is loadbalance in k8s service configuration add yaml section like following:</h4>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="ln">1</span><span class="w">    </span><span class="k">externalIPs</span><span class="p">:</span><span class="w">
+</span><span class="ln">2</span><span class="w">      </span>- <span class="m">172.18.0.2</span><span class="w">
+</span></code></pre></div><p>The node_ip can get through:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>  kubectl get node kubecf-control-plane <span class="se">\
+</span><span class="ln">2</span><span class="se"></span>  --output <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{ .status.addresses[?(@.type == &#34;InternalIP&#34;)].address }&#39;</span>
+</code></pre></div><h4 id="then-change-ingress-controller-service-config">Then change ingress controller service config.</h4>
+<blockquote>
+<p>Cancel tls config: remove tls section in ingress service
+The backend servicePort change to : 80</p>
+</blockquote>
+<ul>
+<li>Resolves a list of domain names to Host external ip. such as:
+{api|login|uaa|credhub}.kubecf.example.com
+and other domain name can view: <a href="http://api.kubecf.example.com/">http://api.kubecf.example.com/</a> when kubecf is launched</li>
+</ul>
+<p>Test cf login: <code>cf login --skip-ssl-validation -a https://api.kubecf.example.com -u admin</code></p>
 
-
-    </li>
-  </ul>
+  </article>
 <aside class="sidebar">
   <section class="sidebar_inner">
     
@@ -246,9 +240,6 @@ k get all --all-namespaces
       </li>
       <li>
         <a href="https://blog.wisekee.com/blog/automatic-generate-kubernetes-custom-resources-api-go-language-code/" class="nav-link">Automatic generate kubernetes custom resources api go language code</a>
-      </li>
-      <li>
-        <a href="https://blog.wisekee.com/blog/install-and-setup-cloud-foundry-in-kubernetes-cluster/" class="nav-link">Install and setup cloud foundry in kubernetes cluster</a>
       </li>
       <li>
         <a href="https://blog.wisekee.com/blog/hugo-usage-issues-summary/" class="nav-link">Hugo usage issues summary</a>
@@ -318,8 +309,6 @@ k get all --all-namespaces
 </aside>
 
 </div>
-
-
     </main><svg width="0" height="0" class="hidden">
   <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
     <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>
