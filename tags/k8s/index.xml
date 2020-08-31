@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>k8s on Xiao.chen</title>
+    <link>https://blog.wisekee.com/tags/k8s/</link>
+    <description>Recent content in k8s on Xiao.chen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 25 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.wisekee.com/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>kubernetes operations command summary</title>
+      <link>https://blog.wisekee.com/post/k8s-common-command-conclusion/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/k8s-common-command-conclusion/</guid>
+      <description>When we use the Kubernetes platform,has many commands is important:
+ The k command is alias to kubectl
+   force delete pod, sometimes the pod still terminating.
+k delete pods &amp;lt;pod&amp;gt; -n &amp;lt;namespace&amp;gt; --grace-period=0 --force
+  get all resource in current kubernetes cluster
+k get all --all-namespaces
+  view job logs
+k logs $(k get pods --selector=job-name=job-1598792400 --output=jsonpath={.items[*].metadata.name})
+  taint the master nodes no execute and no schedult</description>
+    </item>
+    
+  </channel>
+</rss>

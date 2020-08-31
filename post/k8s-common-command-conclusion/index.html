@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-figures="" class="page">
-  <head>  <title>About | Xiao.chen</title>
+  <head>  <title>kubernetes operations command summary | Xiao.chen</title>
   <meta charset='utf-8'>
   <meta name="generator" content="Hugo 0.74.1" />
   <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
@@ -15,13 +15,13 @@
   
 <meta property = "og:locale" content = "en_US" />
 <meta property="og:type" content="article">
-<meta name="description" content="Xiao.chen DevOps Engineer,Web development instructor">
+<meta name="description" content="Kubernetes operations command summary">
 <meta name = "twitter:card" content = "summary" />
 <meta name = "twitter:creator" content = "">
-<meta name = "twitter:title" content = "About" />
-<meta property = "og:url" content = "https://blog.wisekee.com/about/" />
-<meta property = "og:title" content = "About" />
-<meta property = "og:description" content = "Xiao.chen DevOps Engineer,Web development instructor" />
+<meta name = "twitter:title" content = "kubernetes operations command summary" />
+<meta property = "og:url" content = "https://blog.wisekee.com/post/k8s-common-command-conclusion/" />
+<meta property = "og:title" content = "kubernetes operations command summary" />
+<meta property = "og:description" content = "Kubernetes operations command summary" />
 <meta property = "og:image" content = "https://blog.wisekee.com/images/thumbnail.png" />
 <link rel='apple-touch-icon' sizes='180x180' href='https://blog.wisekee.com/icons/apple-touch-icon.png'>
 <link rel='icon' type='image/png' sizes='32x32' href='https://blog.wisekee.com/icons/favicon-32x32.png'>
@@ -31,7 +31,7 @@
 <meta name="msapplication-TileColor" content="#002538">
 <meta name="theme-color" content="#002538">
 
-  <link rel='canonical' href='https://blog.wisekee.com/about/'>
+  <link rel='canonical' href='https://blog.wisekee.com/post/k8s-common-command-conclusion/'>
     
 
     
@@ -91,30 +91,36 @@
   
 <div class = 'grid-inverse wrap content'>
   <article class='post_content'>
-    <h1 class='post_title'>About</h1><div class = 'post_meta'>
+    <h1 class='post_title'>kubernetes operations command summary</h1><div class = 'post_meta'>
   <svg class="icon">
     <use xlink:href="#calendar"></use>
   </svg>
   <span class="post_date">
-    Feb 28, 2019</span>
+    Aug 25, 2020</span>
+  <a href = 'https://blog.wisekee.com/tags/k8s' class = 'post_tag button button_translucent'>k8s
+  </a>
+  <a href = 'https://blog.wisekee.com/tags/kubectl' class = 'post_tag button button_translucent'>kubectl
+  </a>
+  <a href = 'https://blog.wisekee.com/tags/kubernetes' class = 'post_tag button button_translucent'>kubernetes
+  </a>
 </div>
 
     <div class='post_share'>
   Share on:
-  <a href="https://twitter.com/intent/tweet?text=About&url=https%3a%2f%2fblog.wisekee.com%2fabout%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
+  <a href="https://twitter.com/intent/tweet?text=kubernetes%20operations%20command%20summary&url=https%3a%2f%2fblog.wisekee.com%2fpost%2fk8s-common-command-conclusion%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
     <svg class="icon">
       <use xlink:href="#twitter"></use>
     </svg>
   </a>
   
-  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.wisekee.com%2fabout%2f&t=About" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.wisekee.com%2fpost%2fk8s-common-command-conclusion%2f&t=kubernetes%20operations%20command%20summary" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
     <svg class="icon">
       <use xlink:href="#facebook"></use>
     </svg>
   </a>
   <script>
     function shareViaLinkedin() {
-      window.open('http://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent("https://blog.wisekee.com/about/"), '', 'left=0,top=0,width=650,height=420,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+      window.open('http://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent("https://blog.wisekee.com/post/k8s-common-command-conclusion/"), '', 'left=0,top=0,width=650,height=420,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
     }
   </script>
   <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow" onclick="shareViaLinkedin()">
@@ -122,7 +128,7 @@
       <use xlink:href="#linkedin"></use>
     </svg>
   </a>
-  <a href="https://blog.wisekee.com/about/" title="Copy Link" class="link link_yank">
+  <a href="https://blog.wisekee.com/post/k8s-common-command-conclusion/" title="Copy Link" class="link link_yank">
     <svg class="icon">
       <use xlink:href="#yank"></use>
     </svg>
@@ -130,21 +136,39 @@
 </div>
 
     
-    <p>I have 13 years of working experience in the IT industry in China
-from Qbasic language in high school to Foxbase,PowerBuilder and other traditional C/S software development tool sets.
-With the vigorous development of Internet, ASP language has been used to make dynamic website since 2002.
-Later, I turned to PHP, a powerful WEB development language, and led the development of Online education websites.</p>
-<p>Around 2011, as Java becomes more and more powerful in the web development space.
-Most internal ERP systems use the powerful JavaEE framework, and SSH combinations are beginning to become a global phenomenon.
-During this period I use JSP, Servlet, Flex, Struts,
-popular web technology such as Ajax framework has completed multiple enterprise internal use CRM, such as Portal B/S program.</p>
-<p>And the development of Internet technology to today, has been a different scene.
-With the separation of front end and back end, modern front-end frameworks like Vue,Angular,React&rsquo;s MVVM framework,
-the front end has taken on a different look, with the powerful packaging tool: WebPack,
-interacting with the back end through Restful API.
-It was at this point that I also moved on to another,
-more exciting area. Cloud platform based development, testing,
-release and a series of cloud native technology world. The position is known as DevOps</p>
+    <p>When we use the Kubernetes platform,has many commands is important:</p>
+<blockquote>
+<p>The <code>k</code> command is alias to kubectl</p>
+</blockquote>
+<ul>
+<li>
+<p>force delete pod, sometimes the pod still terminating.</p>
+<p><code>k delete pods &lt;pod&gt; -n &lt;namespace&gt; --grace-period=0 --force</code></p>
+</li>
+<li>
+<p>get all resource in current kubernetes cluster</p>
+<p><code>k get all --all-namespaces</code></p>
+</li>
+<li>
+<p>view job logs</p>
+<p><code>k logs $(k get pods --selector=job-name=job-1598792400 --output=jsonpath={.items[*].metadata.name})</code></p>
+</li>
+<li>
+<p>taint the master nodes no execute and no schedult</p>
+<p><code>kubectl taint nodes &lt;node-name&gt; node-role.kubernetes.io/master=:NoExecute</code></p>
+<p><code>kubectl taint nodes &lt;node-name&gt; node-role.kubernetes.io/master=:NoSchedule</code></p>
+</li>
+<li>
+<p>no schedule on nodes: SchedulingDisabled</p>
+<p><code>k get nodes</code></p>
+<p><code>k cordon &lt;node name&gt;</code></p>
+<p><code>k uncordon &lt;node name&gt;</code> # cancel cordon back to normal</p>
+</li>
+<li>
+<p>when shutdown the nodes first exec</p>
+<p><code>k drain &lt;node name&gt;</code></p>
+</li>
+</ul>
 
   </article>
 <aside class="sidebar">
@@ -163,9 +187,6 @@ release and a series of cloud native technology world. The position is known as 
     <h2 class="mt-4">Recent Posts</h2>
     <ul class="flex-column">
       
-      <li>
-        <a href="https://blog.wisekee.com/post/k8s-common-command-conclusion/" class="nav-link">kubernetes operations command summary</a>
-      </li>
       <li>
         <a href="https://blog.wisekee.com/post/generate-crds-api-k8s/" class="nav-link">Automatic generate kubernetes custom resources api go language code</a>
       </li>
