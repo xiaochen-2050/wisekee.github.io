@@ -13,10 +13,10 @@
     
     <item>
       <title>Hugo usage issues summary</title>
-      <link>https://blog.wisekee.com/blog/hugo-usage-issues-summary/</link>
+      <link>https://blog.wisekee.com/post/hugo-usage-issues/</link>
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.wisekee.com/blog/hugo-usage-issues-summary/</guid>
+      <guid>https://blog.wisekee.com/post/hugo-usage-issues/</guid>
       <description>Usage scene   In my github repo initialize two repos
  One to storage Hugo sourcecode and markdown files And other one use release finaly site resources    Has two folders themes and public as github submodes
 1 git submodule add https://github.com/don.chen/blog.github.io public 2 git submodule update --init and every time wited markdown article and execute

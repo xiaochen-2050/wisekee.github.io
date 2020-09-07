@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NFS on Xiao.chen</title>
+    <link>https://blog.wisekee.com/tags/nfs/</link>
+    <description>Recent content in NFS on Xiao.chen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 02 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.wisekee.com/tags/nfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Configuration and Installing NFS on ubuntu</title>
+      <link>https://blog.wisekee.com/post/ubuntu-install-nfs/</link>
+      <pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/ubuntu-install-nfs/</guid>
+      <description>1#updating the system and install nfs daemon 2sudo apt-get update 3sudo apt install nfs-kernel-server 4 5#view the relative info about NFS 6sudo cat /proc/fs/nfsd/versions 7cat /etc/default/nfs-kernel-server 8cat /etc/default/nfs-common 9 10#create and bind the NFS directory in host hard disk 11sudo mkdir -p /srv/nfs4/data1 12sudo mkdir -p /srv/nfs4/data2 13sudo mount --bind /data2/nfs /srv/nfs4/data1 14sudo mount --bind /data3/nfs /srv/nfs4/data2 15 16#let binds permanent effect 17sudo vi /etc/fstab 18/data1/nfs /srv/nfs4/data2 none bind 0 0 19/data2/nfs /srv/nfs4/data3 none bind 0 0 20 21sudo vi /etc/exports 22# add following content to the file 23/srv/nfs4 192.</description>
+    </item>
+    
+  </channel>
+</rss>

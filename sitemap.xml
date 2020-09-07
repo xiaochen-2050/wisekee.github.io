@@ -4,7 +4,32 @@
   
   <url>
     <loc>https://blog.wisekee.com/</loc>
-    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/post/ubuntu-install-nfs/</loc>
+    <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/file-system/</loc>
+    <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/nfs/</loc>
+    <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/post/</loc>
+    <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/</loc>
+    <lastmod>2020-09-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -23,22 +48,12 @@
   </url>
   
   <url>
-    <loc>https://blog.wisekee.com/blog/kubernetes-operations-command-summary/</loc>
+    <loc>https://blog.wisekee.com/post/k8s-common-command-conclusion/</loc>
     <lastmod>2020-08-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.wisekee.com/post/</loc>
-    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.wisekee.com/tags/</loc>
-    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.wisekee.com/blog/automatic-generate-kubernetes-custom-resources-api-go-language-code/</loc>
+    <loc>https://blog.wisekee.com/post/generate-crds-api-k8s/</loc>
     <lastmod>2020-08-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -58,7 +73,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wisekee.com/blog/install-and-setup-cloud-foundry-in-kubernetes-cluster/</loc>
+    <loc>https://blog.wisekee.com/post/setup-cloudfoundry-in-k8s/</loc>
     <lastmod>2020-08-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -73,7 +88,7 @@
   </url>
   
   <url>
-    <loc>https://blog.wisekee.com/blog/hugo-usage-issues-summary/</loc>
+    <loc>https://blog.wisekee.com/post/hugo-usage-issues/</loc>
     <lastmod>2020-08-16T00:00:00+00:00</lastmod>
   </url>
   
