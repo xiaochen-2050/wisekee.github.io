@@ -69,5 +69,16 @@ k logs $(k get pods --selector=job-name=job-1598792400 --output=jsonpath={.items
 1git submodule update public 2git pull origin master 3cd public &amp;amp;&amp;amp; git add .</description>
     </item>
     
+    <item>
+      <title>ElasticSearch monitoring and  alert base on ElastAlert</title>
+      <link>https://blog.wisekee.com/post/elastalert-usage/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/elastalert-usage/</guid>
+      <description>Dynamically generate alarm rules and send email to relative people.based on a given parameter or configuration Elastalert
+The directory construct look following 1├── elastalert 2├── generate_rule.py 3├── param.json 4├── rules 5└── template You can also through pip install elastalert installing elastalert package. I&amp;rsquo;m going to use it directly here The templatedirectory store tpl file, use this template generate some rules file to rules directory. and used elastalert
+Configuration file param.json 1{ 2 &amp;#34;dev&amp;#34;: { 3 &amp;#34;public_config&amp;#34;: { 4 &amp;#34;run_every&amp;#34;: 5, 5 &amp;#34;buffer_time&amp;#34;: 15, 6 &amp;#34;es_host&amp;#34;: &amp;#34;dev.</description>
+    </item>
+    
   </channel>
 </rss>
