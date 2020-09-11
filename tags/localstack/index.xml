@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AWS on Xiao.chen</title>
-    <link>https://blog.wisekee.com/tags/aws/</link>
-    <description>Recent content in AWS on Xiao.chen</description>
+    <title>LocalStack on Xiao.chen</title>
+    <link>https://blog.wisekee.com/tags/localstack/</link>
+    <description>Recent content in LocalStack on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
     <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://blog.wisekee.com/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.wisekee.com/tags/localstack/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       <guid>https://blog.wisekee.com/post/aws-local-development/</guid>
       <description>When you develop components locally that rely on AWS, it can be cumbersome to configure authentication information, and sometimes network latency. It is important to mock with a native AWS component, which can:localstack I&amp;rsquo;m using Docker-Compose here to start a set of tools that local development depends on：
 The docker-compose.yml looks like this following 1version:&amp;#39;3&amp;#39;23services:4mongodb:5image:mongo:3.4.16volumes:7- &amp;#39;./easymock/data/db:/data/db&amp;#39;8networks:9- easy-mock10ports:11- &amp;#34;27017:27017&amp;#34;12restart:always13container_name:mongodb1415redis:16image:redis:4.0.617command:redis-server--appendonlyyes18volumes:19- &amp;#39;./easymock/data/redis:/data&amp;#39;20networks:21- easy-mock22restart:always23container_name:redis2425localstack:26container_name:&amp;#34;${LOCALSTACK_DOCKER_NAME-localstack}&amp;#34;27image:localstack/localstack28ports:29- &amp;#34;4567-4597:4567-4597&amp;#34;30environment:31- DEBUG=${DEBUG-true}32- DATA_DIR=${DATA_DIR-/tmp/localstack/data}33- PORT_WEB_UI=${PORT_WEB_UI-8080}34- LAMBDA_EXECUTOR=${LAMBDA_EXECUTOR-docker-reuse}35- DOCKER_HOST=unix:///var/run/docker.sock36- HOSTNAME_EXTERNAL=awsmock.local-dev.com37volumes:38- &amp;#34;./localstack/data:/tmp/localstack&amp;#34;39- &amp;#34;/var/run/docker.sock:/var/run/docker.sock&amp;#34;40networks:41- easy-mock4243mysql:44container_name:&amp;#34;mysql&amp;#34;45image:mysql46command:&amp;#34;--default-authentication-plugin=mysql_native_password --skip-mysqlx&amp;#34;47ports:48- &amp;#34;3306:3306&amp;#34;49environment:50MYSQL_ROOT_PASSWORD:&amp;#34;xxxxx&amp;#34;51MYSQL_DATABASE:&amp;#34;awsmock&amp;#34;52MYSQL_PASSWORD:&amp;#34;xxxxx&amp;#34;53MYSQL_USER:&amp;#34;user&amp;#34;54volumes:55- &amp;#34;.</description>
-    </item>
-    
-    <item>
-      <title>AWS networking security enhance</title>
-      <link>https://blog.wisekee.com/post/aws-network-secrutiy-enhance/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.wisekee.com/post/aws-network-secrutiy-enhance/</guid>
-      <description>Vpc network division According to the requirements of the product and the customer, the two services of the two types of subnets are isolated. For example, DBsubnet01 and DBsubnet02 are both internal private subnets and belong to different product segments. ​	 The two major subnet types are the intranet and the extranet. The internal network goes to the NAT Gateway, and the external network goes to the Internet Gateway. Like: RDS, Redis, background services, etc.</description>
     </item>
     
   </channel>
