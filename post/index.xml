@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.wisekee.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Backup and Restore kubernetes cluster using Velero</title>
+      <link>https://blog.wisekee.com/post/k8s-backup-restore-using-velero/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/k8s-backup-restore-using-velero/</guid>
+      <description>Installing or Upgrade Velero client on Mac OS:
+1	brew install velero 2	HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade velero #upgrade to the latest version if maybe The Velero should use object store save the snapshot. so we use Minio as kubernetes object store.Minio launched as part of docker-compose.yaml
+1minio:2container_name:&amp;#34;minio&amp;#34;3image:minio/minio4command:&amp;#34;server /data&amp;#34;5ports:6- &amp;#34;9000:9000&amp;#34;7environment:8MINIO_ACCESS_KEY:“xxxxxxx”9MINIO_SECRET_KEY:“xxxxxxx”10volumes:11- &amp;#34;./minio/data:/data&amp;#34;12networks:13- easy-mockCreate a env file is named: velero-env. because the Velero need the similar aws credentials access to Minio service storage backup object.</description>
+    </item>
     
     <item>
       <title>Quickly debug AWS App locally use Localstack(AWS Mock in local)</title>

@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
-    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.wisekee.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>K8s</title>
+      <link>https://blog.wisekee.com/tags/k8s/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/tags/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://blog.wisekee.com/tags/kubernetes/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Velero</title>
+      <link>https://blog.wisekee.com/tags/velero/</link>
+      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/tags/velero/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AWS</title>
@@ -39,11 +66,11 @@
     </item>
     
     <item>
-      <title>k8s</title>
-      <link>https://blog.wisekee.com/tags/k8s/</link>
+      <title>featured</title>
+      <link>https://blog.wisekee.com/tags/featured/</link>
       <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://blog.wisekee.com/tags/k8s/</guid>
+      <guid>https://blog.wisekee.com/tags/featured/</guid>
       <description></description>
     </item>
     
@@ -53,15 +80,6 @@
       <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/tags/kubectl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>https://blog.wisekee.com/tags/kubernetes/</link>
-      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.wisekee.com/tags/kubernetes/</guid>
       <description></description>
     </item>
     
