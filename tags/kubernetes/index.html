@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-figures="">
-  <head>  <title>Kubernetes | Xiao.chen</title>
+  <head>  <title>kubernetes | Xiao.chen</title>
   <meta charset='utf-8'>
   <meta name="generator" content="Hugo 0.74.1" />
   <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
@@ -17,9 +17,9 @@
 <meta name="description" content="">
 <meta name = "twitter:card" content = "summary" />
 <meta name = "twitter:creator" content = "">
-<meta name = "twitter:title" content = "Kubernetes" />
+<meta name = "twitter:title" content = "kubernetes" />
 <meta property = "og:url" content = "https://blog.wisekee.com/tags/kubernetes/" />
-<meta property = "og:title" content = "Kubernetes" />
+<meta property = "og:title" content = "kubernetes" />
 <meta property = "og:description" content = "" />
 <meta property = "og:image" content = "https://blog.wisekee.com/images/thumbnail.png" />
 <link rel='apple-touch-icon' sizes='180x180' href='https://blog.wisekee.com/icons/apple-touch-icon.png'>
@@ -117,6 +117,36 @@
           <p class = 'pale'>Installing or Upgrade Velero client on Mac OS:
 1	brew install velero 2	HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade velero #upgrade to the latest version if maybe The Velero should use object store save the snapshot. so we use Minio as kubernetes object store.Minio launched as part of docker-compose.yaml …</p>
           <a href='https://blog.wisekee.com/post/k8s-backup-restore-using-velero/' class='excerpt_more button'>Read More</a>
+        </div>
+      </div>
+    </div>
+  </li>
+  
+      
+<li class = 'post_item'>
+  <div class = 'excerpt'>
+    <div class = 'excerpt_header'>
+      <h3 class = 'post_link'>
+        <a href='https://blog.wisekee.com/post/custom-domain-name-in-k8s/'>Custom private domain name in kubernetes cluster</a>
+      </h3>
+      <div class = 'post_meta'>
+  <svg class="icon">
+    <use xlink:href="#calendar"></use>
+  </svg>
+  <span class="post_date">
+    Sep 3, 2020</span>
+  <a href = 'https://blog.wisekee.com/tags/kubernetes' class = 'post_tag button button_translucent'>kubernetes
+  </a>
+  <a href = 'https://blog.wisekee.com/tags/coredons' class = 'post_tag button button_translucent'>Coredons
+  </a>
+</div>
+
+    </div>
+      <div class = 'excerpt_footer'>
+        <div>
+          <p class = 'pale'>We use default service domain name ${servicename}.${namespace}.svc.cluster.localin kubernetes cluster, however the custom private domain name in private k8s networks frequently used. we can use coredns component reparse the private domain name to default CNAME.
+change coredns configmap add custom domain name config to …</p>
+          <a href='https://blog.wisekee.com/post/custom-domain-name-in-k8s/' class='excerpt_more button'>Read More</a>
         </div>
       </div>
     </div>
@@ -259,6 +289,9 @@ k get all --all-namespaces
         <a href="https://blog.wisekee.com/post/k8s-backup-restore-using-velero/" class="nav-link">Backup and Restore kubernetes cluster using Velero</a>
       </li>
       <li>
+        <a href="https://blog.wisekee.com/post/custom-domain-name-in-k8s/" class="nav-link">Custom private domain name in kubernetes cluster</a>
+      </li>
+      <li>
         <a href="https://blog.wisekee.com/post/aws-local-development/" class="nav-link">Quickly debug AWS App locally use Localstack(AWS Mock in local)</a>
       </li>
       <li>
@@ -276,9 +309,6 @@ k get all --all-namespaces
       <li>
         <a href="https://blog.wisekee.com/post/elastalert-usage/" class="nav-link">ElasticSearch monitoring and  alert base on ElastAlert</a>
       </li>
-      <li>
-        <a href="https://blog.wisekee.com/post/aws-network-secrutiy-enhance/" class="nav-link">AWS networking security enhance</a>
-      </li>
     </ul> 
     
     <div>
@@ -293,7 +323,7 @@ k get all --all-namespaces
       <nav class="tags_nav">
         <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent">
           KUBERNETES
-          <span class='button_tally'>4</span>
+          <span class='button_tally'>5</span>
         </a>
         
         <a href='https://blog.wisekee.com/tags/featured/' class=" post_tag button button_translucent">
@@ -336,6 +366,11 @@ k get all --all-namespaces
           <span class='button_tally'>1</span>
         </a>
         
+        <a href='https://blog.wisekee.com/tags/coredons/' class=" post_tag button button_translucent">
+          COREDONS
+          <span class='button_tally'>1</span>
+        </a>
+        
         <a href='https://blog.wisekee.com/tags/custom-resources/' class=" post_tag button button_translucent">
           CUSTOM-RESOURCES
           <span class='button_tally'>1</span>
@@ -353,11 +388,6 @@ k get all --all-namespaces
         
         <a href='https://blog.wisekee.com/tags/file-system/' class=" post_tag button button_translucent">
           FILE-SYSTEM
-          <span class='button_tally'>1</span>
-        </a>
-        
-        <a href='https://blog.wisekee.com/tags/go/' class=" post_tag button button_translucent">
-          GO
           <span class='button_tally'>1</span>
         </a>
         
@@ -388,6 +418,10 @@ k get all --all-namespaces
             
             
             <a href='https://blog.wisekee.com/tags/commands/' class=" post_tag button button_translucent" data-position=1>COMMANDS<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/coredons/' class=" post_tag button button_translucent" data-position=1>COREDONS<span class='button_tally'>1</span>
             </a>
             
             
@@ -435,7 +469,7 @@ k get all --all-namespaces
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent" data-position=4>KUBERNETES<span class='button_tally'>4</span>
+            <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent" data-position=5>KUBERNETES<span class='button_tally'>5</span>
             </a>
             
             

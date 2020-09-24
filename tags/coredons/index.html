@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-figures="" class="page">
-  <head>  <title>Quickly debug AWS App locally use Localstack(AWS Mock in local) | Xiao.chen</title>
+<html lang="en" data-figures="">
+  <head>  <title>Coredons | Xiao.chen</title>
   <meta charset='utf-8'>
   <meta name="generator" content="Hugo 0.74.1" />
   <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
@@ -12,16 +12,15 @@
   gtag('js', new Date());
   gtag('config', 'G-YV2D58JX2Y');
 </script>
-  
 <meta property = "og:locale" content = "en_US" />
 <meta property="og:type" content="article">
-<meta name="description" content="Project debug in local development decoupled AWS components dependences">
+<meta name="description" content="">
 <meta name = "twitter:card" content = "summary" />
 <meta name = "twitter:creator" content = "">
-<meta name = "twitter:title" content = "Quickly debug AWS App locally use Localstack(AWS Mock in local)" />
-<meta property = "og:url" content = "https://blog.wisekee.com/post/aws-local-development/" />
-<meta property = "og:title" content = "Quickly debug AWS App locally use Localstack(AWS Mock in local)" />
-<meta property = "og:description" content = "Project debug in local development decoupled AWS components dependences" />
+<meta name = "twitter:title" content = "Coredons" />
+<meta property = "og:url" content = "https://blog.wisekee.com/tags/coredons/" />
+<meta property = "og:title" content = "Coredons" />
+<meta property = "og:description" content = "" />
 <meta property = "og:image" content = "https://blog.wisekee.com/images/thumbnail.png" />
 <link rel='apple-touch-icon' sizes='180x180' href='https://blog.wisekee.com/icons/apple-touch-icon.png'>
 <link rel='icon' type='image/png' sizes='32x32' href='https://blog.wisekee.com/icons/favicon-32x32.png'>
@@ -31,7 +30,7 @@
 <meta name="msapplication-TileColor" content="#002538">
 <meta name="theme-color" content="#002538">
 
-  <link rel='canonical' href='https://blog.wisekee.com/post/aws-local-development/'>
+  <link rel='canonical' href='https://blog.wisekee.com/tags/coredons/'>
     
 
     
@@ -88,158 +87,44 @@
 </header>
 
     <main>
-  
-<div class = 'grid-inverse wrap content'>
-  <article class='post_content'>
-    <h1 class='post_title'>Quickly debug AWS App locally use Localstack(AWS Mock in local)</h1><div class = 'post_meta'>
+
+<div class='grid-inverse wrap content'>
+  <ul class='posts' id = 'posts'>
+      
+<li class = 'post_item'>
+  <div class = 'excerpt'>
+    <div class = 'excerpt_header'>
+      <h3 class = 'post_link'>
+        <a href='https://blog.wisekee.com/post/custom-domain-name-in-k8s/'>Custom private domain name in kubernetes cluster</a>
+      </h3>
+      <div class = 'post_meta'>
   <svg class="icon">
     <use xlink:href="#calendar"></use>
   </svg>
   <span class="post_date">
-    Sep 1, 2020</span>
-  <a href = 'https://blog.wisekee.com/tags/aws' class = 'post_tag button button_translucent'>AWS
+    Sep 3, 2020</span>
+  <a href = 'https://blog.wisekee.com/tags/kubernetes' class = 'post_tag button button_translucent'>kubernetes
   </a>
-  <a href = 'https://blog.wisekee.com/tags/localstack' class = 'post_tag button button_translucent'>LocalStack
-  </a>
-  <a href = 'https://blog.wisekee.com/tags/cloud' class = 'post_tag button button_translucent'>Cloud
+  <a href = 'https://blog.wisekee.com/tags/coredons' class = 'post_tag button button_translucent'>Coredons
   </a>
 </div>
 
-    <div class='post_share'>
-  Share on:
-  <a href="https://twitter.com/intent/tweet?text=Quickly%20debug%20AWS%20App%20locally%20use%20Localstack%28AWS%20Mock%20in%20local%29&url=https%3a%2f%2fblog.wisekee.com%2fpost%2faws-local-development%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
-    <svg class="icon">
-      <use xlink:href="#twitter"></use>
-    </svg>
-  </a>
+    </div>
+      <div class = 'excerpt_footer'>
+        <div>
+          <p class = 'pale'>We use default service domain name ${servicename}.${namespace}.svc.cluster.localin kubernetes cluster, however the custom private domain name in private k8s networks frequently used. we can use coredns component reparse the private domain name to default CNAME.
+change coredns configmap add custom domain name config to …</p>
+          <a href='https://blog.wisekee.com/post/custom-domain-name-in-k8s/' class='excerpt_more button'>Read More</a>
+        </div>
+      </div>
+    </div>
+  </li>
   
-  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.wisekee.com%2fpost%2faws-local-development%2f&t=Quickly%20debug%20AWS%20App%20locally%20use%20Localstack%28AWS%20Mock%20in%20local%29" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
-    <svg class="icon">
-      <use xlink:href="#facebook"></use>
-    </svg>
-  </a>
-  <script>
-    function shareViaLinkedin() {
-      window.open('http://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent("https://blog.wisekee.com/post/aws-local-development/"), '', 'left=0,top=0,width=650,height=420,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
-    }
-  </script>
-  <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow" onclick="shareViaLinkedin()">
-    <svg class="icon">
-      <use xlink:href="#linkedin"></use>
-    </svg>
-  </a>
-  <a href="https://blog.wisekee.com/post/aws-local-development/" title="Copy Link" class="link link_yank">
-    <svg class="icon">
-      <use xlink:href="#yank"></use>
-    </svg>
-  </a>
-</div>
+    <li>
 
-    
-    <p>When you develop components locally that rely on AWS, it can be cumbersome to configure authentication information, and sometimes network latency. It is important to mock with a native AWS component, which can:<a href="https://github.com/localstack/localstack">localstack</a>
-I&rsquo;m using Docker-Compose here to start a set of tools that local development depends on：</p>
-<h4 id="the-docker-composeyml-looks-like-this-following">The docker-compose.yml looks like this following</h4>
-<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="ln"> 1</span><span class="k">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
-</span><span class="ln"> 2</span><span class="w">
-</span><span class="ln"> 3</span><span class="w"></span><span class="k">services</span><span class="p">:</span><span class="w">
-</span><span class="ln"> 4</span><span class="w">  </span><span class="k">mongodb</span><span class="p">:</span><span class="w">
-</span><span class="ln"> 5</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>mongo<span class="p">:</span><span class="m">3.4.1</span><span class="w">
-</span><span class="ln"> 6</span><span class="w">    </span><span class="k">volumes</span><span class="p">:</span><span class="w">
-</span><span class="ln"> 7</span><span class="w">      </span>- <span class="s1">&#39;./easymock/data/db:/data/db&#39;</span><span class="w">
-</span><span class="ln"> 8</span><span class="w">    </span><span class="k">networks</span><span class="p">:</span><span class="w">
-</span><span class="ln"> 9</span><span class="w">      </span>- easy-mock<span class="w">
-</span><span class="ln">10</span><span class="w">    </span><span class="k">ports</span><span class="p">:</span><span class="w">
-</span><span class="ln">11</span><span class="w">      </span>- <span class="s2">&#34;27017:27017&#34;</span><span class="w">
-</span><span class="ln">12</span><span class="w">    </span><span class="k">restart</span><span class="p">:</span><span class="w"> </span>always<span class="w">
-</span><span class="ln">13</span><span class="w">    </span><span class="k">container_name</span><span class="p">:</span><span class="w"> </span>mongodb<span class="w">
-</span><span class="ln">14</span><span class="w">    
-</span><span class="ln">15</span><span class="w">  </span><span class="k">redis</span><span class="p">:</span><span class="w">
-</span><span class="ln">16</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>redis<span class="p">:</span><span class="m">4.0.6</span><span class="w">
-</span><span class="ln">17</span><span class="w">    </span><span class="k">command</span><span class="p">:</span><span class="w"> </span>redis-server<span class="w"> </span>--appendonly<span class="w"> </span>yes<span class="w">
-</span><span class="ln">18</span><span class="w">    </span><span class="k">volumes</span><span class="p">:</span><span class="w">
-</span><span class="ln">19</span><span class="w">    	</span>- <span class="s1">&#39;./easymock/data/redis:/data&#39;</span><span class="w">
-</span><span class="ln">20</span><span class="w">    </span><span class="k">networks</span><span class="p">:</span><span class="w">
-</span><span class="ln">21</span><span class="w">    	</span>- easy-mock<span class="w">
-</span><span class="ln">22</span><span class="w">    </span><span class="k">restart</span><span class="p">:</span><span class="w"> </span>always<span class="w">
-</span><span class="ln">23</span><span class="w">    </span><span class="k">container_name</span><span class="p">:</span><span class="w"> </span>redis<span class="w">
-</span><span class="ln">24</span><span class="w">    
-</span><span class="ln">25</span><span class="w">  </span><span class="k">localstack</span><span class="p">:</span><span class="w">
-</span><span class="ln">26</span><span class="w">    </span><span class="k">container_name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${LOCALSTACK_DOCKER_NAME-localstack}&#34;</span><span class="w">
-</span><span class="ln">27</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>localstack/localstack<span class="w">
-</span><span class="ln">28</span><span class="w">    </span><span class="k">ports</span><span class="p">:</span><span class="w">
-</span><span class="ln">29</span><span class="w">      </span>- <span class="s2">&#34;4567-4597:4567-4597&#34;</span><span class="w">
-</span><span class="ln">30</span><span class="w">    </span><span class="k">environment</span><span class="p">:</span><span class="w">
-</span><span class="ln">31</span><span class="w">      </span>- DEBUG=${DEBUG-<span class="kc">true</span>}<span class="w">
-</span><span class="ln">32</span><span class="w">      </span>- DATA_DIR=${DATA_DIR-/tmp/localstack/data}<span class="w">
-</span><span class="ln">33</span><span class="w">      </span>- PORT_WEB_UI=${PORT_WEB_UI<span class="m">-8080</span>}<span class="w">
-</span><span class="ln">34</span><span class="w">      </span>- LAMBDA_EXECUTOR=${LAMBDA_EXECUTOR-docker-reuse}<span class="w">
-</span><span class="ln">35</span><span class="w">      </span>- DOCKER_HOST=unix<span class="p">:</span>///var/run/docker.sock<span class="w">
-</span><span class="ln">36</span><span class="w">      </span>- HOSTNAME_EXTERNAL=awsmock.local-dev.com<span class="w">
-</span><span class="ln">37</span><span class="w">    </span><span class="k">volumes</span><span class="p">:</span><span class="w">
-</span><span class="ln">38</span><span class="w">      </span>- <span class="s2">&#34;./localstack/data:/tmp/localstack&#34;</span><span class="w">
-</span><span class="ln">39</span><span class="w">      </span>- <span class="s2">&#34;/var/run/docker.sock:/var/run/docker.sock&#34;</span><span class="w">
-</span><span class="ln">40</span><span class="w">    </span><span class="k">networks</span><span class="p">:</span><span class="w">
-</span><span class="ln">41</span><span class="w">      </span>- easy-mock<span class="w">
-</span><span class="ln">42</span><span class="w">
-</span><span class="ln">43</span><span class="w">  </span><span class="k">mysql</span><span class="p">:</span><span class="w">
-</span><span class="ln">44</span><span class="w">      </span><span class="k">container_name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;mysql&#34;</span><span class="w">
-</span><span class="ln">45</span><span class="w">      </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>mysql<span class="w">
-</span><span class="ln">46</span><span class="w">      </span><span class="k">command</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;--default-authentication-plugin=mysql_native_password --skip-mysqlx&#34;</span><span class="w">
-</span><span class="ln">47</span><span class="w">      </span><span class="k">ports</span><span class="p">:</span><span class="w">
-</span><span class="ln">48</span><span class="w">         </span>- <span class="s2">&#34;3306:3306&#34;</span><span class="w">
-</span><span class="ln">49</span><span class="w">      </span><span class="k">environment</span><span class="p">:</span><span class="w">
-</span><span class="ln">50</span><span class="w">         </span><span class="k">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;xxxxx&#34;</span><span class="w">
-</span><span class="ln">51</span><span class="w">         </span><span class="k">MYSQL_DATABASE</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;awsmock&#34;</span><span class="w">
-</span><span class="ln">52</span><span class="w">         </span><span class="k">MYSQL_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;xxxxx&#34;</span><span class="w">
-</span><span class="ln">53</span><span class="w">         </span><span class="k">MYSQL_USER</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;user&#34;</span><span class="w">
-</span><span class="ln">54</span><span class="w">      </span><span class="k">volumes</span><span class="p">:</span><span class="w">
-</span><span class="ln">55</span><span class="w">         </span>- <span class="s2">&#34;./mysql:/var/lib/mysql&#34;</span><span class="w">
-</span><span class="ln">56</span><span class="w">      </span><span class="k">networks</span><span class="p">:</span><span class="w">
-</span><span class="ln">57</span><span class="w">         </span>- easy-mock<span class="w"> 
-</span><span class="ln">58</span><span class="w">        
-</span><span class="ln">59</span><span class="w"></span><span class="k">networks</span><span class="p">:</span><span class="w">
-</span><span class="ln">60</span><span class="w">  </span><span class="k">easy-mock</span><span class="p">:</span><span class="w">    
-</span></code></pre></div><p>you should create relative folder such as: <code>mkdir -p ./localstack/data ./easymock/data/redis ./easymock/data/db</code> mount to container persistent datas</p>
-<p>when exec <code>docker-compose up -d .</code> the docker container should be is launched</p>
-<p>the aws endpoint-url is configured: <code>awsmock.local-dev.com</code> in /etc/hosts file map to <code>127.0.0.1</code>
-You only need to change the appropriate endpoint-url to use them, without the need for sophisticated credentials</p>
-<p>Install AWS Cli command in Ubuntu</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span> sudo apt-get update
-<span class="ln">2</span> sudo apt-get install awscli
-<span class="ln">3</span> aws --version
-</code></pre></div><p>Now you can use AWS-cli command create resources:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln"> 1</span><span class="c1"># create a sns</span>
-<span class="ln"> 2</span>aws --endpoint-url<span class="o">=</span>http://awsmock.local-dev.com:4575 sns create-topic --name testSns
-<span class="ln"> 3</span><span class="c1">#create a sqs</span>
-<span class="ln"> 4</span>aws --endpoint-url<span class="o">=</span>http://awsmock.local-dev.com:4576 sqs create-queue --queue-name testSqs --attributes <span class="nv">ReceiveMessageWaitTimeSeconds</span><span class="o">=</span><span class="m">20</span>
-<span class="ln"> 5</span><span class="c1"># get-queue-attributes</span>
-<span class="ln"> 6</span>aws --endpoint-url<span class="o">=</span>http://awsmock.local-dev.com:4576 sqs get-queue-attributes --queue-url http://awsmock.local-dev.com:4576/queue/testSqs 
-<span class="ln"> 7</span><span class="c1"># add attributes for exist sqs</span>
-<span class="ln"> 8</span>aws --endpoint-url<span class="o">=</span>http://awsmock.local-dev.com:4576 sqs set-queue-attributes --attributes <span class="nv">ReceiveMessageWaitTimeSeconds</span><span class="o">=</span><span class="m">15</span>  --queue-url http://awsmock.local-dev.com:4576/queue/testSqs
-<span class="ln"> 9</span><span class="c1">#create bucket on s3 in mock</span>
-<span class="ln">10</span>aws --endpoint-url<span class="o">=</span>http://awsmock.local-dev.com:4572 s3 mb s3://myTestBucket
-<span class="ln">11</span><span class="c1"># list all sqs</span>
-<span class="ln">12</span>aws --endpoint-url<span class="o">=</span>http://awsmock.local-dev.com:4576 sqs list-queues
-</code></pre></div><p>In java code you can implement mock Bean:</p>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="ln"> 1</span><span class="nd">@Bean</span>
-<span class="ln"> 2</span><span class="kd">public</span> <span class="n">AWSSecretsManager</span> <span class="nf">awsSecretsManager</span><span class="o">()</span> <span class="o">{</span>
-<span class="ln"> 3</span>    <span class="n">AwsClientBuilder</span><span class="o">.</span><span class="na">EndpointConfiguration</span> <span class="n">endpointConfiguration</span> <span class="o">=</span>
-<span class="ln"> 4</span>            <span class="k">new</span> <span class="n">AwsClientBuilder</span><span class="o">.</span><span class="na">EndpointConfiguration</span><span class="o">(</span><span class="s">&#34;http://awsmock.local-dev.com:4584&#34;</span><span class="o">,</span>
-<span class="ln"> 5</span>                    <span class="s">&#34;us-east-1&#34;</span><span class="o">);</span>
-<span class="ln"> 6</span>    <span class="k">return</span> <span class="n">AWSSecretsManagerClientBuilder</span>
-<span class="ln"> 7</span>            <span class="o">.</span><span class="na">standard</span><span class="o">()</span>
-<span class="ln"> 8</span>            <span class="o">.</span><span class="na">withEndpointConfiguration</span><span class="o">(</span><span class="n">endpointConfiguration</span><span class="o">)</span>
-<span class="ln"> 9</span>            <span class="o">.</span><span class="na">withCredentials</span><span class="o">(</span><span class="k">new</span> <span class="n">AWSStaticCredentialsProvider</span><span class="o">(</span><span class="k">new</span> <span class="n">BasicAWSCredentials</span><span class="o">(</span><span class="s">&#34;testKey&#34;</span><span class="o">,</span> <span class="s">&#34;testSecret&#34;</span><span class="o">)))</span>
-<span class="ln">10</span>            <span class="o">.</span><span class="na">build</span><span class="o">();</span>
-<span class="ln">11</span><span class="o">}</span>
-</code></pre></div><p>When you use S3 service functions, construct sdk client instance. Must be set <code>'use_path_style_endpoint' =&gt; true</code>(this PHP key-value settings in clientSdk arguments) <code>.withPathStyleAccessEnabled(true)</code> the java clientSdk implementations</p>
-<p>When your code needs to be compatible with both native mocks and production environments, you can set the environment variables, which will not be set in production.</p>
-<div class="highlight"><pre class="chroma"><code class="language-php" data-lang="php"><span class="ln">1</span>if (!empty(env(&#39;AWS_MOCK_SM_URL&#39;, &#39;&#39;))) {
-<span class="ln">2</span>            $args[&#39;endpoint&#39;] = env(&#39;AWS_MOCK_SM_URL&#39;);
-<span class="ln">3</span>        }
-<span class="ln">4</span>$client = new SecretsManagerClient($args);
-</code></pre></div>
-  </article>
+
+    </li>
+  </ul>
 <aside class="sidebar">
   <section class="sidebar_inner">
     
@@ -273,6 +158,9 @@ You only need to change the appropriate endpoint-url to use them, without the ne
       </li>
       <li>
         <a href="https://blog.wisekee.com/post/custom-domain-name-in-k8s/" class="nav-link">Custom private domain name in kubernetes cluster</a>
+      </li>
+      <li>
+        <a href="https://blog.wisekee.com/post/aws-local-development/" class="nav-link">Quickly debug AWS App locally use Localstack(AWS Mock in local)</a>
       </li>
       <li>
         <a href="https://blog.wisekee.com/post/k8s-common-command-conclusion/" class="nav-link">kubernetes operations command summary</a>
@@ -494,10 +382,9 @@ You only need to change the appropriate endpoint-url to use them, without the ne
   </section>
 </aside>
 
-  
-    
-  
 </div>
+
+
     </main><svg width="0" height="0" class="hidden">
   <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
     <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>

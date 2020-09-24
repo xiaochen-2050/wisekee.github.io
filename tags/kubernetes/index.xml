@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kubernetes on Xiao.chen</title>
+    <title>kubernetes on Xiao.chen</title>
     <link>https://blog.wisekee.com/tags/kubernetes/</link>
-    <description>Recent content in Kubernetes on Xiao.chen</description>
+    <description>Recent content in kubernetes on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
     <lastBuildDate>Thu, 10 Sep 2020 00:00:00 +0000</lastBuildDate>
@@ -20,6 +20,17 @@
       <description>Installing or Upgrade Velero client on Mac OS:
 1	brew install velero 2	HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade velero #upgrade to the latest version if maybe The Velero should use object store save the snapshot. so we use Minio as kubernetes object store.Minio launched as part of docker-compose.yaml
 1minio:2container_name:&amp;#34;minio&amp;#34;3image:minio/minio4command:&amp;#34;server /data&amp;#34;5ports:6- &amp;#34;9000:9000&amp;#34;7environment:8MINIO_ACCESS_KEY:“xxxxxxx”9MINIO_SECRET_KEY:“xxxxxxx”10volumes:11- &amp;#34;./minio/data:/data&amp;#34;12networks:13- easy-mockCreate a env file is named: velero-env. because the Velero need the similar aws credentials access to Minio service storage backup object.</description>
+    </item>
+    
+    <item>
+      <title>Custom private domain name in kubernetes cluster</title>
+      <link>https://blog.wisekee.com/post/custom-domain-name-in-k8s/</link>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/custom-domain-name-in-k8s/</guid>
+      <description>We use default service domain name ${servicename}.${namespace}.svc.cluster.localin kubernetes cluster, however the custom private domain name in private k8s networks frequently used. we can use coredns component reparse the private domain name to default CNAME.
+change coredns configmap add custom domain name config to yaml kubectl edit cm coredns -n kube-system
+1data:2Corefile:| 3.:53 {4errors5health{6lameduck5s7}8ready9kubernetescluster.localin-addr.arpaip6.arpa{10podsinsecure11fallthroughin-addr.arpaip6.arpa12ttl3013}14file/etc/coredns/uat-env.dbuat-env.com15prometheus:915316forward./etc/resolv.conf17cache3018loop19reload20loadbalance21}22uat-env.db:&amp;gt;- 23uat-env.com. IN SOA ns.dns.cluster.local. 24hostmaster.cluster.local.15923622027200180086400302526uat-env.com.INNS27kube-dns.kube-system.svc.cluster.local.2829db.uat-env.com.INCNAME30mysql.db.svc.cluster.local.3132private-services.uat-env.com.INCNAME33internal-gateway.default.svc.cluster.local.add file /etc/coredns/uat-env.db uat-env.com line to Corefile section add new section uat-env.db and add relative recordset</description>
     </item>
     
     <item>
