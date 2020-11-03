@@ -6,17 +6,35 @@
     <description>Recent content in Tags on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 10 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.wisekee.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>featured</title>
+      <link>https://blog.wisekee.com/tags/featured/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/tags/featured/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>K8s</title>
       <link>https://blog.wisekee.com/tags/k8s/</link>
-      <pubDate>Thu, 10 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/tags/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terraform</title>
+      <link>https://blog.wisekee.com/tags/terraform/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/tags/terraform/</guid>
       <description></description>
     </item>
     
@@ -71,15 +89,6 @@
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/tags/localstack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>featured</title>
-      <link>https://blog.wisekee.com/tags/featured/</link>
-      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.wisekee.com/tags/featured/</guid>
       <description></description>
     </item>
     

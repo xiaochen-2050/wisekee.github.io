@@ -6,10 +6,19 @@
     <description>Recent content in K8s on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 10 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.wisekee.com/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Points to note about  Terraform helm provider</title>
+      <link>https://blog.wisekee.com/post/terraform-helm-issues/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/terraform-helm-issues/</guid>
+      <description>The Metrics-Server helm chart as Terraform HCL 1resource&amp;#34;helm_release&amp;#34;&amp;#34;metrics-server&amp;#34;{2name=&amp;#34;metrics-server&amp;#34;3repository=&amp;#34;https://charts.bitnami.com/bitnami&amp;#34;4chart=&amp;#34;metrics-server&amp;#34;5version=&amp;#34;4.1.4&amp;#34;6namespace=&amp;#34;kube-system&amp;#34;78set{9name=&amp;#34;extraArgs.kubelet-preferred-address-types&amp;#34;10value=&amp;#34;InternalIP\\,ExternalIP\\,Hostname&amp;#34;11}1213set{14name=&amp;#34;resources.requests.memory&amp;#34;15value=&amp;#34;500Mi&amp;#34;16}1718set{19name=&amp;#34;resources.limits.memory&amp;#34;20value=&amp;#34;1Gi&amp;#34;21}2223set{24name=&amp;#34;apiService.create&amp;#34;25value=&amp;#34;true&amp;#34;26}2728} The apiService.create always assign to true when in AWS EKS or other kubernetes distribution The values include comma , muste be use escape in terraform Any resources should be specific quota, like resource requests and limits  When Name includes dot annotations also escaped 1# set {2# type = &amp;#34;string&amp;#34;3# name = &amp;#34;ingress.web.annotations.alb\\.ingress\\.kubernetes\\.io/security-groups&amp;#34;4# value = &amp;#34;${var.office_sg_id}\\,${var.internal_sg_id}\\,${var.cluster_sg_id}&amp;#34;5# }</description>
+    </item>
     
     <item>
       <title>Backup and Restore kubernetes cluster using Velero</title>
