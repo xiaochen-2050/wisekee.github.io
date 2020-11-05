@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 10 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.wisekee.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Notes for using Kubernetes Ingress Controller</title>
+      <link>https://blog.wisekee.com/post/kubernetes-ingress-guides/</link>
+      <pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/kubernetes-ingress-guides/</guid>
+      <description>Using Nginx-Ingress Controller in AWS Eks environment  Need manually enable the Proxy protocol V2 in NLB target group just only TCP https 443 listener Rather than TCP http 80 listener Multiple SSL certificate need manually add to NLB The http redirect to https, need to change some paramets  1# use http-snippet and open proxy protocol2use-proxy-protocol:&amp;#39;true&amp;#39;3use-forwarded-headers:&amp;#39;true&amp;#39;4server-tokens:&amp;#39;false&amp;#39;5http-snippet:| 6server {7listen8000;8return308https://$host$request_uri;9}10proxy-real-ip-cidr:${join(&amp;#34;,&amp;#34;,var.internal_cidr)}11# Add special port in controller container12set{13type=&amp;#34;string&amp;#34;14name=&amp;#34;controller.containerPort.special&amp;#34;15value=&amp;#34;8000&amp;#34;16}17# Let https redirect to http port and http port redirect to special port , the special port listener in `http-snippet` section18set{19type=&amp;#34;string&amp;#34;20name=&amp;#34;controller.</description>
+    </item>
     
     <item>
       <title>Points to note about  Terraform helm provider</title>
