@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-figures="">
-  <head>  <title>index | Xiao.chen</title>
+<html lang="en" data-figures="" class="page">
+  <head>  <title>Solve the problem of Metrics - Server | Xiao.chen</title>
   <meta charset='utf-8'>
   <meta name="generator" content="Hugo 0.74.3" />
   <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
@@ -12,15 +12,16 @@
   gtag('js', new Date());
   gtag('config', 'G-YV2D58JX2Y');
 </script>
+  
 <meta property = "og:locale" content = "en_US" />
 <meta property="og:type" content="article">
-<meta name="description" content="">
+<meta name="description" content="Solve the problem of Metrics - Server v1beta1.metrics.k8s.io not found">
 <meta name = "twitter:card" content = "summary" />
 <meta name = "twitter:creator" content = "">
-<meta name = "twitter:title" content = "index" />
-<meta property = "og:url" content = "https://blog.wisekee.com/tags/index/" />
-<meta property = "og:title" content = "index" />
-<meta property = "og:description" content = "" />
+<meta name = "twitter:title" content = "Solve the problem of Metrics - Server" />
+<meta property = "og:url" content = "https://blog.wisekee.com/post/k8s-metrics-server/" />
+<meta property = "og:title" content = "Solve the problem of Metrics - Server" />
+<meta property = "og:description" content = "Solve the problem of Metrics - Server v1beta1.metrics.k8s.io not found" />
 <meta property = "og:image" content = "https://blog.wisekee.com/images/thumbnail.png" />
 <link rel='apple-touch-icon' sizes='180x180' href='https://blog.wisekee.com/icons/apple-touch-icon.png'>
 <link rel='icon' type='image/png' sizes='32x32' href='https://blog.wisekee.com/icons/favicon-32x32.png'>
@@ -30,7 +31,7 @@
 <meta name="msapplication-TileColor" content="#002538">
 <meta name="theme-color" content="#002538">
 
-  <link rel='canonical' href='https://blog.wisekee.com/tags/index/'>
+  <link rel='canonical' href='https://blog.wisekee.com/post/k8s-metrics-server/'>
   <style>
     pre code {
       overflow-y: scroll !important;
@@ -92,41 +93,91 @@
 </header>
 
     <main>
-
-<div class='grid-inverse wrap content'>
-  <ul class='posts' id = 'posts'>
-      
-<li class = 'post_item'>
-  <div class = 'excerpt'>
-    <div class = 'excerpt_header'>
-      <h3 class = 'post_link'>
-        <a href='https://blog.wisekee.com/post/'>Posts</a>
-      </h3>
-      <div class = 'post_meta'>
+  
+<div class = 'grid-inverse wrap content'>
+  <article class='post_content'>
+    <h1 class='post_title'>Solve the problem of Metrics - Server</h1><div class = 'post_meta'>
   <svg class="icon">
     <use xlink:href="#calendar"></use>
   </svg>
   <span class="post_date">
     Oct 25, 2020</span>
-  <a href = 'https://blog.wisekee.com/tags/index' class = 'post_tag button button_translucent'>index
+  <a href = 'https://blog.wisekee.com/tags/k8s' class = 'post_tag button button_translucent'>k8s
+  </a>
+  <a href = 'https://blog.wisekee.com/tags/kubectl' class = 'post_tag button button_translucent'>kubectl
+  </a>
+  <a href = 'https://blog.wisekee.com/tags/kubernetes' class = 'post_tag button button_translucent'>kubernetes
+  </a>
+  <a href = 'https://blog.wisekee.com/tags/featured' class = 'post_tag button button_translucent'>featured
   </a>
 </div>
 
-    </div>
-      <div class = 'excerpt_footer'>
-        <div>
-          <p class = 'pale'></p>
-          <a href='https://blog.wisekee.com/post/' class='excerpt_more button'>Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
+    <div class='post_share'>
+  Share on:
+  <a href="https://twitter.com/intent/tweet?text=Solve%20the%20problem%20of%20Metrics%20-%20Server&url=https%3a%2f%2fblog.wisekee.com%2fpost%2fk8s-metrics-server%2f&tw_p=tweetbutton" class="twitter" title="Share on Twitter" target="_blank" rel="nofollow">
+    <svg class="icon">
+      <use xlink:href="#twitter"></use>
+    </svg>
+  </a>
   
-    <li>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fblog.wisekee.com%2fpost%2fk8s-metrics-server%2f&t=Solve%20the%20problem%20of%20Metrics%20-%20Server" class="facebook" title="Share on Facebook" target="_blank" rel="nofollow">
+    <svg class="icon">
+      <use xlink:href="#facebook"></use>
+    </svg>
+  </a>
+  <script>
+    function shareViaLinkedin() {
+      window.open('http://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent("https://blog.wisekee.com/post/k8s-metrics-server/"), '', 'left=0,top=0,width=650,height=420,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+    }
+  </script>
+  <a href="#linkedinshare" id = "linkedinshare" class="linkedin" title="Share on LinkedIn" rel="nofollow" onclick="shareViaLinkedin()">
+    <svg class="icon">
+      <use xlink:href="#linkedin"></use>
+    </svg>
+  </a>
+  <a href="https://blog.wisekee.com/post/k8s-metrics-server/" title="Copy Link" class="link link_yank">
+    <svg class="icon">
+      <use xlink:href="#yank"></use>
+    </svg>
+  </a>
+</div>
 
+    
+    <h3 id="when-we-repeatedly-install-the-metrics-server-because-we-use-helm-to-install-it-deleting-one-of-them-will-cause-the-following-error-when-executing-the-command-related-to-kubectl-top-nodes">When we repeatedly install the Metrics-Server, because we use helm to install it, deleting one of them will cause the following error when executing the command related to <code>kubectl top nodes</code>:</h3>
+<blockquote>
+<p>Error from server (NotFound): the server could not find the requested resource (get services http:heapster:)</p>
+</blockquote>
+<ul>
+<li>A large part of this is due to the removal of the Apiservice Resources from Metics, when you execute the following command to ensure that the Apiservice exists
+<code> kubectl get apiservice | grep metrics</code></li>
+</ul>
+<blockquote>
+<p><code>v1beta1.metrics.k8s.io                 kube-system/metrics-server   True        4d6h</code></p>
+</blockquote>
+<ul>
+<li>Check to see if you can find the correct Apiservice and register the correct Service name below Namespace. If not, you can simply create an Apiservice YAML file that points to the correct Metrics- Server Service</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="ln"> 1</span><span class="k">apiVersion</span><span class="p">:</span><span class="w"> </span>apiregistration.k8s.io/v1<span class="w">
+</span><span class="ln"> 2</span><span class="w"></span><span class="k">kind</span><span class="p">:</span><span class="w"> </span>APIService<span class="w">
+</span><span class="ln"> 3</span><span class="w"></span><span class="k">metadata</span><span class="p">:</span><span class="w">
+</span><span class="ln"> 4</span><span class="w">  </span><span class="k">labels</span><span class="p">:</span><span class="w">
+</span><span class="ln"> 5</span><span class="w">    </span><span class="k">k8s-app</span><span class="p">:</span><span class="w"> </span>metrics-server<span class="w">
+</span><span class="ln"> 6</span><span class="w">  </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>v1beta1.metrics.k8s.io<span class="w">
+</span><span class="ln"> 7</span><span class="w"></span><span class="k">spec</span><span class="p">:</span><span class="w">
+</span><span class="ln"> 8</span><span class="w">  </span><span class="k">group</span><span class="p">:</span><span class="w"> </span>metrics.k8s.io<span class="w">
+</span><span class="ln"> 9</span><span class="w">  </span><span class="k">groupPriorityMinimum</span><span class="p">:</span><span class="w"> </span><span class="m">100</span><span class="w">
+</span><span class="ln">10</span><span class="w">  </span><span class="k">insecureSkipTLSVerify</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="ln">11</span><span class="w">  </span><span class="k">service</span><span class="p">:</span><span class="w">
+</span><span class="ln">12</span><span class="w">    </span><span class="k">name</span><span class="p">:</span><span class="w"> </span>metrics-server<span class="w"> </span><span class="c"># Replace correct merics-server&#39;s service name in namespace</span><span class="w">
+</span><span class="ln">13</span><span class="w">    </span><span class="k">namespace</span><span class="p">:</span><span class="w"> </span>kube-system<span class="w">
+</span><span class="ln">14</span><span class="w">  </span><span class="k">version</span><span class="p">:</span><span class="w"> </span>v1beta1<span class="w">
+</span><span class="ln">15</span><span class="w">  </span><span class="k">versionPriority</span><span class="p">:</span><span class="w"> </span><span class="m">100</span><span class="w">
+</span></code></pre></div><ul>
+<li>Rerequest the resource and execute the following command
+<code>kubectl apply -f metrics-apiservice.yaml</code></li>
+</ul>
 
-    </li>
-  </ul>
+  </article>
 <aside class="sidebar">
   <section class="sidebar_inner">
     
@@ -139,9 +190,6 @@
     
     <ul>
     
-      <li>
-        <a href="https://blog.wisekee.com/post/k8s-metrics-server/" class="nav-link">Solve the problem of Metrics - Server</a>
-      </li>
     
       <li>
         <a href="https://blog.wisekee.com/post/kubernetes-ingress-guides/" class="nav-link">Notes for using Kubernetes Ingress Controller</a>
@@ -167,9 +215,6 @@
     <h2 class="mt-4">Recent Posts</h2>
     <ul class="flex-column">
       
-      <li>
-        <a href="https://blog.wisekee.com/post/k8s-metrics-server/" class="nav-link">Solve the problem of Metrics - Server</a>
-      </li>
       <li>
         <a href="https://blog.wisekee.com/post/kubernetes-ingress-guides/" class="nav-link">Notes for using Kubernetes Ingress Controller</a>
       </li>
@@ -401,8 +446,6 @@
 </aside>
 
 </div>
-
-
     </main><svg width="0" height="0" class="hidden">
   <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
     <path d="M437 0H75C33.648 0 0 33.648 0 75v362c0 41.352 33.648 75 75 75h151V331h-60v-90h60v-61c0-49.629 40.371-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.352 0 75-33.648 75-75V75c0-41.352-33.648-75-75-75zm0 0"></path>

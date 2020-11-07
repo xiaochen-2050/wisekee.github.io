@@ -6,10 +6,20 @@
     <description>Recent content in kubernetes on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
-    <lastBuildDate>Thu, 15 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.wisekee.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Solve the problem of Metrics - Server</title>
+      <link>https://blog.wisekee.com/post/k8s-metrics-server/</link>
+      <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/k8s-metrics-server/</guid>
+      <description>When we repeatedly install the Metrics-Server, because we use helm to install it, deleting one of them will cause the following error when executing the command related to kubectl top nodes:  Error from server (NotFound): the server could not find the requested resource (get services http:heapster:)
+  A large part of this is due to the removal of the Apiservice Resources from Metics, when you execute the following command to ensure that the Apiservice exists  kubectl get apiservice | grep metrics   v1beta1.</description>
+    </item>
     
     <item>
       <title>Notes for using Kubernetes Ingress Controller</title>
