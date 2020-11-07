@@ -2,7 +2,7 @@
 <html lang="en" data-figures="" class="page">
   <head>  <title>Notes for using Kubernetes Ingress Controller | Xiao.chen</title>
   <meta charset='utf-8'>
-  <meta name="generator" content="Hugo 0.74.1" />
+  <meta name="generator" content="Hugo 0.74.3" />
   <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
   <meta http-equiv = 'X-UA-Compatible' content = 'IE=edge'>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV2D58JX2Y"></script>
@@ -32,6 +32,11 @@
 <meta name="theme-color" content="#002538">
 
   <link rel='canonical' href='https://blog.wisekee.com/post/kubernetes-ingress-guides/'>
+  <style>
+    pre code {
+      overflow-y: scroll !important;
+    }
+  </style>
     
 
     
@@ -171,8 +176,7 @@
 </span><span class="ln">27</span><span class="w"></span>value<span class="w"> </span>=<span class="w"> </span><span class="s2">&#34;special&#34;</span><span class="w">
 </span><span class="ln">28</span><span class="w"></span>}<span class="w">
 </span></code></pre></div><ul>
-<li>The complete Terraform configuration is shown below</li>
-</ul>
+<li>The complete Terraform configuration is shown below
 <div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="ln">  1</span><span class="w">	</span>resource<span class="w"> </span><span class="s2">&#34;helm_release&#34;</span><span class="w"> </span><span class="s2">&#34;ingress_nginx_controller&#34;</span><span class="w"> </span>{<span class="w">
 </span><span class="ln">  2</span><span class="w">  </span>name<span class="w"> </span>=<span class="w"> </span><span class="s2">&#34;nginx-ingress-controller&#34;</span><span class="w">  
 </span><span class="ln">  3</span><span class="w">  </span>repository<span class="w"> </span>=<span class="w"> </span><span class="s2">&#34;https://kubernetes.github.io/ingress-nginx&#34;</span><span class="w">
@@ -280,8 +284,9 @@
 </span><span class="ln">105</span><span class="w">    </span>name<span class="w"> </span>=<span class="w"> </span><span class="s2">&#34;controller.service.annotations.service\\.beta\\.kubernetes\\.io/aws-load-balancer-cross-zone-load-balancing-enabled&#34;</span><span class="w">
 </span><span class="ln">106</span><span class="w">    </span>value<span class="w"> </span>=<span class="w"> </span><span class="s2">&#34;true&#34;</span><span class="w">
 </span><span class="ln">107</span><span class="w">  </span>}<span class="w">
-</span><span class="ln">108</span><span class="w"></span>}<span class="w">
-</span></code></pre></div><h3 id="using-alb-ingress-controller-in-aws-eks">Using Alb-ingress-controller in AWS Eks</h3>
+</span><span class="ln">108</span><span class="w"></span>}</code></pre></div></li>
+</ul>
+<h3 id="using-alb-ingress-controller-in-aws-eks">Using Alb-ingress-controller in AWS Eks</h3>
 <ul>
 <li>Every ingress should create application loadbalance it will cost a lot</li>
 <li>Alb-ingress controller need aws IAM policy to create ALB</li>
@@ -799,9 +804,6 @@
   </section>
 </aside>
 
-  
-    
-  
 </div>
     </main><svg width="0" height="0" class="hidden">
   <symbol viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="facebook">
@@ -874,7 +876,6 @@
 
   </div>
 </footer>
-<script id="dsq-count-scr" src="//wisekee.disqus.com/count.js" async></script>
     <script src = 'https://blog.wisekee.com/js/bundle.9c6f41f07357bb02b4064d47017791cb7813d03ae518f46b68bac14408f97b50709fc03f7720e26f51069083cdb250c3bd8422c1579b4b6d660eb69a26beebc2.js'></script>
   </body>
 </html>
