@@ -2,7 +2,7 @@
 <html lang="en" data-figures="" class="page">
   <head>  <title>kubernetes operations command summary | Xiao.chen</title>
   <meta charset='utf-8'>
-  <meta name="generator" content="Hugo 0.74.3" />
+  <meta name="generator" content="Hugo 0.74.1" />
   <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
   <meta http-equiv = 'X-UA-Compatible' content = 'IE=edge'>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YV2D58JX2Y"></script>
@@ -180,14 +180,23 @@
 <code>kubectl port-forward service/redis-master 7000:6379</code></p>
 </li>
 <li>
+<p>Arbitrary proxy Kubernetes internal Service
+<code>kubectl proxy</code>
+then browse the internal service for example: dashboard and metrics</p>
+<blockquote>
+<p>http://localhost:8001/api/v1/namespaces/kube-system/services/kube-state-metrics:http-metrics/proxy/metrics
+http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/.</p>
+</blockquote>
+</li>
+<li>
 <p>operate all resources
 <code>k delete all --all --namespace=kubesphere-logging-system </code>
 <code>k get all --all-namespaces</code></p>
 </li>
 <li>
 <p>terminating pvc when delete pv stuck
-<code>kubectl patch pvc db-pv-claim -p '{&quot;metadata&quot;:{&quot;finalizers&quot;:null}}'</code>
-<code>kubectl patch pod db-74755f6698-8td72 -p '{&quot;metadata&quot;:{&quot;finalizers&quot;:null}}'</code></p>
+<code>kubectl patch pvc db-pv-claim -p '{&quot;metadata&quot;:{&quot;finalizers&quot;:null}}'</code></p>
+<p><code>kubectl patch pod db-74755f6698-8td72 -p '{&quot;metadata&quot;:{&quot;finalizers&quot;:null}}'</code></p>
 </li>
 </ul>
 
