@@ -287,6 +287,37 @@ types.go file include&rsquo;s annotations</p>
 <ul>
 <li>exectue <code>./gen-client.sh</code> late, will generate client and deepcopy.go in pkg directory</li>
 </ul>
+<ol start="4">
+<li>
+<h4 id="and-it-turns-out-theres-a-simpler-way-to-do-it">And it turns out there&rsquo;s a simpler way to do it</h4>
+</li>
+</ol>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="ln"> 1</span><span class="kn">package</span> <span class="nx">main</span>
+<span class="ln"> 2</span>
+<span class="ln"> 3</span><span class="kn">import</span> <span class="p">(</span>
+<span class="ln"> 4</span>	<span class="nx">logs</span> <span class="s">&#34;github.com/prometheus/common/log&#34;</span>
+<span class="ln"> 5</span>	<span class="s">&#34;golang.org/x/net/context&#34;</span>
+<span class="ln"> 6</span>	<span class="nx">v1</span> <span class="s">&#34;k8s.io/apimachinery/pkg/apis/meta/v1&#34;</span>
+<span class="ln"> 7</span>	<span class="s">&#34;k8s.io/apimachinery/pkg/runtime/schema&#34;</span>
+<span class="ln"> 8</span>	<span class="s">&#34;k8s.io/client-go/dynamic&#34;</span>
+<span class="ln"> 9</span>	<span class="s">&#34;snc.com/cleanup/resources/config&#34;</span>
+<span class="ln">10</span><span class="p">)</span>
+<span class="ln">11</span>
+<span class="ln">12</span><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="ln">13</span>	<span class="nx">k8sClient</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">config</span><span class="p">.</span><span class="nf">NewK8s</span><span class="p">()</span>
+<span class="ln">14</span>	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+<span class="ln">15</span>		<span class="nx">logs</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="s">&#34;Init kubernetes error.&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+<span class="ln">16</span>	<span class="p">}</span>
+<span class="ln">17</span>	
+<span class="ln">18</span>	<span class="nx">dyClient</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">dynamic</span><span class="p">.</span><span class="nf">NewForConfig</span><span class="p">(</span><span class="nx">k8sClient</span><span class="p">.</span><span class="nx">Config</span><span class="p">)</span>
+<span class="ln">19</span>	<span class="nx">dyResource</span> <span class="o">:=</span> <span class="nx">dyClient</span><span class="p">.</span><span class="nf">Resource</span><span class="p">(</span><span class="nx">schema</span><span class="p">.</span><span class="nx">GroupVersionResource</span><span class="p">{</span><span class="nx">Version</span><span class="p">:</span> <span class="s">&#34;v1alpha1&#34;</span><span class="p">,</span> <span class="nx">Group</span><span class="p">:</span> <span class="s">&#34;devops.kubesphere.io&#34;</span><span class="p">,</span> <span class="nx">Resource</span><span class="p">:</span> <span class="s">&#34;s2ibinaries&#34;</span><span class="p">})</span>
+<span class="ln">20</span>	<span class="nx">result</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">dyResource</span><span class="p">.</span><span class="nf">List</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nf">TODO</span><span class="p">(),</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">ListOptions</span><span class="p">{})</span>
+<span class="ln">21</span>	<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">item</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">result</span><span class="p">.</span><span class="nx">Items</span> <span class="p">{</span>
+<span class="ln">22</span>		<span class="nx">logs</span><span class="p">.</span><span class="nf">Info</span><span class="p">(</span><span class="s">&#34;Name:&#34;</span><span class="p">,</span> <span class="nx">item</span><span class="p">.</span><span class="nf">GetName</span><span class="p">(),</span> <span class="s">&#34;\t Namespace: &#34;</span><span class="p">,</span> <span class="nx">item</span><span class="p">.</span><span class="nf">GetNamespace</span><span class="p">())</span>
+<span class="ln">23</span>	<span class="p">}</span>
+<span class="ln">24</span>	
+<span class="ln">25</span><span class="p">}</span>
+</code></pre></div><p><em><strong>Use Dynamic resource interface so easy!</strong></em></p>
 
   </article>
 <aside class="sidebar">

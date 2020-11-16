@@ -161,6 +161,12 @@
 <ul>
 <li><code>go mod init example.com/module</code></li>
 </ul>
+<h4 id="add-modules-to-current-packages">Add modules to current packages</h4>
+<ul>
+<li><code>go mod edit -require github.com/prometheus/common@v0.1.0</code></li>
+<li><code>go mod edit -require  k8s.io/client-go@0.18.2</code>
+or <code>go get k8s.io/client-go@v0.18.2</code></li>
+</ul>
 <h5 id="_when-use-module-in-local-packages_"><em>when use module in local packages.</em></h5>
 <ul>
 <li><code>go mod edit -replace github.com/acme/bar=/path/to/local/bar</code></li>
