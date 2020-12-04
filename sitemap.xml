@@ -4,16 +4,71 @@
   
   <url>
     <loc>https://blog.wisekee.com/</loc>
-    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.wisekee.com/tags/featured/</loc>
-    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+    <loc>https://blog.wisekee.com/tags/fluentd/</loc>
+    <lastmod>2020-12-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.wisekee.com/tags/k8s/</loc>
+    <lastmod>2020-12-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/post/</loc>
+    <lastmod>2020-12-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/</loc>
+    <lastmod>2020-12-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/terraform/</loc>
+    <lastmod>2020-12-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/post/terraform-helm-fluentd/</loc>
+    <lastmod>2020-12-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/post/getting-stared-nucalio/</loc>
+    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/kubernetes/</loc>
+    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/nuclio/</loc>
+    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/serverless/</loc>
+    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/go/</loc>
+    <lastmod>2020-11-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/post/schedule-cleanup-k8s-resources/</loc>
+    <lastmod>2020-11-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/featured/</loc>
     <lastmod>2020-10-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -23,32 +78,12 @@
   </url>
   
   <url>
-    <loc>https://blog.wisekee.com/tags/kubernetes/</loc>
-    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.wisekee.com/post/</loc>
-    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.wisekee.com/post/k8s-metrics-server/</loc>
     <lastmod>2020-10-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.wisekee.com/tags/</loc>
-    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.wisekee.com/post/kubernetes-ingress-guides/</loc>
-    <lastmod>2020-10-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.wisekee.com/tags/terraform/</loc>
     <lastmod>2020-10-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -129,11 +164,6 @@
   
   <url>
     <loc>https://blog.wisekee.com/tags/commands/</loc>
-    <lastmod>2019-09-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.wisekee.com/tags/go/</loc>
     <lastmod>2019-09-11T00:00:00+00:00</lastmod>
   </url>
   

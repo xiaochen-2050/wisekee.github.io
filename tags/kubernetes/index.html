@@ -100,6 +100,67 @@
   <div class = 'excerpt'>
     <div class = 'excerpt_header'>
       <h3 class = 'post_link'>
+        <a href='https://blog.wisekee.com/post/getting-stared-nucalio/'>Getting started Serverless framework Nuclio</a>
+      </h3>
+      <div class = 'post_meta'>
+  <svg class="icon">
+    <use xlink:href="#calendar"></use>
+  </svg>
+  <span class="post_date">
+    Nov 15, 2020</span>
+  <a href = 'https://blog.wisekee.com/tags/kubernetes' class = 'post_tag button button_translucent'>Kubernetes
+  </a>
+  <a href = 'https://blog.wisekee.com/tags/nuclio' class = 'post_tag button button_translucent'>Nuclio
+  </a>
+  <a href = 'https://blog.wisekee.com/tags/serverless' class = 'post_tag button button_translucent'>Serverless
+  </a>
+</div>
+
+    </div>
+      <div class = 'excerpt_footer'>
+        <div>
+          <p class = 'pale'>use Helm charts: Github  1	helm repo add nuclio https://nuclio.github.io/nuclio/charts 2	kubectl create namespace nuclio  copy registry to nuclio namespace from existing namespace  1kubectl get secret repo-registry -n dev-ns -o yaml \ 2| sed s/&#34;namespace: dev-ns&#34;/&#34;namespace: nuclio&#34;/ \ 3| kubectl apply …</p>
+          <a href='https://blog.wisekee.com/post/getting-stared-nucalio/' class='excerpt_more button'>Read More</a>
+        </div>
+      </div>
+    </div>
+  </li>
+  
+      
+<li class = 'post_item'>
+  <div class = 'excerpt'>
+    <div class = 'excerpt_header'>
+      <h3 class = 'post_link'>
+        <a href='https://blog.wisekee.com/post/schedule-cleanup-k8s-resources/'>Scheduler clean up kubernetes unuseful resources</a>
+      </h3>
+      <div class = 'post_meta'>
+  <svg class="icon">
+    <use xlink:href="#calendar"></use>
+  </svg>
+  <span class="post_date">
+    Nov 2, 2020</span>
+  <a href = 'https://blog.wisekee.com/tags/kubernetes' class = 'post_tag button button_translucent'>Kubernetes
+  </a>
+  <a href = 'https://blog.wisekee.com/tags/go' class = 'post_tag button button_translucent'>Go
+  </a>
+</div>
+
+    </div>
+      <div class = 'excerpt_footer'>
+        <div>
+          <p class = 'pale'>Prepare Golang program code use clean up unused pods and replicaset resources in kubernetes we can clean up not running status pods and deactive replicasets
+ initialization Go lanugage project evnironment  1	mkdir k8s_res_cleanup &amp;&amp; cd k8s_res_cleanup 2	go mod init example.com/cleanup/resources 3	go get -v -u …</p>
+          <a href='https://blog.wisekee.com/post/schedule-cleanup-k8s-resources/' class='excerpt_more button'>Read More</a>
+        </div>
+      </div>
+    </div>
+  </li>
+  
+      
+<li class = 'post_item'>
+  <div class = 'excerpt'>
+    <div class = 'excerpt_header'>
+      <h3 class = 'post_link'>
         <a href='https://blog.wisekee.com/post/k8s-metrics-server/'>Solve the problem of Metrics - Server</a>
       </h3>
       <div class = 'post_meta'>
@@ -192,75 +253,6 @@
     </div>
   </li>
   
-      
-<li class = 'post_item'>
-  <div class = 'excerpt'>
-    <div class = 'excerpt_header'>
-      <h3 class = 'post_link'>
-        <a href='https://blog.wisekee.com/post/custom-domain-name-in-k8s/'>Custom private domain name in kubernetes cluster</a>
-      </h3>
-      <div class = 'post_meta'>
-  <svg class="icon">
-    <use xlink:href="#calendar"></use>
-  </svg>
-  <span class="post_date">
-    Sep 3, 2020</span>
-  <a href = 'https://blog.wisekee.com/tags/kubernetes' class = 'post_tag button button_translucent'>kubernetes
-  </a>
-  <a href = 'https://blog.wisekee.com/tags/coredons' class = 'post_tag button button_translucent'>Coredons
-  </a>
-</div>
-
-    </div>
-      <div class = 'excerpt_footer'>
-        <div>
-          <p class = 'pale'>We use default service domain name ${servicename}.${namespace}.svc.cluster.localin kubernetes cluster, however the custom private domain name in private k8s networks frequently used. we can use coredns component reparse the private domain name to default CNAME.
-change coredns configmap add custom domain name config to …</p>
-          <a href='https://blog.wisekee.com/post/custom-domain-name-in-k8s/' class='excerpt_more button'>Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-  
-      
-<li class = 'post_item'>
-  <div class = 'excerpt'>
-    <div class = 'excerpt_header'>
-      <h3 class = 'post_link'>
-        <a href='https://blog.wisekee.com/post/k8s-common-command-conclusion/'>kubernetes operations command summary</a>
-      </h3>
-      <div class = 'post_meta'>
-  <svg class="icon">
-    <use xlink:href="#calendar"></use>
-  </svg>
-  <span class="post_date">
-    Aug 25, 2020</span>
-  <a href = 'https://blog.wisekee.com/tags/k8s' class = 'post_tag button button_translucent'>k8s
-  </a>
-  <a href = 'https://blog.wisekee.com/tags/kubectl' class = 'post_tag button button_translucent'>kubectl
-  </a>
-  <a href = 'https://blog.wisekee.com/tags/kubernetes' class = 'post_tag button button_translucent'>kubernetes
-  </a>
-  <a href = 'https://blog.wisekee.com/tags/featured' class = 'post_tag button button_translucent'>featured
-  </a>
-</div>
-
-    </div>
-      <div class = 'excerpt_footer'>
-        <div>
-          <p class = 'pale'>When we use the Kubernetes platform,has many commands is important:
- The k command is alias to kubectl
-   force delete pod, sometimes the pod still terminating.
-k delete pods &lt;pod&gt; -n &lt;namespace&gt; --grace-period=0 --force
-  get all resource in current kubernetes cluster
-k get all --all-namespaces
-  view job …</p>
-          <a href='https://blog.wisekee.com/post/k8s-common-command-conclusion/' class='excerpt_more button'>Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-  
     <li>
 <ul class="pagination">
   <li class="page-item">
@@ -327,6 +319,15 @@ k get all --all-namespaces
     <ul class="flex-column">
       
       <li>
+        <a href="https://blog.wisekee.com/post/terraform-helm-fluentd/" class="nav-link">Terraform&#43;Helm release&#43;fluentd in kubernetes</a>
+      </li>
+      <li>
+        <a href="https://blog.wisekee.com/post/getting-stared-nucalio/" class="nav-link">Getting started Serverless framework Nuclio</a>
+      </li>
+      <li>
+        <a href="https://blog.wisekee.com/post/schedule-cleanup-k8s-resources/" class="nav-link">Scheduler clean up kubernetes unuseful resources</a>
+      </li>
+      <li>
         <a href="https://blog.wisekee.com/post/k8s-metrics-server/" class="nav-link">Solve the problem of Metrics - Server</a>
       </li>
       <li>
@@ -340,15 +341,6 @@ k get all --all-namespaces
       </li>
       <li>
         <a href="https://blog.wisekee.com/post/custom-domain-name-in-k8s/" class="nav-link">Custom private domain name in kubernetes cluster</a>
-      </li>
-      <li>
-        <a href="https://blog.wisekee.com/post/aws-local-development/" class="nav-link">Quickly debug AWS App locally use Localstack(AWS Mock in local)</a>
-      </li>
-      <li>
-        <a href="https://blog.wisekee.com/post/k8s-common-command-conclusion/" class="nav-link">kubernetes operations command summary</a>
-      </li>
-      <li>
-        <a href="https://blog.wisekee.com/post/generate-crds-api-k8s/" class="nav-link">Automatic generate kubernetes custom resources api go language code</a>
       </li>
     </ul> 
     
@@ -364,7 +356,7 @@ k get all --all-namespaces
       <nav class="tags_nav">
         <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent">
           KUBERNETES
-          <span class='button_tally'>7</span>
+          <span class='button_tally'>9</span>
         </a>
         
         <a href='https://blog.wisekee.com/tags/featured/' class=" post_tag button button_translucent">
@@ -374,7 +366,12 @@ k get all --all-namespaces
         
         <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent">
           K8S
-          <span class='button_tally'>4</span>
+          <span class='button_tally'>5</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/terraform/' class=" post_tag button button_translucent">
+          TERRAFORM
+          <span class='button_tally'>3</span>
         </a>
         
         <a href='https://blog.wisekee.com/tags/aws/' class=" post_tag button button_translucent">
@@ -382,13 +379,13 @@ k get all --all-namespaces
           <span class='button_tally'>2</span>
         </a>
         
-        <a href='https://blog.wisekee.com/tags/kubectl/' class=" post_tag button button_translucent">
-          KUBECTL
+        <a href='https://blog.wisekee.com/tags/go/' class=" post_tag button button_translucent">
+          GO
           <span class='button_tally'>2</span>
         </a>
         
-        <a href='https://blog.wisekee.com/tags/terraform/' class=" post_tag button button_translucent">
-          TERRAFORM
+        <a href='https://blog.wisekee.com/tags/kubectl/' class=" post_tag button button_translucent">
+          KUBECTL
           <span class='button_tally'>2</span>
         </a>
         
@@ -424,11 +421,6 @@ k get all --all-namespaces
         
         <a href='https://blog.wisekee.com/tags/custom-resources/' class=" post_tag button button_translucent">
           CUSTOM-RESOURCES
-          <span class='button_tally'>1</span>
-        </a>
-        
-        <a href='https://blog.wisekee.com/tags/elastalert/' class=" post_tag button button_translucent">
-          ELASTALERT
           <span class='button_tally'>1</span>
         </a>
         
@@ -486,7 +478,11 @@ k get all --all-namespaces
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/go/' class=" post_tag button button_translucent" data-position=1>GO<span class='button_tally'>1</span>
+            <a href='https://blog.wisekee.com/tags/fluentd/' class=" post_tag button button_translucent" data-position=1>FLUENTD<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/go/' class=" post_tag button button_translucent" data-position=2>GO<span class='button_tally'>2</span>
             </a>
             
             
@@ -502,7 +498,7 @@ k get all --all-namespaces
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent" data-position=4>K8S<span class='button_tally'>4</span>
+            <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent" data-position=5>K8S<span class='button_tally'>5</span>
             </a>
             
             
@@ -510,7 +506,7 @@ k get all --all-namespaces
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent" data-position=7>KUBERNETES<span class='button_tally'>7</span>
+            <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent" data-position=9>KUBERNETES<span class='button_tally'>9</span>
             </a>
             
             
@@ -534,11 +530,19 @@ k get all --all-namespaces
             </a>
             
             
+            <a href='https://blog.wisekee.com/tags/nuclio/' class=" post_tag button button_translucent" data-position=1>NUCLIO<span class='button_tally'>1</span>
+            </a>
+            
+            
             <a href='https://blog.wisekee.com/tags/security/' class=" post_tag button button_translucent" data-position=1>SECURITY<span class='button_tally'>1</span>
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/terraform/' class=" post_tag button button_translucent" data-position=2>TERRAFORM<span class='button_tally'>2</span>
+            <a href='https://blog.wisekee.com/tags/serverless/' class=" post_tag button button_translucent" data-position=1>SERVERLESS<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/terraform/' class=" post_tag button button_translucent" data-position=3>TERRAFORM<span class='button_tally'>3</span>
             </a>
             
             

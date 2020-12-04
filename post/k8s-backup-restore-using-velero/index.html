@@ -207,15 +207,31 @@
 <span class="ln">6</span>	velero restore describe nginx-backup-20200914164752 <span class="c1"># veiw detail</span> 
 <span class="ln">7</span>	velero restore get <span class="c1"># the status is Completed.</span>
 </code></pre></div><p>You can also using Helm chart install Velero server end. the Helm repo looks like following:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln">1</span>	helm repo add vmware-tanzu https://vmware-tanzu.github.io/helm-charts <span class="c1"># add repo</span> 
-<span class="ln">2</span>	<span class="c1">## other some repo if testing in local.</span>
-<span class="ln">3</span>	<span class="c1"># apphub        	https://apphub.aliyuncs.com/</span>	
-<span class="ln">4</span>	<span class="c1"># harbor        	https://helm.goharbor.io</span>
-<span class="ln">5</span>	<span class="c1"># choerodon     	https://openchart.choerodon.com.cn/choerodon/c7n</span>
-<span class="ln">6</span>	<span class="c1"># rancher-latest	https://releases.rancher.com/server-charts/latest</span>
-<span class="ln">7</span>	<span class="c1"># jetstack      	https://charts.jetstack.io</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln"> 1</span>	helm repo add vmware-tanzu https://vmware-tanzu.github.io/helm-charts <span class="c1"># add repo</span> 
+<span class="ln"> 2</span>	<span class="c1">## other some repo if testing in local.</span>
+<span class="ln"> 3</span>	<span class="c1">#apphub        	https://apphub.aliyuncs.com/</span>                     
+<span class="ln"> 4</span>	<span class="c1">#vmware-tanzu  	https://vmware-tanzu.github.io/helm-charts</span>       
+<span class="ln"> 5</span>	<span class="c1">#harbor        	https://helm.goharbor.io</span>                         
+<span class="ln"> 6</span>	<span class="c1">#choerodon     	https://openchart.choerodon.com.cn/choerodon/c7n</span> 
+<span class="ln"> 7</span>	<span class="c1">#rancher-latest	https://releases.rancher.com/server-charts/latest</span>
+<span class="ln"> 8</span>	<span class="c1">#jetstack      	https://charts.jetstack.io</span>                       
+<span class="ln"> 9</span>	<span class="c1">#nuclio        	https://nuclio.github.io/nuclio/charts</span>           
+<span class="ln">10</span>	<span class="c1">#bitnami       	https://charts.bitnami.com/bitnami</span>
 </code></pre></div><p>reference to: <a href="https://github.com/vmware-tanzu/helm-charts/blob/main/charts/velero/README.md">https://github.com/vmware-tanzu/helm-charts/blob/main/charts/velero/README.md</a></p>
-
+<h4 id="backup-kubernetes-master-etcd-snapshot-and-pki-files">backup kubernetes master etcd snapshot and pki files</h4>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="ln"> 1</span><span class="cp">#!/usr/bin/env bash
+</span><span class="ln"> 2</span><span class="cp"></span>sudo cp -r /etc/kubernetes/pki ./backup/
+<span class="ln"> 3</span>sudo docker run --rm -v /data1/k8s/backup:/backup <span class="se">\
+</span><span class="ln"> 4</span><span class="se"></span>    --network host <span class="se">\
+</span><span class="ln"> 5</span><span class="se"></span>    -v /etc/kubernetes/pki/etcd:/etc/kubernetes/pki/etcd <span class="se">\
+</span><span class="ln"> 6</span><span class="se"></span>    --env <span class="nv">ETCDCTL_API</span><span class="o">=</span><span class="m">3</span> <span class="se">\
+</span><span class="ln"> 7</span><span class="se"></span>    registry.aliyuncs.com/google_containers/etcd:3.4.3-0 <span class="se">\
+</span><span class="ln"> 8</span><span class="se"></span>    etcdctl --endpoints<span class="o">=</span>https://127.0.0.1:2379 <span class="se">\
+</span><span class="ln"> 9</span><span class="se"></span>    --cacert<span class="o">=</span>/etc/kubernetes/pki/etcd/ca.crt <span class="se">\
+</span><span class="ln">10</span><span class="se"></span>    --cert<span class="o">=</span>/etc/kubernetes/pki/etcd/healthcheck-client.crt <span class="se">\
+</span><span class="ln">11</span><span class="se"></span>    --key<span class="o">=</span>/etc/kubernetes/pki/etcd/healthcheck-client.key <span class="se">\
+</span><span class="ln">12</span><span class="se"></span>    snapshot save ./backup/etcd-snapshot-latest.db
+</code></pre></div>
   </article>
 <aside class="sidebar">
   <section class="sidebar_inner">
@@ -258,6 +274,15 @@
     <ul class="flex-column">
       
       <li>
+        <a href="https://blog.wisekee.com/post/terraform-helm-fluentd/" class="nav-link">Terraform&#43;Helm release&#43;fluentd in kubernetes</a>
+      </li>
+      <li>
+        <a href="https://blog.wisekee.com/post/getting-stared-nucalio/" class="nav-link">Getting started Serverless framework Nuclio</a>
+      </li>
+      <li>
+        <a href="https://blog.wisekee.com/post/schedule-cleanup-k8s-resources/" class="nav-link">Scheduler clean up kubernetes unuseful resources</a>
+      </li>
+      <li>
         <a href="https://blog.wisekee.com/post/k8s-metrics-server/" class="nav-link">Solve the problem of Metrics - Server</a>
       </li>
       <li>
@@ -268,15 +293,6 @@
       </li>
       <li>
         <a href="https://blog.wisekee.com/post/custom-domain-name-in-k8s/" class="nav-link">Custom private domain name in kubernetes cluster</a>
-      </li>
-      <li>
-        <a href="https://blog.wisekee.com/post/aws-local-development/" class="nav-link">Quickly debug AWS App locally use Localstack(AWS Mock in local)</a>
-      </li>
-      <li>
-        <a href="https://blog.wisekee.com/post/k8s-common-command-conclusion/" class="nav-link">kubernetes operations command summary</a>
-      </li>
-      <li>
-        <a href="https://blog.wisekee.com/post/generate-crds-api-k8s/" class="nav-link">Automatic generate kubernetes custom resources api go language code</a>
       </li>
     </ul> 
     
@@ -292,7 +308,7 @@
       <nav class="tags_nav">
         <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent">
           KUBERNETES
-          <span class='button_tally'>7</span>
+          <span class='button_tally'>9</span>
         </a>
         
         <a href='https://blog.wisekee.com/tags/featured/' class=" post_tag button button_translucent">
@@ -302,7 +318,12 @@
         
         <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent">
           K8S
-          <span class='button_tally'>4</span>
+          <span class='button_tally'>5</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/terraform/' class=" post_tag button button_translucent">
+          TERRAFORM
+          <span class='button_tally'>3</span>
         </a>
         
         <a href='https://blog.wisekee.com/tags/aws/' class=" post_tag button button_translucent">
@@ -310,13 +331,13 @@
           <span class='button_tally'>2</span>
         </a>
         
-        <a href='https://blog.wisekee.com/tags/kubectl/' class=" post_tag button button_translucent">
-          KUBECTL
+        <a href='https://blog.wisekee.com/tags/go/' class=" post_tag button button_translucent">
+          GO
           <span class='button_tally'>2</span>
         </a>
         
-        <a href='https://blog.wisekee.com/tags/terraform/' class=" post_tag button button_translucent">
-          TERRAFORM
+        <a href='https://blog.wisekee.com/tags/kubectl/' class=" post_tag button button_translucent">
+          KUBECTL
           <span class='button_tally'>2</span>
         </a>
         
@@ -352,11 +373,6 @@
         
         <a href='https://blog.wisekee.com/tags/custom-resources/' class=" post_tag button button_translucent">
           CUSTOM-RESOURCES
-          <span class='button_tally'>1</span>
-        </a>
-        
-        <a href='https://blog.wisekee.com/tags/elastalert/' class=" post_tag button button_translucent">
-          ELASTALERT
           <span class='button_tally'>1</span>
         </a>
         
@@ -414,7 +430,11 @@
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/go/' class=" post_tag button button_translucent" data-position=1>GO<span class='button_tally'>1</span>
+            <a href='https://blog.wisekee.com/tags/fluentd/' class=" post_tag button button_translucent" data-position=1>FLUENTD<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/go/' class=" post_tag button button_translucent" data-position=2>GO<span class='button_tally'>2</span>
             </a>
             
             
@@ -430,7 +450,7 @@
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent" data-position=4>K8S<span class='button_tally'>4</span>
+            <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent" data-position=5>K8S<span class='button_tally'>5</span>
             </a>
             
             
@@ -438,7 +458,7 @@
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent" data-position=7>KUBERNETES<span class='button_tally'>7</span>
+            <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent" data-position=9>KUBERNETES<span class='button_tally'>9</span>
             </a>
             
             
@@ -462,11 +482,19 @@
             </a>
             
             
+            <a href='https://blog.wisekee.com/tags/nuclio/' class=" post_tag button button_translucent" data-position=1>NUCLIO<span class='button_tally'>1</span>
+            </a>
+            
+            
             <a href='https://blog.wisekee.com/tags/security/' class=" post_tag button button_translucent" data-position=1>SECURITY<span class='button_tally'>1</span>
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/terraform/' class=" post_tag button button_translucent" data-position=2>TERRAFORM<span class='button_tally'>2</span>
+            <a href='https://blog.wisekee.com/tags/serverless/' class=" post_tag button button_translucent" data-position=1>SERVERLESS<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/terraform/' class=" post_tag button button_translucent" data-position=3>TERRAFORM<span class='button_tally'>3</span>
             </a>
             
             

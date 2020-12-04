@@ -194,6 +194,15 @@ http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kube
 <code>k get all --all-namespaces</code></p>
 </li>
 <li>
+<p>deployments an echoserver to kubernetes</p>
+</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="ln">1</span><span class="c1"># create deployment</span>
+<span class="ln">2</span>kubectl create deployment hello-minikube --image<span class="o">=</span>registry.cn-hangzhou.aliyuncs.com/google_containers/echoserver:1.10
+<span class="ln">3</span><span class="c1"># expose the service</span>
+<span class="ln">4</span>kubectl expose deployment hello-minikube --type<span class="o">=</span>NodePort --port<span class="o">=</span><span class="m">8080</span>
+</code></pre></div><ul>
+<li>
 <p>terminating pvc when delete pv stuck
 <code>kubectl patch pvc db-pv-claim -p '{&quot;metadata&quot;:{&quot;finalizers&quot;:null}}'</code></p>
 <p><code>kubectl patch pod db-74755f6698-8td72 -p '{&quot;metadata&quot;:{&quot;finalizers&quot;:null}}'</code></p>
@@ -244,6 +253,15 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
     <ul class="flex-column">
       
       <li>
+        <a href="https://blog.wisekee.com/post/terraform-helm-fluentd/" class="nav-link">Terraform&#43;Helm release&#43;fluentd in kubernetes</a>
+      </li>
+      <li>
+        <a href="https://blog.wisekee.com/post/getting-stared-nucalio/" class="nav-link">Getting started Serverless framework Nuclio</a>
+      </li>
+      <li>
+        <a href="https://blog.wisekee.com/post/schedule-cleanup-k8s-resources/" class="nav-link">Scheduler clean up kubernetes unuseful resources</a>
+      </li>
+      <li>
         <a href="https://blog.wisekee.com/post/k8s-metrics-server/" class="nav-link">Solve the problem of Metrics - Server</a>
       </li>
       <li>
@@ -257,12 +275,6 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
       </li>
       <li>
         <a href="https://blog.wisekee.com/post/custom-domain-name-in-k8s/" class="nav-link">Custom private domain name in kubernetes cluster</a>
-      </li>
-      <li>
-        <a href="https://blog.wisekee.com/post/aws-local-development/" class="nav-link">Quickly debug AWS App locally use Localstack(AWS Mock in local)</a>
-      </li>
-      <li>
-        <a href="https://blog.wisekee.com/post/generate-crds-api-k8s/" class="nav-link">Automatic generate kubernetes custom resources api go language code</a>
       </li>
     </ul> 
     
@@ -278,7 +290,7 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
       <nav class="tags_nav">
         <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent">
           KUBERNETES
-          <span class='button_tally'>7</span>
+          <span class='button_tally'>9</span>
         </a>
         
         <a href='https://blog.wisekee.com/tags/featured/' class=" post_tag button button_translucent">
@@ -288,7 +300,12 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
         
         <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent">
           K8S
-          <span class='button_tally'>4</span>
+          <span class='button_tally'>5</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/terraform/' class=" post_tag button button_translucent">
+          TERRAFORM
+          <span class='button_tally'>3</span>
         </a>
         
         <a href='https://blog.wisekee.com/tags/aws/' class=" post_tag button button_translucent">
@@ -296,13 +313,13 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
           <span class='button_tally'>2</span>
         </a>
         
-        <a href='https://blog.wisekee.com/tags/kubectl/' class=" post_tag button button_translucent">
-          KUBECTL
+        <a href='https://blog.wisekee.com/tags/go/' class=" post_tag button button_translucent">
+          GO
           <span class='button_tally'>2</span>
         </a>
         
-        <a href='https://blog.wisekee.com/tags/terraform/' class=" post_tag button button_translucent">
-          TERRAFORM
+        <a href='https://blog.wisekee.com/tags/kubectl/' class=" post_tag button button_translucent">
+          KUBECTL
           <span class='button_tally'>2</span>
         </a>
         
@@ -338,11 +355,6 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
         
         <a href='https://blog.wisekee.com/tags/custom-resources/' class=" post_tag button button_translucent">
           CUSTOM-RESOURCES
-          <span class='button_tally'>1</span>
-        </a>
-        
-        <a href='https://blog.wisekee.com/tags/elastalert/' class=" post_tag button button_translucent">
-          ELASTALERT
           <span class='button_tally'>1</span>
         </a>
         
@@ -400,7 +412,11 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/go/' class=" post_tag button button_translucent" data-position=1>GO<span class='button_tally'>1</span>
+            <a href='https://blog.wisekee.com/tags/fluentd/' class=" post_tag button button_translucent" data-position=1>FLUENTD<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/go/' class=" post_tag button button_translucent" data-position=2>GO<span class='button_tally'>2</span>
             </a>
             
             
@@ -416,7 +432,7 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent" data-position=4>K8S<span class='button_tally'>4</span>
+            <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent" data-position=5>K8S<span class='button_tally'>5</span>
             </a>
             
             
@@ -424,7 +440,7 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent" data-position=7>KUBERNETES<span class='button_tally'>7</span>
+            <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent" data-position=9>KUBERNETES<span class='button_tally'>9</span>
             </a>
             
             
@@ -448,11 +464,19 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
             </a>
             
             
+            <a href='https://blog.wisekee.com/tags/nuclio/' class=" post_tag button button_translucent" data-position=1>NUCLIO<span class='button_tally'>1</span>
+            </a>
+            
+            
             <a href='https://blog.wisekee.com/tags/security/' class=" post_tag button button_translucent" data-position=1>SECURITY<span class='button_tally'>1</span>
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/terraform/' class=" post_tag button button_translucent" data-position=2>TERRAFORM<span class='button_tally'>2</span>
+            <a href='https://blog.wisekee.com/tags/serverless/' class=" post_tag button button_translucent" data-position=1>SERVERLESS<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/terraform/' class=" post_tag button button_translucent" data-position=3>TERRAFORM<span class='button_tally'>3</span>
             </a>
             
             

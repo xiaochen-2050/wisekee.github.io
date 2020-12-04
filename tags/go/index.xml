@@ -6,10 +6,20 @@
     <description>Recent content in Go on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 11 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.wisekee.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Scheduler clean up kubernetes unuseful resources</title>
+      <link>https://blog.wisekee.com/post/schedule-cleanup-k8s-resources/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/schedule-cleanup-k8s-resources/</guid>
+      <description>Prepare Golang program code use clean up unused pods and replicaset resources in kubernetes we can clean up not running status pods and deactive replicasets
+ initialization Go lanugage project evnironment  1	mkdir k8s_res_cleanup &amp;amp;&amp;amp; cd k8s_res_cleanup 2	go mod init example.com/cleanup/resources 3	go get -v -u k8s.io/client-go@v0.18.2 # install packages 4	go get -v -u github.com/prometheus/common@v0.1.0  create sub packageconfig/k8s.go indicate how can connect to kubernetes cluster  1package config 2 3import ( 4	&amp;#34;flag&amp;#34; 5	logs &amp;#34;github.</description>
+    </item>
     
     <item>
       <title>Go language frequently used command notes</title>
@@ -17,7 +27,7 @@
       <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/post/go-usually-commands/</guid>
-      <description>when go version is higher 1.12 should install godoc command  go get golang.org/x/tools/cmd/godoc  launch go docs services in local  godoc -http=:6060  view go environment variables,inlude GO ROOT path  go env  fmt package Println docs  go doc fmt Println  initialization go modules, when reference sub directory straightway example.com/module/sub1/sub2  go mod init example.com/module  Add modules to current packages  go mod edit -require github.</description>
+      <description>when go version is higher 1.12 should install godoc command  go get golang.org/x/tools/cmd/godoc  launch go docs services in local  godoc -http=:6060  view go environment variables,inlude GO ROOT path  go env  fmt package Println docs  go doc fmt Println  initialization go modules, when reference sub directory straightway example.com/module/sub1/sub2  go mod init example.com/module  delete packages  go clean -i -v -x github.com/somepkg/go/simpleGitHub  Add modules to current packages  go mod edit -require github.</description>
     </item>
     
   </channel>

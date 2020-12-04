@@ -6,10 +6,38 @@
     <description>Recent content on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 25 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.wisekee.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Terraform&#43;Helm release&#43;fluentd in kubernetes</title>
+      <link>https://blog.wisekee.com/post/terraform-helm-fluentd/</link>
+      <pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/terraform-helm-fluentd/</guid>
+      <description>step1 the main.tf include following contents: 1resource&amp;#34;helm_release&amp;#34;&amp;#34;fluentd_server&amp;#34;{2name=&amp;#34;fluentd-server&amp;#34;3repository=&amp;#34;https://charts.bitnami.com/bitnami&amp;#34;4# chart = &amp;#34;${path.module}/../../../../../charts/fluentd&amp;#34;5version=&amp;#34;3.1.0&amp;#34;6namespace=&amp;#34;kube-system&amp;#34;78values=[9&amp;lt;&amp;lt;-EOF10forwarder:11configMap:&amp;#34;fluentd-forwarder-config&amp;#34;12rbac:13pspEnabled:true14resources:15limits:16memory:1Gi17requests:18memory:512Mi19aggregator:20replicaCount:121configMap:&amp;#34;fluentd-elasticsearch-config&amp;#34;22resources:23limits:24memory:1Gi25requests:26memory:512Mi27extraEnv:28- name:ELASTICSEARCH_HOST29value:&amp;#34;${var.es_url}&amp;#34;30- name:ELASTICSEARCH_PORT31value:&amp;#34;80&amp;#34;32- name:ELASTICSEARCH_SCHEME33value:&amp;#34;http&amp;#34;34persistence:35enabled:true36storageClass:gp237EOF38]3940depends_on=[41kubernetes_config_map.fluentd_elasticsearch_output,42kubernetes_config_map.fluentd_forwarder_config43]4445}step2 the fluentd aggegator configmap config aggregator_configmap.tf 1resource&amp;#34;kubernetes_config_map&amp;#34;&amp;#34;fluentd_elasticsearch_output&amp;#34;{2metadata{3name=&amp;#34;fluentd-elasticsearch-config&amp;#34;4namespace=&amp;#34;kube-system&amp;#34;5}6data={7&amp;#34;fluentd.conf&amp;#34;=&amp;lt;&amp;lt;-EOF8# Prometheus Exporter Plugin9# input plugin that exports metrics10&amp;lt;source&amp;gt; 11@type prometheus12port2423113&amp;lt;/source&amp;gt; 1415# input plugin that collects metrics from MonitorAgent16&amp;lt;source&amp;gt; 17@type prometheus_monitor18&amp;lt;labels&amp;gt; 19host $${hostname}20&amp;lt;/labels&amp;gt; 21&amp;lt;/source&amp;gt;2223# input plugin that collects metrics for output plugin24&amp;lt;source&amp;gt; 25@type prometheus_output_monitor26&amp;lt;labels&amp;gt; 27host $${hostname}28&amp;lt;/labels&amp;gt; 29&amp;lt;/source&amp;gt;3031# Ignore fluentd own events32&amp;lt;matchfluent.**&amp;gt;33@typenull34&amp;lt;/match&amp;gt; 3536# TCP input to receive logs from the forwarders37&amp;lt;source&amp;gt; 38@type forward39bind0.</description>
+    </item>
+    
+    <item>
+      <title>Getting started Serverless framework Nuclio</title>
+      <link>https://blog.wisekee.com/post/getting-stared-nucalio/</link>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/getting-stared-nucalio/</guid>
+      <description>use Helm charts: Github  1	helm repo add nuclio https://nuclio.github.io/nuclio/charts 2	kubectl create namespace nuclio  copy registry to nuclio namespace from existing namespace  1kubectl get secret repo-registry -n dev-ns -o yaml \ 2| sed s/&amp;#34;namespace: dev-ns&amp;#34;/&amp;#34;namespace: nuclio&amp;#34;/ \ 3| kubectl apply -f -  install nuclio  1	helm install nuclio \ 2 --set registry.secretName=repo-registry \ 3 --set registry.pushPullUrl=localhost/nucalio \ 4 nuclio/nuclio -n nuclio  visit dashboard  1	kubectl -n nuclio port-forward $(kubectl get pods -n nuclio -l nuclio.</description>
+    </item>
+    
+    <item>
+      <title>Scheduler clean up kubernetes unuseful resources</title>
+      <link>https://blog.wisekee.com/post/schedule-cleanup-k8s-resources/</link>
+      <pubDate>Mon, 02 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/schedule-cleanup-k8s-resources/</guid>
+      <description>Prepare Golang program code use clean up unused pods and replicaset resources in kubernetes we can clean up not running status pods and deactive replicasets
+ initialization Go lanugage project evnironment  1	mkdir k8s_res_cleanup &amp;amp;&amp;amp; cd k8s_res_cleanup 2	go mod init example.com/cleanup/resources 3	go get -v -u k8s.io/client-go@v0.18.2 # install packages 4	go get -v -u github.com/prometheus/common@v0.1.0  create sub packageconfig/k8s.go indicate how can connect to kubernetes cluster  1package config 2 3import ( 4	&amp;#34;flag&amp;#34; 5	logs &amp;#34;github.</description>
+    </item>
     
     <item>
       <title>Solve the problem of Metrics - Server</title>
@@ -36,7 +64,7 @@
       <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/post/terraform-helm-issues/</guid>
-      <description>The Metrics-Server helm chart as Terraform HCL 1resource&amp;#34;helm_release&amp;#34;&amp;#34;metrics-server&amp;#34;{2name=&amp;#34;metrics-server&amp;#34;3repository=&amp;#34;https://charts.bitnami.com/bitnami&amp;#34;4chart=&amp;#34;metrics-server&amp;#34;5version=&amp;#34;4.1.4&amp;#34;6namespace=&amp;#34;kube-system&amp;#34;78set{9name=&amp;#34;extraArgs.kubelet-preferred-address-types&amp;#34;10value=&amp;#34;InternalIP\\,ExternalIP\\,Hostname&amp;#34;11}1213set{14name=&amp;#34;resources.requests.memory&amp;#34;15value=&amp;#34;500Mi&amp;#34;16}1718set{19name=&amp;#34;resources.limits.memory&amp;#34;20value=&amp;#34;1Gi&amp;#34;21}2223set{24name=&amp;#34;apiService.create&amp;#34;25value=&amp;#34;true&amp;#34;26}2728} The apiService.create always assign to true when in AWS EKS or other kubernetes distribution The values include comma , muste be use escape in terraform Any resources should be specific quota, like resource requests and limits  When Name includes dot annotations also escaped 1# set {2# type = &amp;#34;string&amp;#34;3# name = &amp;#34;ingress.web.annotations.alb\\.ingress\\.kubernetes\\.io/security-groups&amp;#34;4# value = &amp;#34;${var.office_sg_id}\\,${var.internal_sg_id}\\,${var.cluster_sg_id}&amp;#34;5# }</description>
+      <description>The Metrics-Server helm chart as Terraform HCL 1resource&amp;#34;helm_release&amp;#34;&amp;#34;metrics-server&amp;#34;{2name=&amp;#34;metrics-server&amp;#34;3repository=&amp;#34;https://charts.bitnami.com/bitnami&amp;#34;4chart=&amp;#34;metrics-server&amp;#34;5version=&amp;#34;4.1.4&amp;#34;6namespace=&amp;#34;kube-system&amp;#34;78set{9name=&amp;#34;extraArgs.kubelet-preferred-address-types&amp;#34;10value=&amp;#34;InternalIP\\,ExternalIP\\,Hostname&amp;#34;11}1213set{14name=&amp;#34;resources.requests.memory&amp;#34;15value=&amp;#34;500Mi&amp;#34;16}1718set{19name=&amp;#34;resources.limits.memory&amp;#34;20value=&amp;#34;1Gi&amp;#34;21}2223set{24name=&amp;#34;apiService.create&amp;#34;25value=&amp;#34;true&amp;#34;26}2728} The apiService.create always assign to true when in AWS EKS or other kubernetes distribution The values include comma , muste be use escape in terraform Any resources should be specific quota, like resource requests and limits  When Name includes dot annotations also escaped 1# set {2# type = &amp;#34;string&amp;#34;3# name = &amp;#34;ingress.web.annotations.alb\\.ingress\\.kubernetes\\.io/security-groups&amp;#34;4# value = &amp;#34;${var.office_sg_id}\\,${var.internal_sg_id}\\,${var.cluster_sg_id}&amp;#34;5# }terraform helm release use local charts 1resource&amp;#34;helm_release&amp;#34;&amp;#34;fluentd_server&amp;#34;{2name=&amp;#34;fluentd-server&amp;#34;3# repository = &amp;#34;https://charts.</description>
     </item>
     
     <item>
@@ -114,7 +142,7 @@ k logs $(k get pods --selector=job-name=job-1598792400 --output=jsonpath={.items
       <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/post/go-usually-commands/</guid>
-      <description>when go version is higher 1.12 should install godoc command  go get golang.org/x/tools/cmd/godoc  launch go docs services in local  godoc -http=:6060  view go environment variables,inlude GO ROOT path  go env  fmt package Println docs  go doc fmt Println  initialization go modules, when reference sub directory straightway example.com/module/sub1/sub2  go mod init example.com/module  Add modules to current packages  go mod edit -require github.</description>
+      <description>when go version is higher 1.12 should install godoc command  go get golang.org/x/tools/cmd/godoc  launch go docs services in local  godoc -http=:6060  view go environment variables,inlude GO ROOT path  go env  fmt package Println docs  go doc fmt Println  initialization go modules, when reference sub directory straightway example.com/module/sub1/sub2  go mod init example.com/module  delete packages  go clean -i -v -x github.com/somepkg/go/simpleGitHub  Add modules to current packages  go mod edit -require github.</description>
     </item>
     
     <item>
