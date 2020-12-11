@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ip whitelist on Xiao.chen</title>
+    <link>https://blog.wisekee.com/tags/ip-whitelist/</link>
+    <description>Recent content in Ip whitelist on Xiao.chen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 15 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.wisekee.com/tags/ip-whitelist/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Laravel ip allowlist request filter middleware</title>
+      <link>https://blog.wisekee.com/post/laravel-php-snippets/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/laravel-php-snippets/</guid>
+      <description>Temporary ip allow list in PHP framework Laravel 1&amp;lt;?php 2 3namespace App\Http\Middleware; 4 5use Closure; 6use Illuminate\Http\Request; 7use Illuminate\Support\Facades\Cache; 8use Illuminate\Support\Facades\Log; 9use Symfony\Component\HttpFoundation\IpUtils; 10 11class IpAllowMiddleware 12{ 13 /** 14* Handle an incoming request. 15* 16* @param \Illuminate\Http\Request $request 17* @param \Closure $next 18* @return mixed 19*/ 20 public function handle($request, Closure $next) 21 { 22 $this-&amp;gt;setTrustProxy(); 23 $clientIp = $request-&amp;gt;getClientIp(); 24 if (!$this-&amp;gt;compareOrigin($clientIp)) { 25 Log::warning(&amp;#34;The client ip is forbidden: &amp;#34; .</description>
+    </item>
+    
+  </channel>
+</rss>

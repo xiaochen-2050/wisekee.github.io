@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cache on Xiao.chen</title>
+    <link>https://blog.wisekee.com/tags/cache/</link>
+    <description>Recent content in cache on Xiao.chen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 25 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.wisekee.com/tags/cache/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Php file cache in project</title>
+      <link>https://blog.wisekee.com/post/laravel-librarys/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/laravel-librarys/</guid>
+      <description>use cache library out of laravel framework 1&amp;lt;?php 2 3namespace Company; 4 5 6use Illuminate\Cache\CacheManager; 7use Illuminate\Container\Container; 8use Illuminate\Filesystem\Filesystem; 9 10class FileCache { 11 12 13 private $cacheManager; 14 private $cache; 15 16 private function __construct() 17 { 18 $container = new Container(); 19 $container[&amp;#39;config&amp;#39;] = [ 20 &amp;#39;cache.default&amp;#39; =&amp;gt; &amp;#39;file&amp;#39;, 21 &amp;#39;cache.stores.file&amp;#39; =&amp;gt; [ 22 &amp;#39;driver&amp;#39; =&amp;gt; &amp;#39;file&amp;#39;, 23 &amp;#39;path&amp;#39; =&amp;gt; __DIR__ . &amp;#39;/../../../storage/framework/cache&amp;#39; 24 ] 25 ]; 26 27 $container[&amp;#39;files&amp;#39;] = new Filesystem(); 28 $this-&amp;gt;cacheManager = new CacheManager($container); 29 $this-&amp;gt;cache = $this-&amp;gt;cacheManager-&amp;gt;store(); 30 } 31 32 public static function rememberForever($key, callable $callBack) { 33 return (new static()) 34 -&amp;gt;cache 35 -&amp;gt;rememberForever($key, $callBack); 36 } 37} use file cache get AWS SecretsManager item 1&amp;lt;?</description>
+    </item>
+    
+  </channel>
+</rss>

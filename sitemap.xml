@@ -133,7 +133,22 @@
   </url>
   
   <url>
+    <loc>https://blog.wisekee.com/tags/cache/</loc>
+    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.wisekee.com/post/k8s-common-command-conclusion/</loc>
+    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/php/</loc>
+    <lastmod>2020-08-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/post/laravel-librarys/</loc>
     <lastmod>2020-08-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -160,6 +175,16 @@
   <url>
     <loc>https://blog.wisekee.com/post/setup-cloudfoundry-in-k8s/</loc>
     <lastmod>2020-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/ip-whitelist/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/post/laravel-php-snippets/</loc>
+    <lastmod>2020-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>

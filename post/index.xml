@@ -117,6 +117,15 @@ k logs $(k get pods --selector=job-name=job-1598792400 --output=jsonpath={.items
     </item>
     
     <item>
+      <title>Php file cache in project</title>
+      <link>https://blog.wisekee.com/post/laravel-librarys/</link>
+      <pubDate>Tue, 25 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/laravel-librarys/</guid>
+      <description>use cache library out of laravel framework 1&amp;lt;?php 2 3namespace Company; 4 5 6use Illuminate\Cache\CacheManager; 7use Illuminate\Container\Container; 8use Illuminate\Filesystem\Filesystem; 9 10class FileCache { 11 12 13 private $cacheManager; 14 private $cache; 15 16 private function __construct() 17 { 18 $container = new Container(); 19 $container[&amp;#39;config&amp;#39;] = [ 20 &amp;#39;cache.default&amp;#39; =&amp;gt; &amp;#39;file&amp;#39;, 21 &amp;#39;cache.stores.file&amp;#39; =&amp;gt; [ 22 &amp;#39;driver&amp;#39; =&amp;gt; &amp;#39;file&amp;#39;, 23 &amp;#39;path&amp;#39; =&amp;gt; __DIR__ . &amp;#39;/../../../storage/framework/cache&amp;#39; 24 ] 25 ]; 26 27 $container[&amp;#39;files&amp;#39;] = new Filesystem(); 28 $this-&amp;gt;cacheManager = new CacheManager($container); 29 $this-&amp;gt;cache = $this-&amp;gt;cacheManager-&amp;gt;store(); 30 } 31 32 public static function rememberForever($key, callable $callBack) { 33 return (new static()) 34 -&amp;gt;cache 35 -&amp;gt;rememberForever($key, $callBack); 36 } 37} use file cache get AWS SecretsManager item 1&amp;lt;?</description>
+    </item>
+    
+    <item>
       <title>Automatic generate kubernetes custom resources api go language code</title>
       <link>https://blog.wisekee.com/post/generate-crds-api-k8s/</link>
       <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
@@ -134,6 +143,15 @@ k logs $(k get pods --selector=job-name=job-1598792400 --output=jsonpath={.items
       <guid>https://blog.wisekee.com/post/setup-cloudfoundry-in-k8s/</guid>
       <description>First prepare the tools installation in host:  Kind: https://kind.sigs.k8s.io/docs/user/quick-start/ Cf command: https://docs.cloudfoundry.org/cf-cli/install-go-cli.html  HOMEBREW_NO_AUTO_UPDATE=1 brew install cloudfoundry/tap/cf-cli@6 or HOMEBREW_NO_AUTO_UPDATE=1 brew install cloudfoundry/tap/cf-cli@7   Kubectl command: https://kubernetes.io/docs/tasks/tools/install-kubectl/ Helm: https://helm.sh/docs/intro/install/  The Kind must definiation config.yml, refer to expose http(80) and https(443) ports to host machine, because the k8s cluster node ip is internal-ip created by Kind such as: 172.18.0.2
 1kind:Cluster2apiVersion:kind.x-k8s.io/v1alpha43networking:4# WARNING: It is _strongly_ recommended that you keep this the default5# (127.</description>
+    </item>
+    
+    <item>
+      <title>Laravel ip allowlist request filter middleware</title>
+      <link>https://blog.wisekee.com/post/laravel-php-snippets/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/laravel-php-snippets/</guid>
+      <description>Temporary ip allow list in PHP framework Laravel 1&amp;lt;?php 2 3namespace App\Http\Middleware; 4 5use Closure; 6use Illuminate\Http\Request; 7use Illuminate\Support\Facades\Cache; 8use Illuminate\Support\Facades\Log; 9use Symfony\Component\HttpFoundation\IpUtils; 10 11class IpAllowMiddleware 12{ 13 /** 14* Handle an incoming request. 15* 16* @param \Illuminate\Http\Request $request 17* @param \Closure $next 18* @return mixed 19*/ 20 public function handle($request, Closure $next) 21 { 22 $this-&amp;gt;setTrustProxy(); 23 $clientIp = $request-&amp;gt;getClientIp(); 24 if (!$this-&amp;gt;compareOrigin($clientIp)) { 25 Log::warning(&amp;#34;The client ip is forbidden: &amp;#34; .</description>
     </item>
     
     <item>

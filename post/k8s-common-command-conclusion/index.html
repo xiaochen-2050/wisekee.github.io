@@ -202,6 +202,11 @@ http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kube
 <span class="ln">3</span><span class="c1"># expose the service</span>
 <span class="ln">4</span>kubectl expose deployment hello-minikube --type<span class="o">=</span>NodePort --port<span class="o">=</span><span class="m">8080</span>
 </code></pre></div><ul>
+<li>tag the nodes</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"><span class="ln">1</span>kubectl tag nodes kube-centos-ceph1 <span class="nv">role</span><span class="o">=</span>storage-node
+<span class="ln">2</span>kubectl get nodes --show-labels
+</code></pre></div><ul>
 <li>
 <p>terminating pvc when delete pv stuck
 <code>kubectl patch pvc db-pv-claim -p '{&quot;metadata&quot;:{&quot;finalizers&quot;:null}}'</code></p>
@@ -323,6 +328,11 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
           <span class='button_tally'>2</span>
         </a>
         
+        <a href='https://blog.wisekee.com/tags/php/' class=" post_tag button button_translucent">
+          PHP
+          <span class='button_tally'>2</span>
+        </a>
+        
         <a href='https://blog.wisekee.com/tags/bastion/' class=" post_tag button button_translucent">
           BASTION
           <span class='button_tally'>1</span>
@@ -330,6 +340,11 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
         
         <a href='https://blog.wisekee.com/tags/blog/' class=" post_tag button button_translucent">
           BLOG
+          <span class='button_tally'>1</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/cache/' class=" post_tag button button_translucent">
+          CACHE
           <span class='button_tally'>1</span>
         </a>
         
@@ -348,16 +363,6 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
           <span class='button_tally'>1</span>
         </a>
         
-        <a href='https://blog.wisekee.com/tags/coredons/' class=" post_tag button button_translucent">
-          COREDONS
-          <span class='button_tally'>1</span>
-        </a>
-        
-        <a href='https://blog.wisekee.com/tags/custom-resources/' class=" post_tag button button_translucent">
-          CUSTOM-RESOURCES
-          <span class='button_tally'>1</span>
-        </a>
-        
         
         <br>
         <div class="post_tags_toggle button">All tags</div>
@@ -373,6 +378,10 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
             
             
             <a href='https://blog.wisekee.com/tags/blog/' class=" post_tag button button_translucent" data-position=1>BLOG<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/cache/' class=" post_tag button button_translucent" data-position=1>CACHE<span class='button_tally'>1</span>
             </a>
             
             
@@ -432,6 +441,10 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
             </a>
             
             
+            <a href='https://blog.wisekee.com/tags/ip-whitelist/' class=" post_tag button button_translucent" data-position=1>IP-WHITELIST<span class='button_tally'>1</span>
+            </a>
+            
+            
             <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent" data-position=5>K8S<span class='button_tally'>5</span>
             </a>
             
@@ -465,6 +478,10 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
             
             
             <a href='https://blog.wisekee.com/tags/nuclio/' class=" post_tag button button_translucent" data-position=1>NUCLIO<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/php/' class=" post_tag button button_translucent" data-position=2>PHP<span class='button_tally'>2</span>
             </a>
             
             
