@@ -6,24 +6,15 @@
     <description>Recent content in Tags on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 02 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.wisekee.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Fluentd</title>
-      <link>https://blog.wisekee.com/tags/fluentd/</link>
-      <pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.wisekee.com/tags/fluentd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>K8s</title>
       <link>https://blog.wisekee.com/tags/k8s/</link>
-      <pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/tags/k8s/</guid>
       <description></description>
@@ -32,9 +23,18 @@
     <item>
       <title>Terraform</title>
       <link>https://blog.wisekee.com/tags/terraform/</link>
-      <pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/tags/terraform/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fluentd</title>
+      <link>https://blog.wisekee.com/tags/fluentd/</link>
+      <pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/tags/fluentd/</guid>
       <description></description>
     </item>
     

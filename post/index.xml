@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 02 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.wisekee.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kubernetes events collect to elasticsearch</title>
+      <link>https://blog.wisekee.com/post/kubernetes-events-to-es/</link>
+      <pubDate>Wed, 16 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/kubernetes-events-to-es/</guid>
+      <description>We what collect and storage kubernetes events to elasticsearch, easy to query and analyze alerts. we use this github repo componentkubernetes-event-exporter
+The main.tf include kubernetes &amp;lsquo;deployment&amp;rsquo; object 1resource&amp;#34;kubernetes_deployment&amp;#34;&amp;#34;event_export&amp;#34;{2metadata{3name=&amp;#34;event-export&amp;#34;4namespace=&amp;#34;kube-system&amp;#34;5labels={6app=&amp;#34;event-export&amp;#34;7}8}910spec{11replicas=11213selector{14match_labels={15app=&amp;#34;event-export&amp;#34;16}17}1819template{20metadata{21labels={22app=&amp;#34;event-export&amp;#34;23version=&amp;#34;v1&amp;#34;24}25}2627spec{28service_account_name=kubernetes_service_account.event_export.metadata[0].name29automount_service_account_token=true30container{31image=&amp;#34;opsgenie/kubernetes-event-exporter:0.9&amp;#34;32args=[33&amp;#34;-conf=/data/config.yaml&amp;#34;,34]35name=&amp;#34;event-export&amp;#34;36resources{37requests{38memory=&amp;#34;50Mi&amp;#34;39}40limits{41memory=&amp;#34;100Mi&amp;#34;42}43}44volume_mount{45name=&amp;#34;cfg&amp;#34;46mount_path=&amp;#34;/data&amp;#34;47}48image_pull_policy=&amp;#34;IfNotPresent&amp;#34;49}50volume{51name=&amp;#34;cfg&amp;#34;52config_map{53name=kubernetes_config_map.event_export_config.metadata[0].name54}55}56}57}58}5960depends_on=[61kubernetes_service_account.event_export62]6364}The configmap.tf indlude the kubernetes configMap object storage event-exporter&amp;rsquo;s config as volume mount to previous deployment&amp;rsquo;s pod container 1resource&amp;#34;kubernetes_config_map&amp;#34;&amp;#34;event_export_config&amp;#34;{2metadata{3name=&amp;#34;event-export-config&amp;#34;4namespace=&amp;#34;kube-system&amp;#34;5}6data={7&amp;#34;config.yaml&amp;#34;=&amp;lt;&amp;lt;-EOF8logLevel:error9logFormat:json10route:11routes:12- match:13- type:&amp;#34;Warning&amp;#34;14receiver:&amp;#34;dump&amp;#34;15- match:16- type:&amp;#34;Error&amp;#34;17receiver:&amp;#34;dump&amp;#34;18receivers:19- name:&amp;#34;dump&amp;#34;20file:21path:&amp;#34;dev/stderr&amp;#34;22EOF23}2425}In this config section, we decides collect the Error and Warning events only. And this component support for AWS ElasticSearch is not good, we output events directly to the Console, after which the ES are collected through Fluentdfluentd service</description>
+    </item>
     
     <item>
       <title>Terraform&#43;Helm release&#43;fluentd in kubernetes</title>
