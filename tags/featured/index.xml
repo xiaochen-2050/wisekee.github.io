@@ -47,13 +47,12 @@
       <guid>https://blog.wisekee.com/post/k8s-common-command-conclusion/</guid>
       <description>When we use the Kubernetes platform,has many commands is important:
  The k command is alias to kubectl
-   force delete pod, sometimes the pod still terminating.
+   label for nodes kubectl label nodes host02 disktype=ssd
+  view local config for kubernetes context k config get-contexts
+  switch context&amp;rsquo;s namespaces kubectl config set-context my-vsphere-cluster --namespace=helm-test
+  force delete pod, sometimes the pod still terminating.
 k delete pods &amp;lt;pod&amp;gt; -n &amp;lt;namespace&amp;gt; --grace-period=0 --force
-  get all resource in current kubernetes cluster
-k get all --all-namespaces
-  view job logs
-k logs $(k get pods --selector=job-name=job-1598792400 --output=jsonpath={.items[*].metadata.name})
-  taint the master nodes no execute and no schedult</description>
+  get all resource in current kubernetes cluster</description>
     </item>
     
     <item>
@@ -62,7 +61,7 @@ k logs $(k get pods --selector=job-name=job-1598792400 --output=jsonpath={.items
       <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/post/go-usually-commands/</guid>
-      <description>when go version is higher 1.12 should install godoc command  go get golang.org/x/tools/cmd/godoc  launch go docs services in local  godoc -http=:6060  view go environment variables,inlude GO ROOT path  go env  fmt package Println docs  go doc fmt Println  initialization go modules, when reference sub directory straightway example.com/module/sub1/sub2  go mod init example.com/module  delete packages  go clean -i -v -x github.com/somepkg/go/simpleGitHub  Add modules to current packages  go mod edit -require github.</description>
+      <description>Global install go program(go version &amp;gt;=1.16.0)  go install sigs.k8s.io/kind@v0.9.0  when go version is higher 1.12 should install godoc command  go get golang.org/x/tools/cmd/godoc  launch go docs services in local  godoc -http=:6060  view go environment variables,inlude GO ROOT path  go env  fmt package Println docs  go doc fmt Println  initialization go modules, when reference sub directory straightway example.com/module/sub1/sub2  go mod init example.</description>
     </item>
     
     <item>

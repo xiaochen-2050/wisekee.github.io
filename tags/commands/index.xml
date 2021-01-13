@@ -17,7 +17,7 @@
       <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/post/go-usually-commands/</guid>
-      <description>when go version is higher 1.12 should install godoc command  go get golang.org/x/tools/cmd/godoc  launch go docs services in local  godoc -http=:6060  view go environment variables,inlude GO ROOT path  go env  fmt package Println docs  go doc fmt Println  initialization go modules, when reference sub directory straightway example.com/module/sub1/sub2  go mod init example.com/module  delete packages  go clean -i -v -x github.com/somepkg/go/simpleGitHub  Add modules to current packages  go mod edit -require github.</description>
+      <description>Global install go program(go version &amp;gt;=1.16.0)  go install sigs.k8s.io/kind@v0.9.0  when go version is higher 1.12 should install godoc command  go get golang.org/x/tools/cmd/godoc  launch go docs services in local  godoc -http=:6060  view go environment variables,inlude GO ROOT path  go env  fmt package Println docs  go doc fmt Println  initialization go modules, when reference sub directory straightway example.com/module/sub1/sub2  go mod init example.</description>
     </item>
     
   </channel>

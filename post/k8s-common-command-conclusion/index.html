@@ -149,6 +149,18 @@
 </blockquote>
 <ul>
 <li>
+<p>label for nodes
+<code>kubectl label nodes host02 disktype=ssd</code></p>
+</li>
+<li>
+<p>view local config for kubernetes context
+<code>k config get-contexts</code></p>
+</li>
+<li>
+<p>switch context&rsquo;s  namespaces
+<code>kubectl config set-context my-vsphere-cluster --namespace=helm-test</code></p>
+</li>
+<li>
 <p>force delete pod, sometimes the pod still terminating.</p>
 <p><code>k delete pods &lt;pod&gt; -n &lt;namespace&gt; --grace-period=0 --force</code></p>
 </li>
@@ -217,6 +229,16 @@ http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kube
 helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
 <code>helm pull --repo https://charts.bitnami.com/bitnami metrics-server --version 4.1.4</code></p>
 </li>
+<li>
+<p>taints the node the effects: &ldquo;NoSchedule,PreferNoSchedule,NoExecute&rdquo;
+<code>kubectl taint node master node.kubernetes.io/unschedulable:NoSchedule</code>
+<code>kubectl taint nodes node1 key=value:NoSchedule</code>
+<code>kubectl taint node -l myLabel=X dedicated=foo:PreferNoSchedule</code></p>
+</li>
+<li>
+<p>remove taints
+<code>kubectl taint nodes foo dedicated-</code></p>
+</li>
 </ul>
 
   </article>
@@ -276,10 +298,10 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
         <a href="https://blog.wisekee.com/post/kubernetes-ingress-guides/" class="nav-link">Notes for using Kubernetes Ingress Controller</a>
       </li>
       <li>
-        <a href="https://blog.wisekee.com/post/terraform-helm-issues/" class="nav-link">Points to note about  Terraform helm provider</a>
+        <a href="https://blog.wisekee.com/post/airflow-kuberntes-logs-config/" class="nav-link">Airflow console logs display in kuberntes container executor</a>
       </li>
       <li>
-        <a href="https://blog.wisekee.com/post/k8s-backup-restore-using-velero/" class="nav-link">Backup and Restore kubernetes cluster using Velero</a>
+        <a href="https://blog.wisekee.com/post/terraform-helm-issues/" class="nav-link">Points to note about  Terraform helm provider</a>
       </li>
     </ul> 
     
@@ -298,13 +320,13 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
           <span class='button_tally'>9</span>
         </a>
         
-        <a href='https://blog.wisekee.com/tags/featured/' class=" post_tag button button_translucent">
-          FEATURED
-          <span class='button_tally'>6</span>
-        </a>
-        
         <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent">
           K8S
+          <span class='button_tally'>7</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/featured/' class=" post_tag button button_translucent">
+          FEATURED
           <span class='button_tally'>6</span>
         </a>
         
@@ -315,6 +337,11 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
         
         <a href='https://blog.wisekee.com/tags/aws/' class=" post_tag button button_translucent">
           AWS
+          <span class='button_tally'>2</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/cloud/' class=" post_tag button button_translucent">
+          CLOUD
           <span class='button_tally'>2</span>
         </a>
         
@@ -333,6 +360,11 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
           <span class='button_tally'>2</span>
         </a>
         
+        <a href='https://blog.wisekee.com/tags/airflow/' class=" post_tag button button_translucent">
+          AIRFLOW
+          <span class='button_tally'>1</span>
+        </a>
+        
         <a href='https://blog.wisekee.com/tags/bastion/' class=" post_tag button button_translucent">
           BASTION
           <span class='button_tally'>1</span>
@@ -348,18 +380,8 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
           <span class='button_tally'>1</span>
         </a>
         
-        <a href='https://blog.wisekee.com/tags/cloud/' class=" post_tag button button_translucent">
-          CLOUD
-          <span class='button_tally'>1</span>
-        </a>
-        
         <a href='https://blog.wisekee.com/tags/cloud-foundry/' class=" post_tag button button_translucent">
           CLOUD-FOUNDRY
-          <span class='button_tally'>1</span>
-        </a>
-        
-        <a href='https://blog.wisekee.com/tags/commands/' class=" post_tag button button_translucent">
-          COMMANDS
           <span class='button_tally'>1</span>
         </a>
         
@@ -368,6 +390,10 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
         <div class="post_tags_toggle button">All tags</div>
         <div class="post_tags">
           <div class="tags_list">
+            
+            <a href='https://blog.wisekee.com/tags/airflow/' class=" post_tag button button_translucent" data-position=1>AIRFLOW<span class='button_tally'>1</span>
+            </a>
+            
             
             <a href='https://blog.wisekee.com/tags/aws/' class=" post_tag button button_translucent" data-position=2>AWS<span class='button_tally'>2</span>
             </a>
@@ -385,7 +411,7 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/cloud/' class=" post_tag button button_translucent" data-position=1>CLOUD<span class='button_tally'>1</span>
+            <a href='https://blog.wisekee.com/tags/cloud/' class=" post_tag button button_translucent" data-position=2>CLOUD<span class='button_tally'>2</span>
             </a>
             
             
@@ -413,11 +439,19 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
             </a>
             
             
+            <a href='https://blog.wisekee.com/tags/elk/' class=" post_tag button button_translucent" data-position=1>ELK<span class='button_tally'>1</span>
+            </a>
+            
+            
             <a href='https://blog.wisekee.com/tags/featured/' class=" post_tag button button_translucent" data-position=6>FEATURED<span class='button_tally'>6</span>
             </a>
             
             
             <a href='https://blog.wisekee.com/tags/file-system/' class=" post_tag button button_translucent" data-position=1>FILE-SYSTEM<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/filebeat/' class=" post_tag button button_translucent" data-position=1>FILEBEAT<span class='button_tally'>1</span>
             </a>
             
             
@@ -445,7 +479,7 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent" data-position=6>K8S<span class='button_tally'>6</span>
+            <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent" data-position=7>K8S<span class='button_tally'>7</span>
             </a>
             
             
@@ -462,6 +496,10 @@ helm pull &ndash;repo {repo-url} {chart-name} &ndash;version {chart-version}
             
             
             <a href='https://blog.wisekee.com/tags/logs/' class=" post_tag button button_translucent" data-position=1>LOGS<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/logstash/' class=" post_tag button button_translucent" data-position=1>LOGSTASH<span class='button_tally'>1</span>
             </a>
             
             

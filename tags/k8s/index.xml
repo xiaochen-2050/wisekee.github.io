@@ -41,6 +41,17 @@ The main.tf include kubernetes &amp;lsquo;deployment&amp;rsquo; object 1resource
     </item>
     
     <item>
+      <title>Airflow console logs display in kuberntes container executor</title>
+      <link>https://blog.wisekee.com/post/airflow-kuberntes-logs-config/</link>
+      <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/airflow-kuberntes-logs-config/</guid>
+      <description>####Problem description When use kubernetes executor in airflow, the dags not use the podOperator but that use PythonOperator, the console logs end of Running %s on host %s &amp;lt;TaskInstance:, then the task logs don&amp;rsquo;t redirect to stdout According to the Airflow descript need config the logging class: custom_log_settings 
+####Change the custom log settings comment relative code and enable to console the tee_file_task_handler.py edit the following code snippet.
+ comment the following content.</description>
+    </item>
+    
+    <item>
       <title>Points to note about  Terraform helm provider</title>
       <link>https://blog.wisekee.com/post/terraform-helm-issues/</link>
       <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
@@ -68,13 +79,12 @@ The main.tf include kubernetes &amp;lsquo;deployment&amp;rsquo; object 1resource
       <guid>https://blog.wisekee.com/post/k8s-common-command-conclusion/</guid>
       <description>When we use the Kubernetes platform,has many commands is important:
  The k command is alias to kubectl
-   force delete pod, sometimes the pod still terminating.
+   label for nodes kubectl label nodes host02 disktype=ssd
+  view local config for kubernetes context k config get-contexts
+  switch context&amp;rsquo;s namespaces kubectl config set-context my-vsphere-cluster --namespace=helm-test
+  force delete pod, sometimes the pod still terminating.
 k delete pods &amp;lt;pod&amp;gt; -n &amp;lt;namespace&amp;gt; --grace-period=0 --force
-  get all resource in current kubernetes cluster
-k get all --all-namespaces
-  view job logs
-k logs $(k get pods --selector=job-name=job-1598792400 --output=jsonpath={.items[*].metadata.name})
-  taint the master nodes no execute and no schedult</description>
+  get all resource in current kubernetes cluster</description>
     </item>
     
   </channel>

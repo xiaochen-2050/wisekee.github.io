@@ -29,13 +29,12 @@
       <guid>https://blog.wisekee.com/post/k8s-common-command-conclusion/</guid>
       <description>When we use the Kubernetes platform,has many commands is important:
  The k command is alias to kubectl
-   force delete pod, sometimes the pod still terminating.
+   label for nodes kubectl label nodes host02 disktype=ssd
+  view local config for kubernetes context k config get-contexts
+  switch context&amp;rsquo;s namespaces kubectl config set-context my-vsphere-cluster --namespace=helm-test
+  force delete pod, sometimes the pod still terminating.
 k delete pods &amp;lt;pod&amp;gt; -n &amp;lt;namespace&amp;gt; --grace-period=0 --force
-  get all resource in current kubernetes cluster
-k get all --all-namespaces
-  view job logs
-k logs $(k get pods --selector=job-name=job-1598792400 --output=jsonpath={.items[*].metadata.name})
-  taint the master nodes no execute and no schedult</description>
+  get all resource in current kubernetes cluster</description>
     </item>
     
   </channel>

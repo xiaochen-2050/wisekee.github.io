@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ELK on Xiao.chen</title>
+    <link>https://blog.wisekee.com/tags/elk/</link>
+    <description>Recent content in ELK on Xiao.chen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
+    <lastBuildDate>Fri, 10 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.wisekee.com/tags/elk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Filebeat and Logstash config</title>
+      <link>https://blog.wisekee.com/post/logstash_configure/</link>
+      <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/logstash_configure/</guid>
+      <description>The logs collect workflow  Filebeat gather the file path log files then send to Logstash 5044 port The logstash receive and transform extract fields and send to Elasticsearch  The Filebeat config file is: /etc/filebeat.yml  installing the Filebeat script:  1#!/bin/bash 2FILEBEAT_NAME=filebeat-6.7.2-x86_64.rpm 3# install filebeat 4curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/${FILEBEAT_NAME} 5sudo rpm -vi ${FILEBEAT_NAME} &amp;amp;&amp;amp; sudo rm ${FILEBEAT_NAME} 6sudo chkconfig --add filebeat 7sudo chkconfig filebeat on 8sudo mv -f filebeat.</description>
+    </item>
+    
+  </channel>
+</rss>

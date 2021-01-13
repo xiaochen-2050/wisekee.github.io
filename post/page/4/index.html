@@ -101,6 +101,35 @@
   <div class = 'excerpt'>
     <div class = 'excerpt_header'>
       <h3 class = 'post_link'>
+        <a href='https://blog.wisekee.com/post/laravel-php-snippets/'>Laravel ip allowlist request filter middleware</a>
+      </h3>
+      <div class = 'post_meta'>
+  <svg class="icon">
+    <use xlink:href="#calendar"></use>
+  </svg>
+  <span class="post_date">
+    Aug 15, 2020</span>
+  <a href = 'https://blog.wisekee.com/tags/php' class = 'post_tag button button_translucent'>PHP
+  </a>
+  <a href = 'https://blog.wisekee.com/tags/ip-whitelist' class = 'post_tag button button_translucent'>Ip whitelist
+  </a>
+</div>
+
+    </div>
+      <div class = 'excerpt_footer'>
+        <div>
+          <p class = 'pale'>Temporary ip allow list in PHP framework Laravel 1&lt;?php 2 3namespace App\Http\Middleware; 4 5use Closure; 6use Illuminate\Http\Request; 7use Illuminate\Support\Facades\Cache; 8use Illuminate\Support\Facades\Log; 9use Symfony\Component\HttpFoundation\IpUtils; 10 11class IpAllowMiddleware 12{ 13 /** 14* Handle an …</p>
+          <a href='https://blog.wisekee.com/post/laravel-php-snippets/' class='excerpt_more button'>Read More</a>
+        </div>
+      </div>
+    </div>
+  </li>
+  
+      
+<li class = 'post_item'>
+  <div class = 'excerpt'>
+    <div class = 'excerpt_header'>
+      <h3 class = 'post_link'>
         <a href='https://blog.wisekee.com/post/go-usually-commands/'>Go language frequently used command notes</a>
       </h3>
       <div class = 'post_meta'>
@@ -120,7 +149,7 @@
     </div>
       <div class = 'excerpt_footer'>
         <div>
-          <p class = 'pale'>when go version is higher 1.12 should install godoc command  go get golang.org/x/tools/cmd/godoc  launch go docs services in local  godoc -http=:6060  view go environment variables,inlude GO ROOT path  go env  fmt package Println docs  go doc fmt Println  initialization go modules, when reference sub directory …</p>
+          <p class = 'pale'>Global install go program(go version &gt;=1.16.0)  go install sigs.k8s.io/kind@v0.9.0  when go version is higher 1.12 should install godoc command  go get golang.org/x/tools/cmd/godoc  launch go docs services in local  godoc -http=:6060  view go environment variables,inlude GO ROOT path  go env  fmt package Println …</p>
           <a href='https://blog.wisekee.com/post/go-usually-commands/' class='excerpt_more button'>Read More</a>
         </div>
       </div>
@@ -201,56 +230,27 @@ The directory construct look following 1├── elastalert 2├── generate
   <div class = 'excerpt'>
     <div class = 'excerpt_header'>
       <h3 class = 'post_link'>
-        <a href='https://blog.wisekee.com/post/ubuntu-install-nfs/'>Configuration and Installing NFS on ubuntu</a>
+        <a href='https://blog.wisekee.com/post/logstash_configure/'>Filebeat and Logstash config</a>
       </h3>
       <div class = 'post_meta'>
   <svg class="icon">
     <use xlink:href="#calendar"></use>
   </svg>
   <span class="post_date">
-    Mar 2, 2018</span>
-  <a href = 'https://blog.wisekee.com/tags/nfs' class = 'post_tag button button_translucent'>NFS
+    Aug 10, 2018</span>
+  <a href = 'https://blog.wisekee.com/tags/elk' class = 'post_tag button button_translucent'>ELK
   </a>
-  <a href = 'https://blog.wisekee.com/tags/file-system' class = 'post_tag button button_translucent'>File system
+  <a href = 'https://blog.wisekee.com/tags/logstash' class = 'post_tag button button_translucent'>Logstash
   </a>
-</div>
-
-    </div>
-      <div class = 'excerpt_footer'>
-        <div>
-          <p class = 'pale'>1#updating the system and install nfs daemon 2sudo apt-get update 3sudo apt install nfs-kernel-server 4 5#view the relative info about NFS 6sudo cat /proc/fs/nfsd/versions 7cat /etc/default/nfs-kernel-server 8cat /etc/default/nfs-common 9 10#create and bind the NFS directory in host hard disk 11sudo mkdir -p …</p>
-          <a href='https://blog.wisekee.com/post/ubuntu-install-nfs/' class='excerpt_more button'>Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-  
-      
-<li class = 'post_item'>
-  <div class = 'excerpt'>
-    <div class = 'excerpt_header'>
-      <h3 class = 'post_link'>
-        <a href='https://blog.wisekee.com/post/hugo-usage-issues/'>Hugo usage issues summary</a>
-      </h3>
-      <div class = 'post_meta'>
-  <svg class="icon">
-    <use xlink:href="#calendar"></use>
-  </svg>
-  <span class="post_date">
-    Aug 16, 2017</span>
-  <a href = 'https://blog.wisekee.com/tags/blog' class = 'post_tag button button_translucent'>blog
-  </a>
-  <a href = 'https://blog.wisekee.com/tags/hugo' class = 'post_tag button button_translucent'>hugo
+  <a href = 'https://blog.wisekee.com/tags/filebeat' class = 'post_tag button button_translucent'>Filebeat
   </a>
 </div>
 
     </div>
       <div class = 'excerpt_footer'>
         <div>
-          <p class = 'pale'>Usage scene   In my github repo initialize two repos
- One to storage Hugo sourcecode and markdown files And other one use release finaly site resources    Has two folders themes and public as github submodes
-1 git submodule add https://github.com/don.chen/blog.github.io public 2 git submodule update --init and every …</p>
-          <a href='https://blog.wisekee.com/post/hugo-usage-issues/' class='excerpt_more button'>Read More</a>
+          <p class = 'pale'>The logs collect workflow  Filebeat gather the file path log files then send to Logstash 5044 port The logstash receive and transform extract fields and send to Elasticsearch  The Filebeat config file is: /etc/filebeat.yml  installing the Filebeat script:  1#!/bin/bash 2FILEBEAT_NAME=filebeat-6.7.2-x86_64.rpm 3# …</p>
+          <a href='https://blog.wisekee.com/post/logstash_configure/' class='excerpt_more button'>Read More</a>
         </div>
       </div>
     </div>
@@ -276,11 +276,14 @@ The directory construct look following 1├── elastalert 2├── generate
   <li class="page-item active">
     <a class="page-link" href="/post/page/4/">4</a>
   </li>
-  <li class="page-item disabled">
-    <a  class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  <li class="page-item">
+    <a class="page-link" href="/post/page/5/">5</a>
   </li>
   <li class="page-item">
-    <a href="/post/page/4/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/post/page/5/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  </li>
+  <li class="page-item">
+    <a href="/post/page/5/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 
@@ -346,10 +349,10 @@ The directory construct look following 1├── elastalert 2├── generate
         <a href="https://blog.wisekee.com/post/kubernetes-ingress-guides/" class="nav-link">Notes for using Kubernetes Ingress Controller</a>
       </li>
       <li>
-        <a href="https://blog.wisekee.com/post/terraform-helm-issues/" class="nav-link">Points to note about  Terraform helm provider</a>
+        <a href="https://blog.wisekee.com/post/airflow-kuberntes-logs-config/" class="nav-link">Airflow console logs display in kuberntes container executor</a>
       </li>
       <li>
-        <a href="https://blog.wisekee.com/post/k8s-backup-restore-using-velero/" class="nav-link">Backup and Restore kubernetes cluster using Velero</a>
+        <a href="https://blog.wisekee.com/post/terraform-helm-issues/" class="nav-link">Points to note about  Terraform helm provider</a>
       </li>
     </ul> 
     
@@ -368,13 +371,13 @@ The directory construct look following 1├── elastalert 2├── generate
           <span class='button_tally'>9</span>
         </a>
         
-        <a href='https://blog.wisekee.com/tags/featured/' class=" post_tag button button_translucent">
-          FEATURED
-          <span class='button_tally'>6</span>
-        </a>
-        
         <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent">
           K8S
+          <span class='button_tally'>7</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/featured/' class=" post_tag button button_translucent">
+          FEATURED
           <span class='button_tally'>6</span>
         </a>
         
@@ -385,6 +388,11 @@ The directory construct look following 1├── elastalert 2├── generate
         
         <a href='https://blog.wisekee.com/tags/aws/' class=" post_tag button button_translucent">
           AWS
+          <span class='button_tally'>2</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/cloud/' class=" post_tag button button_translucent">
+          CLOUD
           <span class='button_tally'>2</span>
         </a>
         
@@ -403,6 +411,11 @@ The directory construct look following 1├── elastalert 2├── generate
           <span class='button_tally'>2</span>
         </a>
         
+        <a href='https://blog.wisekee.com/tags/airflow/' class=" post_tag button button_translucent">
+          AIRFLOW
+          <span class='button_tally'>1</span>
+        </a>
+        
         <a href='https://blog.wisekee.com/tags/bastion/' class=" post_tag button button_translucent">
           BASTION
           <span class='button_tally'>1</span>
@@ -418,18 +431,8 @@ The directory construct look following 1├── elastalert 2├── generate
           <span class='button_tally'>1</span>
         </a>
         
-        <a href='https://blog.wisekee.com/tags/cloud/' class=" post_tag button button_translucent">
-          CLOUD
-          <span class='button_tally'>1</span>
-        </a>
-        
         <a href='https://blog.wisekee.com/tags/cloud-foundry/' class=" post_tag button button_translucent">
           CLOUD-FOUNDRY
-          <span class='button_tally'>1</span>
-        </a>
-        
-        <a href='https://blog.wisekee.com/tags/commands/' class=" post_tag button button_translucent">
-          COMMANDS
           <span class='button_tally'>1</span>
         </a>
         
@@ -438,6 +441,10 @@ The directory construct look following 1├── elastalert 2├── generate
         <div class="post_tags_toggle button">All tags</div>
         <div class="post_tags">
           <div class="tags_list">
+            
+            <a href='https://blog.wisekee.com/tags/airflow/' class=" post_tag button button_translucent" data-position=1>AIRFLOW<span class='button_tally'>1</span>
+            </a>
+            
             
             <a href='https://blog.wisekee.com/tags/aws/' class=" post_tag button button_translucent" data-position=2>AWS<span class='button_tally'>2</span>
             </a>
@@ -455,7 +462,7 @@ The directory construct look following 1├── elastalert 2├── generate
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/cloud/' class=" post_tag button button_translucent" data-position=1>CLOUD<span class='button_tally'>1</span>
+            <a href='https://blog.wisekee.com/tags/cloud/' class=" post_tag button button_translucent" data-position=2>CLOUD<span class='button_tally'>2</span>
             </a>
             
             
@@ -483,11 +490,19 @@ The directory construct look following 1├── elastalert 2├── generate
             </a>
             
             
+            <a href='https://blog.wisekee.com/tags/elk/' class=" post_tag button button_translucent" data-position=1>ELK<span class='button_tally'>1</span>
+            </a>
+            
+            
             <a href='https://blog.wisekee.com/tags/featured/' class=" post_tag button button_translucent" data-position=6>FEATURED<span class='button_tally'>6</span>
             </a>
             
             
             <a href='https://blog.wisekee.com/tags/file-system/' class=" post_tag button button_translucent" data-position=1>FILE-SYSTEM<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/filebeat/' class=" post_tag button button_translucent" data-position=1>FILEBEAT<span class='button_tally'>1</span>
             </a>
             
             
@@ -515,7 +530,7 @@ The directory construct look following 1├── elastalert 2├── generate
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent" data-position=6>K8S<span class='button_tally'>6</span>
+            <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent" data-position=7>K8S<span class='button_tally'>7</span>
             </a>
             
             
@@ -532,6 +547,10 @@ The directory construct look following 1├── elastalert 2├── generate
             
             
             <a href='https://blog.wisekee.com/tags/logs/' class=" post_tag button button_translucent" data-position=1>LOGS<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/logstash/' class=" post_tag button button_translucent" data-position=1>LOGSTASH<span class='button_tally'>1</span>
             </a>
             
             

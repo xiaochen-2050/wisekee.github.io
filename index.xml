@@ -69,6 +69,17 @@ The main.tf include kubernetes &amp;lsquo;deployment&amp;rsquo; object 1resource
     </item>
     
     <item>
+      <title>Airflow console logs display in kuberntes container executor</title>
+      <link>https://blog.wisekee.com/post/airflow-kuberntes-logs-config/</link>
+      <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/airflow-kuberntes-logs-config/</guid>
+      <description>####Problem description When use kubernetes executor in airflow, the dags not use the podOperator but that use PythonOperator, the console logs end of Running %s on host %s &amp;lt;TaskInstance:, then the task logs don&amp;rsquo;t redirect to stdout According to the Airflow descript need config the logging class: custom_log_settings 
+####Change the custom log settings comment relative code and enable to console the tee_file_task_handler.py edit the following code snippet.
+ comment the following content.</description>
+    </item>
+    
+    <item>
       <title>Points to note about  Terraform helm provider</title>
       <link>https://blog.wisekee.com/post/terraform-helm-issues/</link>
       <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
@@ -117,13 +128,12 @@ The docker-compose.yml looks like this following 1version:&amp;#39;3&amp;#39;23s
       <guid>https://blog.wisekee.com/post/k8s-common-command-conclusion/</guid>
       <description>When we use the Kubernetes platform,has many commands is important:
  The k command is alias to kubectl
-   force delete pod, sometimes the pod still terminating.
+   label for nodes kubectl label nodes host02 disktype=ssd
+  view local config for kubernetes context k config get-contexts
+  switch context&amp;rsquo;s namespaces kubectl config set-context my-vsphere-cluster --namespace=helm-test
+  force delete pod, sometimes the pod still terminating.
 k delete pods &amp;lt;pod&amp;gt; -n &amp;lt;namespace&amp;gt; --grace-period=0 --force
-  get all resource in current kubernetes cluster
-k get all --all-namespaces
-  view job logs
-k logs $(k get pods --selector=job-name=job-1598792400 --output=jsonpath={.items[*].metadata.name})
-  taint the master nodes no execute and no schedult</description>
+  get all resource in current kubernetes cluster</description>
     </item>
     
     <item>
@@ -170,7 +180,7 @@ k logs $(k get pods --selector=job-name=job-1598792400 --output=jsonpath={.items
       <pubDate>Wed, 11 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/post/go-usually-commands/</guid>
-      <description>when go version is higher 1.12 should install godoc command  go get golang.org/x/tools/cmd/godoc  launch go docs services in local  godoc -http=:6060  view go environment variables,inlude GO ROOT path  go env  fmt package Println docs  go doc fmt Println  initialization go modules, when reference sub directory straightway example.com/module/sub1/sub2  go mod init example.com/module  delete packages  go clean -i -v -x github.com/somepkg/go/simpleGitHub  Add modules to current packages  go mod edit -require github.</description>
+      <description>Global install go program(go version &amp;gt;=1.16.0)  go install sigs.k8s.io/kind@v0.9.0  when go version is higher 1.12 should install godoc command  go get golang.org/x/tools/cmd/godoc  launch go docs services in local  godoc -http=:6060  view go environment variables,inlude GO ROOT path  go env  fmt package Println docs  go doc fmt Println  initialization go modules, when reference sub directory straightway example.com/module/sub1/sub2  go mod init example.</description>
     </item>
     
     <item>
@@ -210,6 +220,15 @@ Configuration file param.json 1{ 2 &amp;#34;dev&amp;#34;: { 3 &amp;#34;public_co
       <guid>https://blog.wisekee.com/about/</guid>
       <description>I have 13 years of working experience in the IT industry in China from Qbasic language in high school to Foxbase,PowerBuilder and other traditional C/S software development tool sets. With the vigorous development of Internet, ASP language has been used to make dynamic website since 2002. Later, I turned to PHP, a powerful WEB development language, and led the development of Online education websites.
 Around 2011, as Java becomes more and more powerful in the web development space.</description>
+    </item>
+    
+    <item>
+      <title>Filebeat and Logstash config</title>
+      <link>https://blog.wisekee.com/post/logstash_configure/</link>
+      <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/logstash_configure/</guid>
+      <description>The logs collect workflow  Filebeat gather the file path log files then send to Logstash 5044 port The logstash receive and transform extract fields and send to Elasticsearch  The Filebeat config file is: /etc/filebeat.yml  installing the Filebeat script:  1#!/bin/bash 2FILEBEAT_NAME=filebeat-6.7.2-x86_64.rpm 3# install filebeat 4curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/${FILEBEAT_NAME} 5sudo rpm -vi ${FILEBEAT_NAME} &amp;amp;&amp;amp; sudo rm ${FILEBEAT_NAME} 6sudo chkconfig --add filebeat 7sudo chkconfig filebeat on 8sudo mv -f filebeat.</description>
     </item>
     
     <item>

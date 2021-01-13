@@ -195,6 +195,37 @@ The main.tf include kubernetes &lsquo;deployment&rsquo; object …</p>
   <div class = 'excerpt'>
     <div class = 'excerpt_header'>
       <h3 class = 'post_link'>
+        <a href='https://blog.wisekee.com/post/airflow-kuberntes-logs-config/'>Airflow console logs display in kuberntes container executor</a>
+      </h3>
+      <div class = 'post_meta'>
+  <svg class="icon">
+    <use xlink:href="#calendar"></use>
+  </svg>
+  <span class="post_date">
+    Oct 11, 2020</span>
+  <a href = 'https://blog.wisekee.com/tags/airflow' class = 'post_tag button button_translucent'>Airflow
+  </a>
+  <a href = 'https://blog.wisekee.com/tags/k8s' class = 'post_tag button button_translucent'>K8s
+  </a>
+  <a href = 'https://blog.wisekee.com/tags/cloud' class = 'post_tag button button_translucent'>Cloud
+  </a>
+</div>
+
+    </div>
+      <div class = 'excerpt_footer'>
+        <div>
+          <p class = 'pale'>####Problem description When use kubernetes executor in airflow, the dags not use the podOperator but that use PythonOperator, the console logs end of Running %s on host %s &lt;TaskInstance:, then the task logs don&rsquo;t redirect to stdout According to the Airflow descript need config the logging class: …</p>
+          <a href='https://blog.wisekee.com/post/airflow-kuberntes-logs-config/' class='excerpt_more button'>Read More</a>
+        </div>
+      </div>
+    </div>
+  </li>
+  
+      
+<li class = 'post_item'>
+  <div class = 'excerpt'>
+    <div class = 'excerpt_header'>
+      <h3 class = 'post_link'>
         <a href='https://blog.wisekee.com/post/terraform-helm-issues/'>Points to note about  Terraform helm provider</a>
       </h3>
       <div class = 'post_meta'>
@@ -216,38 +247,6 @@ The main.tf include kubernetes &lsquo;deployment&rsquo; object …</p>
         <div>
           <p class = 'pale'>The Metrics-Server helm chart as Terraform HCL …</p>
           <a href='https://blog.wisekee.com/post/terraform-helm-issues/' class='excerpt_more button'>Read More</a>
-        </div>
-      </div>
-    </div>
-  </li>
-  
-      
-<li class = 'post_item'>
-  <div class = 'excerpt'>
-    <div class = 'excerpt_header'>
-      <h3 class = 'post_link'>
-        <a href='https://blog.wisekee.com/post/k8s-backup-restore-using-velero/'>Backup and Restore kubernetes cluster using Velero</a>
-      </h3>
-      <div class = 'post_meta'>
-  <svg class="icon">
-    <use xlink:href="#calendar"></use>
-  </svg>
-  <span class="post_date">
-    Sep 10, 2020</span>
-  <a href = 'https://blog.wisekee.com/tags/kubernetes' class = 'post_tag button button_translucent'>Kubernetes
-  </a>
-  <a href = 'https://blog.wisekee.com/tags/velero' class = 'post_tag button button_translucent'>Velero
-  </a>
-  <a href = 'https://blog.wisekee.com/tags/k8s' class = 'post_tag button button_translucent'>K8s
-  </a>
-</div>
-
-    </div>
-      <div class = 'excerpt_footer'>
-        <div>
-          <p class = 'pale'>Installing or Upgrade Velero client on Mac OS:
-1	brew install velero 2	HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade velero #upgrade to the latest version if maybe The Velero should use object store save the snapshot. so we use Minio as kubernetes object store.Minio launched as part of docker-compose.yaml …</p>
-          <a href='https://blog.wisekee.com/post/k8s-backup-restore-using-velero/' class='excerpt_more button'>Read More</a>
         </div>
       </div>
     </div>
@@ -337,10 +336,10 @@ The main.tf include kubernetes &lsquo;deployment&rsquo; object …</p>
         <a href="https://blog.wisekee.com/post/kubernetes-ingress-guides/" class="nav-link">Notes for using Kubernetes Ingress Controller</a>
       </li>
       <li>
-        <a href="https://blog.wisekee.com/post/terraform-helm-issues/" class="nav-link">Points to note about  Terraform helm provider</a>
+        <a href="https://blog.wisekee.com/post/airflow-kuberntes-logs-config/" class="nav-link">Airflow console logs display in kuberntes container executor</a>
       </li>
       <li>
-        <a href="https://blog.wisekee.com/post/k8s-backup-restore-using-velero/" class="nav-link">Backup and Restore kubernetes cluster using Velero</a>
+        <a href="https://blog.wisekee.com/post/terraform-helm-issues/" class="nav-link">Points to note about  Terraform helm provider</a>
       </li>
     </ul> 
     
@@ -359,13 +358,13 @@ The main.tf include kubernetes &lsquo;deployment&rsquo; object …</p>
           <span class='button_tally'>9</span>
         </a>
         
-        <a href='https://blog.wisekee.com/tags/featured/' class=" post_tag button button_translucent">
-          FEATURED
-          <span class='button_tally'>6</span>
-        </a>
-        
         <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent">
           K8S
+          <span class='button_tally'>7</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/featured/' class=" post_tag button button_translucent">
+          FEATURED
           <span class='button_tally'>6</span>
         </a>
         
@@ -376,6 +375,11 @@ The main.tf include kubernetes &lsquo;deployment&rsquo; object …</p>
         
         <a href='https://blog.wisekee.com/tags/aws/' class=" post_tag button button_translucent">
           AWS
+          <span class='button_tally'>2</span>
+        </a>
+        
+        <a href='https://blog.wisekee.com/tags/cloud/' class=" post_tag button button_translucent">
+          CLOUD
           <span class='button_tally'>2</span>
         </a>
         
@@ -394,6 +398,11 @@ The main.tf include kubernetes &lsquo;deployment&rsquo; object …</p>
           <span class='button_tally'>2</span>
         </a>
         
+        <a href='https://blog.wisekee.com/tags/airflow/' class=" post_tag button button_translucent">
+          AIRFLOW
+          <span class='button_tally'>1</span>
+        </a>
+        
         <a href='https://blog.wisekee.com/tags/bastion/' class=" post_tag button button_translucent">
           BASTION
           <span class='button_tally'>1</span>
@@ -409,18 +418,8 @@ The main.tf include kubernetes &lsquo;deployment&rsquo; object …</p>
           <span class='button_tally'>1</span>
         </a>
         
-        <a href='https://blog.wisekee.com/tags/cloud/' class=" post_tag button button_translucent">
-          CLOUD
-          <span class='button_tally'>1</span>
-        </a>
-        
         <a href='https://blog.wisekee.com/tags/cloud-foundry/' class=" post_tag button button_translucent">
           CLOUD-FOUNDRY
-          <span class='button_tally'>1</span>
-        </a>
-        
-        <a href='https://blog.wisekee.com/tags/commands/' class=" post_tag button button_translucent">
-          COMMANDS
           <span class='button_tally'>1</span>
         </a>
         
@@ -429,6 +428,10 @@ The main.tf include kubernetes &lsquo;deployment&rsquo; object …</p>
         <div class="post_tags_toggle button">All tags</div>
         <div class="post_tags">
           <div class="tags_list">
+            
+            <a href='https://blog.wisekee.com/tags/airflow/' class=" post_tag button button_translucent" data-position=1>AIRFLOW<span class='button_tally'>1</span>
+            </a>
+            
             
             <a href='https://blog.wisekee.com/tags/aws/' class=" post_tag button button_translucent" data-position=2>AWS<span class='button_tally'>2</span>
             </a>
@@ -446,7 +449,7 @@ The main.tf include kubernetes &lsquo;deployment&rsquo; object …</p>
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/cloud/' class=" post_tag button button_translucent" data-position=1>CLOUD<span class='button_tally'>1</span>
+            <a href='https://blog.wisekee.com/tags/cloud/' class=" post_tag button button_translucent" data-position=2>CLOUD<span class='button_tally'>2</span>
             </a>
             
             
@@ -474,11 +477,19 @@ The main.tf include kubernetes &lsquo;deployment&rsquo; object …</p>
             </a>
             
             
+            <a href='https://blog.wisekee.com/tags/elk/' class=" post_tag button button_translucent" data-position=1>ELK<span class='button_tally'>1</span>
+            </a>
+            
+            
             <a href='https://blog.wisekee.com/tags/featured/' class=" post_tag button button_translucent" data-position=6>FEATURED<span class='button_tally'>6</span>
             </a>
             
             
             <a href='https://blog.wisekee.com/tags/file-system/' class=" post_tag button button_translucent" data-position=1>FILE-SYSTEM<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/filebeat/' class=" post_tag button button_translucent" data-position=1>FILEBEAT<span class='button_tally'>1</span>
             </a>
             
             
@@ -506,7 +517,7 @@ The main.tf include kubernetes &lsquo;deployment&rsquo; object …</p>
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent" data-position=6>K8S<span class='button_tally'>6</span>
+            <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent" data-position=7>K8S<span class='button_tally'>7</span>
             </a>
             
             
@@ -523,6 +534,10 @@ The main.tf include kubernetes &lsquo;deployment&rsquo; object …</p>
             
             
             <a href='https://blog.wisekee.com/tags/logs/' class=" post_tag button button_translucent" data-position=1>LOGS<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/logstash/' class=" post_tag button button_translucent" data-position=1>LOGSTASH<span class='button_tally'>1</span>
             </a>
             
             
