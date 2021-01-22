@@ -6,10 +6,21 @@
     <description>Recent content on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 16 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.wisekee.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Installing eclipse-che in native kubernetes platform</title>
+      <link>https://blog.wisekee.com/post/installing-eclipse-che-in-kubernetes/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/installing-eclipse-che-in-kubernetes/</guid>
+      <description>At first installing OLM Requirement: kubectl configred and connect to Kubernetes cluster correct.
+1curl -L https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.17.0/install.sh -o install.sh 2chmod +x install.sh 3./install.sh v0.17.0 Installing Eclipse-Che Operator According to: eclipse-che operator
+1kubectl create -f https://operatorhub.io/install/eclipse-che.yaml 2# view the Operator resources 3kubectl get pods --all-namespaces | grep olm 4# and the CluseterServiceVersion 5kubectl get csv -n my-eclipse-che Install Eclipse-che instance use CheCluster resource 1#The partial configure need to change2k8s:3ingressClass:&amp;#39;nginx&amp;#39;4ingressDomain:&amp;#39;che.dev.com&amp;#39;5ingressStrategy:&amp;#39;single-host&amp;#39;6securityContextFsGroup:&amp;#39;&amp;#39;7securityContextRunAsUser:&amp;#39;&amp;#39;8singleHostExposureType:&amp;#39;&amp;#39;9tlsSecretName:&amp;#39;self-domain-cert&amp;#39;10server:11cheHost:&amp;#39;che.dev.com&amp;#39;12cheHostTLSSecret:&amp;#39;self-domain-cert&amp;#39;13#You can add more custom properties refer to this url: https://www.</description>
+    </item>
     
     <item>
       <title>Kubernetes events collect to elasticsearch</title>
@@ -74,8 +85,8 @@ The main.tf include kubernetes &amp;lsquo;deployment&amp;rsquo; object 1resource
       <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/post/airflow-kuberntes-logs-config/</guid>
-      <description>####Problem description When use kubernetes executor in airflow, the dags not use the podOperator but that use PythonOperator, the console logs end of Running %s on host %s &amp;lt;TaskInstance:, then the task logs don&amp;rsquo;t redirect to stdout According to the Airflow descript need config the logging class: custom_log_settings 
-####Change the custom log settings comment relative code and enable to console the tee_file_task_handler.py edit the following code snippet.
+      <description>Problem description When use kubernetes executor in airflow, the dags not use the podOperator but that use PythonOperator, the console logs end of Running %s on host %s &amp;lt;TaskInstance:, then the task logs don&amp;rsquo;t redirect to stdout According to the Airflow descript need config the logging class: custom_log_settings 
+Change the custom log settings comment relative code and enable to console the tee_file_task_handler.py edit the following code snippet.
  comment the following content.</description>
     </item>
     

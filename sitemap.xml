@@ -4,7 +4,37 @@
   
   <url>
     <loc>https://blog.wisekee.com/</loc>
-    <lastmod>2020-12-16T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/eclipse-che/</loc>
+    <lastmod>2021-01-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/post/installing-eclipse-che-in-kubernetes/</loc>
+    <lastmod>2021-01-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/kubernetes/</loc>
+    <lastmod>2021-01-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/operator/</loc>
+    <lastmod>2021-01-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/post/</loc>
+    <lastmod>2021-01-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.wisekee.com/tags/</loc>
+    <lastmod>2021-01-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -14,16 +44,6 @@
   
   <url>
     <loc>https://blog.wisekee.com/post/kubernetes-events-to-es/</loc>
-    <lastmod>2020-12-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.wisekee.com/post/</loc>
-    <lastmod>2020-12-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.wisekee.com/tags/</loc>
     <lastmod>2020-12-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -44,11 +64,6 @@
   
   <url>
     <loc>https://blog.wisekee.com/post/getting-stared-nucalio/</loc>
-    <lastmod>2020-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.wisekee.com/tags/kubernetes/</loc>
     <lastmod>2020-11-15T00:00:00+00:00</lastmod>
   </url>
   

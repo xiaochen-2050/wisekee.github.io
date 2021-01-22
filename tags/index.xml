@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
-    <lastBuildDate>Wed, 16 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.wisekee.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Eclipse-Che</title>
+      <link>https://blog.wisekee.com/tags/eclipse-che/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/tags/eclipse-che/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://blog.wisekee.com/tags/kubernetes/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Operator</title>
+      <link>https://blog.wisekee.com/tags/operator/</link>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/tags/operator/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>K8s</title>
@@ -35,15 +62,6 @@
       <pubDate>Wed, 02 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/tags/fluentd/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kubernetes</title>
-      <link>https://blog.wisekee.com/tags/kubernetes/</link>
-      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://blog.wisekee.com/tags/kubernetes/</guid>
       <description></description>
     </item>
     

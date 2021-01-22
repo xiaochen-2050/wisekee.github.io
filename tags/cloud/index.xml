@@ -17,8 +17,8 @@
       <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://blog.wisekee.com/post/airflow-kuberntes-logs-config/</guid>
-      <description>####Problem description When use kubernetes executor in airflow, the dags not use the podOperator but that use PythonOperator, the console logs end of Running %s on host %s &amp;lt;TaskInstance:, then the task logs don&amp;rsquo;t redirect to stdout According to the Airflow descript need config the logging class: custom_log_settings 
-####Change the custom log settings comment relative code and enable to console the tee_file_task_handler.py edit the following code snippet.
+      <description>Problem description When use kubernetes executor in airflow, the dags not use the podOperator but that use PythonOperator, the console logs end of Running %s on host %s &amp;lt;TaskInstance:, then the task logs don&amp;rsquo;t redirect to stdout According to the Airflow descript need config the logging class: custom_log_settings 
+Change the custom log settings comment relative code and enable to console the tee_file_task_handler.py edit the following code snippet.
  comment the following content.</description>
     </item>
     

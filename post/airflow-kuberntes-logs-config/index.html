@@ -141,12 +141,12 @@
 </div>
 
     
-    <p>####Problem description
-When use <code>kubernetes executor</code> in airflow, the dags not use the podOperator but that use PythonOperator, the console logs end of <code>Running %s on host %s &lt;TaskInstance:</code>, then the task logs don&rsquo;t redirect to stdout
+    <h4 id="problem-description">Problem description</h4>
+<p>When use <code>kubernetes executor</code> in airflow, the dags not use the podOperator but that use PythonOperator, the console logs end of <code>Running %s on host %s &lt;TaskInstance:</code>, then the task logs don&rsquo;t redirect to stdout
 According to the Airflow descript need config the logging class:
 <a href="https://github.com/kbbqiu/airflow-stdout-log-handler/blob/master/config/">custom_log_settings </a></p>
-<p>####Change the custom log settings comment relative code and enable to console
-the <code>tee_file_task_handler.py</code> edit the following code snippet.</p>
+<h4 id="change-the-custom-log-settings-comment-relative-code-and-enable-to-console">Change the custom log settings comment relative code and enable to console</h4>
+<p>the <code>tee_file_task_handler.py</code> edit the following code snippet.</p>
 <ul>
 <li>comment the following content.</li>
 </ul>
@@ -283,6 +283,9 @@ the <code>tee_file_task_handler.py</code> edit the following code snippet.</p>
     <ul class="flex-column">
       
       <li>
+        <a href="https://blog.wisekee.com/post/installing-eclipse-che-in-kubernetes/" class="nav-link">Installing eclipse-che in native kubernetes platform</a>
+      </li>
+      <li>
         <a href="https://blog.wisekee.com/post/kubernetes-events-to-es/" class="nav-link">Kubernetes events collect to elasticsearch</a>
       </li>
       <li>
@@ -300,9 +303,6 @@ the <code>tee_file_task_handler.py</code> edit the following code snippet.</p>
       <li>
         <a href="https://blog.wisekee.com/post/kubernetes-ingress-guides/" class="nav-link">Notes for using Kubernetes Ingress Controller</a>
       </li>
-      <li>
-        <a href="https://blog.wisekee.com/post/terraform-helm-issues/" class="nav-link">Points to note about  Terraform helm provider</a>
-      </li>
     </ul> 
     
     <div>
@@ -317,7 +317,7 @@ the <code>tee_file_task_handler.py</code> edit the following code snippet.</p>
       <nav class="tags_nav">
         <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent">
           KUBERNETES
-          <span class='button_tally'>9</span>
+          <span class='button_tally'>10</span>
         </a>
         
         <a href='https://blog.wisekee.com/tags/k8s/' class=" post_tag button button_translucent">
@@ -431,6 +431,10 @@ the <code>tee_file_task_handler.py</code> edit the following code snippet.</p>
             </a>
             
             
+            <a href='https://blog.wisekee.com/tags/eclipse-che/' class=" post_tag button button_translucent" data-position=1>ECLIPSE-CHE<span class='button_tally'>1</span>
+            </a>
+            
+            
             <a href='https://blog.wisekee.com/tags/elastalert/' class=" post_tag button button_translucent" data-position=1>ELASTALERT<span class='button_tally'>1</span>
             </a>
             
@@ -487,7 +491,7 @@ the <code>tee_file_task_handler.py</code> edit the following code snippet.</p>
             </a>
             
             
-            <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent" data-position=9>KUBERNETES<span class='button_tally'>9</span>
+            <a href='https://blog.wisekee.com/tags/kubernetes/' class=" post_tag button button_translucent" data-position=10>KUBERNETES<span class='button_tally'>10</span>
             </a>
             
             
@@ -516,6 +520,10 @@ the <code>tee_file_task_handler.py</code> edit the following code snippet.</p>
             
             
             <a href='https://blog.wisekee.com/tags/nuclio/' class=" post_tag button button_translucent" data-position=1>NUCLIO<span class='button_tally'>1</span>
+            </a>
+            
+            
+            <a href='https://blog.wisekee.com/tags/operator/' class=" post_tag button button_translucent" data-position=1>OPERATOR<span class='button_tally'>1</span>
             </a>
             
             
