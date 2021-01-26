@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OmniDB on Xiao.chen</title>
+    <link>https://blog.wisekee.com/tags/omnidb/</link>
+    <description>Recent content in OmniDB on Xiao.chen</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blog.wisekee.com/tags/omnidb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installing OmniDB in kubernetes as deployment resource</title>
+      <link>https://blog.wisekee.com/post/omnidb-installing/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/post/omnidb-installing/</guid>
+      <description>OmniDB is tool for unify the multiple type DataBase management,appropriate deploy in enterprise internal proxy access to other environment.
+fetch the Dockerfile in this url: OminDB Dockerfile Build the docker image docker build . -t dev.com/library/omnidb:latest then push the image to registry:docker push dev.com/library/omnidb:latest
+create the kubernetes deployment manifest file 1apiVersion:v12kind:PersistentVolumeClaim3metadata:4name:omnidb-pvc5spec:6accessModes:7- ReadWriteOnce8storageClassName:nfs-client9resources:10requests:11storage:5Gi12---13apiVersion:apps/v114kind:Deployment15metadata:16name:omnidb-deployment17labels:18app:omnidb19spec:20replicas:121selector:22matchLabels:23app:omnidb24template:25metadata:26labels:27app:omnidb28spec:29containers:30- name:omnidb31image:dev.com/library/omnidb:latest32ports:33- containerPort:800034volumeMounts:35- mountPath:/home/omnidb/.omnidb36name:omnidb-data37volumes:38- name:omnidb-data39persistentVolumeClaim:40claimName:omnidb-pvc41---42apiVersion:v143kind:Service44metadata:45name:omnidb46spec:47ports:48- name:server49port:808050targetPort:800051selector:52app:omnidb53Add the ingress in order to access to OmniDB 1kind:Ingress2apiVersion:extensions/v1beta13metadata:4name:omnidb-ingress5namespace:default6labels:7app:omnidb8annotations:9ingress.kubernetes.io/proxy-body-size:&amp;#39;0&amp;#39;10nginx.ingress.kubernetes.io/proxy-body-size:&amp;#39;0&amp;#39;11nginx.ingress.kubernetes.io/ssl-redirect:&amp;#39;true&amp;#39;12spec:13rules:14- host:omnidb.dev.com15http:16paths:17- path:/18backend:19serviceName:omnidb20servicePort:8080</description>
+    </item>
+    
+  </channel>
+</rss>

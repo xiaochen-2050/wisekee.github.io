@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Xiao.chen</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2008–2020, Xiao.chen; all rights reserved.</copyright>
-    <lastBuildDate>Fri, 15 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.wisekee.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deployment</title>
+      <link>https://blog.wisekee.com/tags/deployment/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/tags/deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OmniDB</title>
+      <link>https://blog.wisekee.com/tags/omnidb/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.wisekee.com/tags/omnidb/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Eclipse-Che</title>
